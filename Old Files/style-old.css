@@ -1,0 +1,376 @@
+:root {
+    --fcg-green: #81bb4e;
+  }
+  
+  /* https://github.com/garrettboatman/ForTheWolf/blob/master/fonts/Futura-Medium.woff */
+  @font-face { 
+    font-family: Inconsolata-Light;
+    src: url('/Fonts/Inconsolata/Inconsolata-Light.ttf');
+    font-weight: normal;
+  }
+  
+  @font-face { 
+    font-family: Inconsolata-Medium;
+    src: url('/Fonts/Inconsolata/Inconsolata-Medium.ttf');
+    font-weight: normal;
+  }
+  
+  @font-face { 
+    font-family: IBM-Plex-Mono-Regular;
+    src: url('/Fonts/IBM_Plex_Mono/IBMPlexMono-Regular.ttf');
+    font-weight: normal;
+  }
+  
+  @font-face { 
+    font-family: IBM-Plex-Mono-SemiBold;
+    src: url('/Fonts/IBM_Plex_Mono/IBMPlexMono-SemiBold.ttf');
+    font-weight: normal;
+  }
+  
+  @font-face { 
+    font-family: Jost-Regular;
+    src: url('/Fonts/Jost/Jost-Regular.ttf');
+    font-weight: normal;
+  }
+  
+  
+  
+  
+  
+  
+  /* UTILITIES */
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  main {
+    /* border-style: dotted; */
+    margin-bottom: 100px;
+  }
+  
+  a {
+    text-decoration: none;
+  }
+  
+  li {
+    list-style: none;
+  }
+  
+  
+  /* NEW NAVBAR STYLING */
+  ul {
+    list-style-type: none;
+    float: right;
+    margin: 0;
+    padding: 0;
+    width: 60px;
+  }
+  
+  li a {
+    display: block;
+    background-color: #dddddd;
+  }
+  
+  /* NAVBAR STYLING */
+  .navbar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 5px 0px 5px 0px;
+    background-color: white;
+    color: black;
+    border-bottom: 1px solid black;
+  }
+  
+  .nav-header {
+    font-family: IBM-Plex-Mono-SemiBold;
+    font-size: 18px;
+    margin-left: 50px;
+  }
+  
+  .nav-links a {
+    font-family: IBM-Plex-Mono-Regular;
+    color: black;
+  }
+  
+  /* LOGO */
+  .logo {
+    cursor: pointer;
+    margin-left: 25px;
+  }
+  
+  img.company-logo {
+    width: 250px;
+  }
+  
+  
+  /* NAVBAR MENU */
+  .menu {
+    display: flex;
+    gap: 1em;
+    font-size: 18px;
+    margin-right: 50px;
+  }
+  
+  .menu li:hover {
+    background-color: var(--fcg-green);
+    border-radius: 5px;
+    transition: 0.3s ease;
+  }
+  
+  .menu li a:hover {
+    color: white;
+  }
+  
+  .menu li {
+    padding: 6.5px 14px;
+  }
+  
+  /* COORDINATION REQUESTS - DROPDOWN MENU */
+  .rf-requests {
+    /* border-style: dotted; */
+    position: relative;
+  }
+  
+  .dropdown {
+    /* border-style: dotted; */
+    background-color: #dbdbdb;
+    padding: 0 0;
+    position: absolute;     /* with respect to parent */
+    display: none;
+    border-radius: 8px;
+    top: 35px;
+  }
+  
+  .dropdown li a + li {
+    /* border-style: dotted; */
+    margin-top: 0px;
+  }
+  
+  .dropdown li {
+    /* border-style: dotted; */
+    /* padding: 0.5em; */
+    width: 18em;
+    text-align: center;
+  }
+  
+  .dropdown li:hover {
+    /* border-style: dotted; */
+    background-color: var(--fcg-green);
+  }
+  
+  .dropdown-menu:hover .dropdown {
+    /* transition-delay: 1s; */
+    /* border-style: dotted; */
+    display: block;
+    background-color: #dbdbdb;
+  }
+  
+  /* RESPONSIVE NAVBAR */
+  .hack { /* input */
+    display: none
+  }
+  
+  /* HAMBURGER MENU */
+  .hamburger {
+    background-color: white;
+    display: none;
+    font-size: 24px;
+    user-select: none;
+    cursor: pointer;
+    margin-right: 100px;
+  }
+  
+  /* MEDIA QUERIES */
+  @media (max-width: 1075px) {
+    .menu {
+        display: none;
+        position: absolute;
+        background-color: white;
+        right: 0;
+        left: 0;
+        text-align: center;
+        padding: 16px 0;
+        margin-top: 50px;
+        width: 100%;
+    }
+  
+    .menu li:hover {
+        cursor: pointer;
+        display: inline-block;
+        background-color: var(--fcg-green);
+        transition: 0.3s ease;
+    }
+  
+    .hack:checked ~ .menu {
+        display: block;
+    }
+  
+    .hamburger {
+        display: block;
+    }
+  
+    .dropdown {
+        /* left: 50%; */
+        top: 34px;
+        /* transform: translateX(10%); */
+    }
+  
+    .dropdown li:hover {
+        background-color: var(--fcg-green);
+    }
+  }
+  
+  
+  /* PAGE DEFAULT */
+  .page-header{
+    /* border-style: dotted; */
+    /* border-radius: 20px; */
+    text-align: center;
+    width: fit-content;
+    margin: 20px auto 10px auto;
+  }
+  
+  #page-title {
+    /* border-style: dotted; */
+    /* font-family: Georgia, 'Times New Roman', Times, serif; */
+    font-family: IBM-Plex-Mono-Regular;
+    width: fit-content;
+    font-size: 4.5vw;
+    margin: 30px auto auto auto;
+    padding: 20px;
+  }
+  
+  #page-subtitle {
+    /* border-style: dotted; */
+    width: fit-content;
+    margin: 10px auto auto auto;
+    padding: 20px;
+    font-family: Jost-Regular;
+    color: #81BB4E;
+    font-size: 4vw;
+  }
+  
+  #page-desc {
+    /* border-style: dotted; */
+    /* font-family: Georgia, 'Times New Roman', Times, serif; */
+    width: 65vw;
+    margin: 10px auto auto auto;
+    padding: 20px;
+    font-family: IBM-Plex-Mono-Regular;
+    font-size: 1.5vw;
+    word-wrap: break-word;
+  }
+  
+  
+  /* CONTACT BUTTON */
+  .contact-button {
+    background-color: var(--fcg-green);
+    border: 0.25vw solid black;
+    border-radius: 2vw;
+    color: black;
+    padding: 1vw 2vw 1vw 2vw;
+    text-align: center;
+    text-decoration: none;
+    font-family: Jost-Regular;
+    font-size: 2vw;
+    cursor: pointer;
+    margin: 35px auto 100px auto;
+  }
+  
+  .contact-button:hover {
+    box-shadow: 0 5px 16px 0 rgba(173, 173, 173, 0.24),0 17px 25px 0 rgba(173, 173, 173, 0.24);
+    transition: all 0.3s ease 0s;
+    border: 0.25vw solid #81BB4E;
+    border-radius: 2vw;
+    background-color: #81BB4E;
+    color: white;
+  }
+  
+  
+  /* FOOTER */
+  footer {
+    /* border-style: dotted; */
+    /* position: absolute; */
+    bottom: 0;
+    padding: 10px 0 10px 0;
+    margin-bottom: 20px;
+    bottom: 0;
+    width: 100%;
+    text-align: center;
+    background-color: white;
+    border-top: 1px solid black;
+  }
+  
+  .footer-credits {
+    font-family: IBM-Plex-Mono-Regular;
+    font-size: 1.2vw;
+    margin-top: 2vw;
+  }
+  
+  #copyright {
+    color: black;
+    text-decoration: none;
+  }
+  
+  /* SOCIAL LINKS & ICONS */
+  .social-links {
+    /* border-style: dotted; */
+    position: static;
+    padding: 10px 10px 0px 10px;
+    /* margin-top: 10px; */
+    margin-bottom: 10px;
+    bottom: 0;
+    text-align: center;
+  }
+  
+  .social-icon {
+    width: 1vw;
+    padding: 10px;
+    text-decoration: none;
+  }
+  
+  
+  /* MOBILE */
+  @media only screen and (max-width: 600px) {
+    img.company-logo {
+        width: 175px;
+    }
+  
+    #page-title {
+        font-size: 10vw;
+    }
+  
+    #page-subtitle {
+        font-size: 8vw;
+        text-align: center;
+        inline-size: 300px;
+        text-wrap: break-word;
+    }
+  
+    #page-desc {
+        width: 80vw;
+        font-size: 4vw;
+    }
+  
+    .contact-button {
+        font-size: 4vw;
+    }
+  
+    .footer-credits {
+        font-size: 2.5vw;
+        /* margin-top: 2vw; */
+    }
+  }
+  /* -------------------------------------------------------------------------------------------- */
+  
+  
+  
+  
+  /* CREDITS / HELP
+  
+  Responsive navbar: https://www.makeuseof.com/responsive-navigation-bar-using-html-and-css/ 
+  
+  */

@@ -1,0 +1,481 @@
+:root {
+  --fcg-green: #81bb4e;
+  --go-to-grey: #dddddd;
+}
+
+/* https://github.com/garrettboatman/ForTheWolf/blob/master/fonts/Futura-Medium.woff */
+@font-face { 
+  font-family: Inconsolata-Light;
+  src: url('/Fonts/Inconsolata/Inconsolata-Light.ttf');
+  font-weight: normal;
+}
+
+@font-face { 
+  font-family: Inconsolata-Medium;
+  src: url('/Fonts/Inconsolata/Inconsolata-Medium.ttf');
+  font-weight: normal;
+}
+
+@font-face { 
+  font-family: IBM-Plex-Mono-Regular;
+  src: url('/Fonts/IBM_Plex_Mono/IBMPlexMono-Regular.ttf');
+  font-weight: normal;
+}
+
+@font-face { 
+  font-family: IBM-Plex-Mono-SemiBold;
+  src: url('/Fonts/IBM_Plex_Mono/IBMPlexMono-SemiBold.ttf');
+  font-weight: normal;
+}
+
+@font-face { 
+  font-family: IBM-Plex-Mono-Bold;
+  src: url('/Fonts/IBM_Plex_Mono/IBMPlexMono-Bold.ttf');
+  font-weight: normal;
+}
+
+@font-face { 
+  font-family: Jost-Regular;
+  src: url('/Fonts/Jost/Jost-Regular.ttf');
+  font-weight: normal;
+}
+
+
+
+
+
+
+/* UTILITIES */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+main {
+  /* border-style: dotted; */
+  margin-bottom: 100px;
+}
+
+a {
+  text-decoration: none;
+}
+
+li {
+  list-style: none;
+}
+
+
+/* ---------- NEW NAVBAR STYLING ---------- */
+.navbar {
+  /* border-bottom: 1px solid black; */
+  padding-bottom: 10px;
+}
+
+.nav-header {
+  font-family: IBM-Plex-Mono-SemiBold;
+  font-size: 20px;
+  margin: 10px 0 0 50px;
+}
+
+ul.top-nav {
+  /* border-style: dotted; */
+  font-family: IBM-Plex-Mono-Regular;
+  font-size: 16px;
+  list-style-type: none;
+  /* float: right; */
+  margin: 20px 0 0 50px;
+  padding: 0;
+  width: 128px;
+}
+
+li a.top-nav-link {
+  display: inline-block;
+  /* background-color: #dddddd; */
+}
+
+.nav-links a {
+  color: black;
+}
+
+/* LOGO */
+/* .logo {
+  cursor: pointer;
+  margin-left: 25px;
+}
+
+img.company-logo {
+  width: 250px;
+} */
+
+
+/* NAVBAR MENU */
+/* .menu {
+  display: flex;
+  gap: 1em;
+  font-size: 18px;
+  margin-right: 50px;
+} */
+
+.menu li:hover {
+  background-color: var(--go-to-grey);
+  border-radius: 5px;
+  /* transition: 0.3s ease; */
+}
+
+.menu li a:hover {
+  color: black;
+}
+
+/* .menu li {
+  padding: 6.5px 14px;
+} */
+
+/* ITP BLOG - DROPDOWN MENU */
+.itp-blog {
+  /* border-style: dotted; */
+  position: relative;
+}
+
+.dropdown {
+  /* border-style: dotted; */
+  background-color: #9a4a4a;
+  width: 15em;
+  padding: 0 0;
+  margin: 0;
+  position: absolute;     /* with respect to parent */
+  display: none;
+  border-radius: 8px;
+  /* top: 35px; */
+}
+
+.dropdown li a + li {
+  /* border-style: dotted; */
+  padding: 0.5px;
+  /* margin: 1px; */
+  /* margin-top: 0px; */
+}
+
+.dropdown li {
+  /* border-style: dotted; */
+  /* padding: 0.5em; */
+  width: 15em;
+  text-align: center;
+  /* padding: 1px; */
+}
+
+.dropdown li:hover {
+  background-color: white;
+  border: 0.5px solid black;
+  /* border-style: dotted; */
+}
+
+.dropdown-menu:hover .dropdown {
+  /* transition-delay: 1s; */
+  display: block;
+  background-color: #dbdbdb;
+  padding: 0;
+  margin: 0;
+  /* border-style: dotted; */
+}
+
+/* RESPONSIVE NAVBAR */
+.hack { /* input */
+  display: none
+}
+
+/* HAMBURGER MENU */
+.hamburger {
+  background-color: white;
+  display: none;
+  font-size: 24px;
+  user-select: none;
+  cursor: pointer;
+  margin-right: 100px;
+}
+/* ---------- ---------- ---------- */
+
+
+
+
+/* ---------- PAGE DEFAULT ---------- */
+.page-body{
+  border-style: dotted;
+  width: 75vw;
+  margin: 100px auto 200px auto;
+  word-wrap: break-word;
+}
+
+.page-header{
+  font-family: IBM-Plex-Mono-Bold;
+  font-size: 22px;
+  /* border-style: dotted; */
+  /* border-radius: 20px; */
+  text-align: left;
+  width: 75vw;
+  margin: 20px auto 10px auto;
+  padding: 10px 20px 0px 20px;
+}
+
+.page-title {
+  /* border-style: dotted; */
+  /* font-family: Georgia, 'Times New Roman', Times, serif; */
+  font-family: IBM-Plex-Mono-Regular;
+  width: fit-content;
+  font-size: 4.5vw;
+  margin: 30px auto auto auto;
+  padding: 20px;
+}
+
+.page-subtitle {
+  /* border-style: dotted; */
+  width: fit-content;
+  margin: 10px auto auto auto;
+  padding: 20px;
+  font-family: Jost-Regular;
+  color: #81BB4E;
+  font-size: 4vw;
+}
+
+.page-text {
+  /* border-style: dotted; */
+  font-family: Jost-Regular;
+  width: 75vw;
+  margin: 10px auto auto auto;
+  padding: 20px;
+  font-size: 18px;
+  word-wrap: break-word;
+}
+
+.page-link {
+  color: black;
+}
+
+.page-link:hover {
+  background-color: var(--go-to-grey);
+  border-radius: 5px;
+}
+/* ---------- ---------- ---------- */
+
+
+/* ---------- CONTACT BUTTON ---------- */
+.contact-button {
+  background-color: var(--go-to-grey);
+  border: 0.25vw solid black;
+  border-radius: 2vw;
+  color: black;
+  padding: 1vw 2vw 1vw 2vw;
+  text-align: center;
+  text-decoration: none;
+  font-family: Jost-Regular;
+  font-size: 2vw;
+  cursor: pointer;
+  margin: 35px auto 100px auto;
+}
+
+.contact-button:hover {
+  box-shadow: 0 5px 16px 0 rgba(173, 173, 173, 0.24),0 17px 25px 0 rgba(173, 173, 173, 0.24);
+  transition: all 0.3s ease 0s;
+  border: 0.25vw solid #81BB4E;
+  border-radius: 2vw;
+  background-color: #81BB4E;
+  color: white;
+}
+
+
+/* ---------- FOOTER ---------- */
+footer {
+  /* border-style: dotted; */
+  /* position: absolute; */
+  display: flex;
+  padding: 10px 0 10px 0;
+  bottom: 0;
+  width: 100%;
+  font-size: 16px;
+  /* text-align: center; */
+  background-color: white;
+  /* border-top: 1px solid black; */
+}
+
+.footer-nav {
+  /* border-style: dotted; */
+  font-family: IBM-Plex-Mono-Regular;
+  font-size: 16px;
+  color: black;
+  list-style-type: none;
+  margin: 0 50px 20px 50px;
+  padding: 0;
+  overflow: hidden;
+}
+
+li.footer-nav-link {
+  /* border-style: dotted; */
+  padding: 0 10px 0 10px;
+  margin: 0;
+  color: black;
+  display: inline-block;
+}
+
+li.footer-nav-link a {
+  color: black;
+  display: inline-block;
+}
+
+li.footer-nav-link:hover {
+  background-color: var(--go-to-grey);
+  border-radius: 5px;
+  /* transition: 0.3s ease; */
+}
+
+li.footer-nav-link a:hover {
+  color: black;
+}
+
+.footer-credits-div {
+  margin-right: 50px;
+  margin-left: auto;
+}
+
+.footer-credits {
+  /* border-style: dotted; */
+  font-family: IBM-Plex-Mono-Regular;
+  font-size: 16px;
+  text-align: right;
+  /* margin: 0 auto 20px 0; */
+}
+
+#copyright {
+  color: black;
+  text-decoration: none;
+}
+
+/* SOCIAL LINKS & ICONS */
+.social-links {
+  /* border-style: dotted; */
+  /* position: static; */
+  margin: 0 50px 20px 100px;
+  text-align: center;
+}
+
+.social-icon {
+  /* border-style: dotted; */
+  /* width: 1vw; */
+  padding: 0 10px 0 10px;
+  text-decoration: none;
+}
+/* ---------- ---------- ---------- */
+
+
+/* ---------- MOBILE ---------- */
+@media only screen and (max-width: 600px) {
+  img.company-logo {
+      width: 175px;
+  }
+
+  .menu {
+    display: none;
+    position: absolute;
+    background-color: white;
+    right: 0;
+    left: 0;
+    text-align: center;
+    padding: 16px 0;
+    margin-top: 50px;
+    width: 100%;
+}
+
+  ul {
+    width: fit-content;
+  }
+
+  li a {
+    padding: 0 20px 0 20px;
+  }
+
+.menu li:hover {
+    cursor: pointer;
+    display: inline-block;
+    background-color: var(--go-to-grey);
+    /* transition: 0.3s ease; */
+}
+
+.hack:checked ~ .menu {
+    display: block;
+}
+
+.hamburger {
+    display: block;
+}
+
+.dropdown {
+    /* left: 50%; */
+    top: 20px;
+    /* transform: translateX(10%); */
+}
+
+.dropdown li:hover {
+    background-color: white;
+}
+
+  #page-title {
+      font-size: 10vw;
+  }
+
+  #page-subtitle {
+      font-size: 8vw;
+      text-align: center;
+      inline-size: 300px;
+      text-wrap: break-word;
+  }
+
+  #page-desc {
+      width: 80vw;
+      font-size: 4vw;
+  }
+
+  .contact-button {
+      font-size: 4vw;
+  }
+
+  .footer-nav {
+      width: 175px;
+      text-align: left;
+      padding: 0;
+      margin: 10px 20px 10px 50px;
+    }
+
+  li.footer-nav-link {
+      /* border-style: dotted; */
+      width: 175px;
+      padding: 0;
+      margin: 0;
+  }
+
+  .social-links {
+      margin: 10px 20px 10px;
+  }
+
+  .social-icon {
+      display: block;
+      padding: 15px 0 15px 0;
+  }
+
+  .footer-credits {
+      font-size: 16px;
+      text-align: right;
+      inline-size: 80px;
+      overflow-wrap: break-word;
+      margin: 10px 0 10px 60px;
+      float: right;
+  }
+}
+/* ---------- ---------- ---------- */
+
+
+
+
+/* CREDITS / HELP
+
+Responsive navbar: https://www.makeuseof.com/responsive-navigation-bar-using-html-and-css/ 
+
+*/
