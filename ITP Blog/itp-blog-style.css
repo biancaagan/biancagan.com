@@ -261,6 +261,13 @@
     border-radius: 5px;
   }
   /* ---------- ---------- ---------- */
+
+  
+  .project-date {
+    font-family: IBM-Plex-Mono-Regular;
+    font-size: 16px;
+    padding: 10px 20px 10px 20px;
+  }
   
   
   /* ---------- CONTACT BUTTON ---------- */
