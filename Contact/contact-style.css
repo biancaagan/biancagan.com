@@ -39,12 +39,6 @@
     src: url('/Fonts/Jost/Jost-Regular.ttf');
     font-weight: normal;
   }
-
-  @font-face { 
-    font-family: Jost-SemiBold;
-    src: url('/Fonts/Jost/Jost-SemiBold.ttf');
-    font-weight: normal;
-  }
   
   
   
@@ -202,9 +196,6 @@
   /* ---------- ---------- ---------- */
   
   
-  /* ---------- MAIN BODY ---------- */
-  
-  /* ---------- ---------- ---------- */
   
   
   /* ---------- PAGE DEFAULT ---------- */
@@ -238,10 +229,12 @@
   
   .page-subtitle {
     /* border-style: dotted; */
-    font-family: Jost-SemiBold;
     width: fit-content;
-    margin: 20px 0 0 20px;
-    font-size: 22px;
+    margin: 10px auto auto auto;
+    padding: 20px;
+    font-family: Jost-Regular;
+    color: #81BB4E;
+    font-size: 4vw;
   }
   
   .page-text {
@@ -253,67 +246,17 @@
     font-size: 18px;
     word-wrap: break-word;
   }
-
-  .main-link {
-    font-family: Jost-SemiBold;
-    width: fit-content;
-    margin: 30px 0 0 20px;
-    font-size: 20px;
-    color: black;
-  }
-
-  .main-link:hover {
-    background-color: var(--go-to-grey);
-    border-radius: 5px;
-  }
   
-  .sub-link {
+  .page-link {
     color: black;
   }
   
-  .sub-link:hover {
+  .page-link:hover {
     background-color: var(--go-to-grey);
     border-radius: 5px;
   }
   /* ---------- ---------- ---------- */
-
-
-  .project-title {
-    /* border-style: dotted; */
-    font-family: Jost-SemiBold;
-    width: fit-content;
-    margin: 30px 0 0 20px;
-    font-size: 22px;
-  }
-
-  .project-desc {
-    font-family: Jost-Regular;
-    width: 75vw;
-    margin: 10px auto auto auto;
-    padding: 10px 20px 40px 20px;
-    font-size: 18px;
-    word-wrap: break-word;
-  }
-
-  .project-link {
-    color: black;
-  }
   
-  .project-link:hover {
-    background-color: var(--go-to-grey);
-    border-radius: 3px;
-    color: black;
-  }
-
-  .project-info-link {
-    color: black;
-  }
-  
-  .project-info-link:hover {
-    background-color: var(--go-to-grey);
-    border-radius: 3px;
-    color: black;
-  }
   
   /* ---------- CONTACT BUTTON ---------- */
   .contact-button {
@@ -387,7 +330,7 @@
   li.footer-nav-link a:hover {
     color: black;
   }
-
+  
   .footer-credits-div {
     margin-right: 50px;
     margin-left: auto;
@@ -500,23 +443,23 @@
         padding: 0;
         margin: 10px 20px 10px 50px;
       }
-
+  
     li.footer-nav-link {
         /* border-style: dotted; */
         width: 175px;
         padding: 0;
         margin: 0;
     }
-
+  
     .social-links {
         margin: 10px 20px 10px;
     }
-
+  
     .social-icon {
         display: block;
         padding: 15px 0 15px 0;
     }
-
+  
     .footer-credits {
         font-size: 16px;
         text-align: right;
