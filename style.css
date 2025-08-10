@@ -1,6 +1,7 @@
 :root {
   --fcg-green: #81bb4e;
   --go-to-grey: #dddddd;
+  --highlight-orange: #ffac63;
 }
 
 /* https://github.com/garrettboatman/ForTheWolf/blob/master/fonts/Futura-Medium.woff */
@@ -37,6 +38,12 @@
 @font-face { 
   font-family: Jost-Regular;
   src: url('/Fonts/Jost/Jost-Regular.ttf');
+  font-weight: normal;
+}
+
+@font-face { 
+  font-family: Jost-SemiBold;
+  src: url('/Fonts/Jost/Jost-SemiBold.ttf');
   font-weight: normal;
 }
 
@@ -229,12 +236,11 @@ img.company-logo {
 
 .page-subtitle {
   /* border-style: dotted; */
+  font-family: Jost-SemiBold;
   width: fit-content;
-  margin: 10px auto auto auto;
-  padding: 20px;
-  font-family: Jost-Regular;
-  color: #81BB4E;
-  font-size: 4vw;
+  /* margin: 20px 0 0 20px; */
+  margin: 30px 0 0 20px;
+  font-size: 20px;
 }
 
 .page-text {
@@ -247,15 +253,37 @@ img.company-logo {
   word-wrap: break-word;
 }
 
+.main-link {
+  font-family: Jost-SemiBold;
+  width: fit-content;
+  margin: 30px 0 0 20px;
+  font-size: 20px;
+  color: black;
+}
+
+.main-link:hover {
+  /* background-color: var(--go-to-grey); */
+  background-color: var(--highlight-orange);
+  border-radius: 5px;
+}
+
 .sub-link {
   color: black;
 }
 
-.page-link:hover {
-  background-color: var(--go-to-grey);
+.sub-link:hover {
+  /* background-color: var(--go-to-grey); */
+  background-color: var(--highlight-orange);
   border-radius: 5px;
 }
 /* ---------- ---------- ---------- */
+
+
+.project-date {
+  font-family: IBM-Plex-Mono-Regular;
+  font-size: 16px;
+  padding: 10px 20px 10px 20px;
+}
 
 
 /* ---------- CONTACT BUTTON ---------- */
