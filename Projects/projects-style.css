@@ -1,205 +1,177 @@
 :root {
-    --fcg-green: #81bb4e;
-    --go-to-grey: #dddddd;
-  }
-  
-  /* https://github.com/garrettboatman/ForTheWolf/blob/master/fonts/Futura-Medium.woff */
-  @font-face { 
-    font-family: Inconsolata-Light;
-    src: url('/Fonts/Inconsolata/Inconsolata-Light.ttf');
-    font-weight: normal;
-  }
-  
-  @font-face { 
-    font-family: Inconsolata-Medium;
-    src: url('/Fonts/Inconsolata/Inconsolata-Medium.ttf');
-    font-weight: normal;
-  }
-  
-  @font-face { 
-    font-family: IBM-Plex-Mono-Regular;
-    src: url('/Fonts/IBM_Plex_Mono/IBMPlexMono-Regular.ttf');
-    font-weight: normal;
-  }
-  
-  @font-face { 
-    font-family: IBM-Plex-Mono-SemiBold;
-    src: url('/Fonts/IBM_Plex_Mono/IBMPlexMono-SemiBold.ttf');
-    font-weight: normal;
-  }
-  
-  @font-face { 
-    font-family: IBM-Plex-Mono-Bold;
-    src: url('/Fonts/IBM_Plex_Mono/IBMPlexMono-Bold.ttf');
-    font-weight: normal;
-  }
-  
-  @font-face { 
-    font-family: Jost-Regular;
-    src: url('/Fonts/Jost/Jost-Regular.ttf');
-    font-weight: normal;
-  }
+  --fcg-green: #81bb4e;
+  --go-to-grey: #dddddd;
+  --highlight-orange: #ff8c28;
+}
 
-  @font-face { 
-    font-family: Jost-SemiBold;
-    src: url('/Fonts/Jost/Jost-SemiBold.ttf');
-    font-weight: normal;
-  }
-  
-  
-  
-  
-  
-  
-  /* UTILITIES */
-  * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-  }
-  
-  main {
+/* https://github.com/garrettboatman/ForTheWolf/blob/master/fonts/Futura-Medium.woff */
+@font-face { 
+  font-family: Inconsolata-Light;
+  src: url('/Fonts/Inconsolata/Inconsolata-Light.ttf');
+  font-weight: normal;
+}
+
+@font-face { 
+  font-family: Inconsolata-Medium;
+  src: url('/Fonts/Inconsolata/Inconsolata-Medium.ttf');
+  font-weight: normal;
+}
+
+@font-face { 
+  font-family: IBM-Plex-Mono-Regular;
+  src: url('/Fonts/IBM_Plex_Mono/IBMPlexMono-Regular.ttf');
+  font-weight: normal;
+}
+
+@font-face { 
+  font-family: IBM-Plex-Mono-SemiBold;
+  src: url('/Fonts/IBM_Plex_Mono/IBMPlexMono-SemiBold.ttf');
+  font-weight: normal;
+}
+
+@font-face { 
+  font-family: IBM-Plex-Mono-Bold;
+  src: url('/Fonts/IBM_Plex_Mono/IBMPlexMono-Bold.ttf');
+  font-weight: normal;
+}
+
+@font-face { 
+  font-family: Jost-Regular;
+  src: url('/Fonts/Jost/Jost-Regular.ttf');
+  font-weight: normal;
+}
+
+@font-face { 
+  font-family: Jost-SemiBold;
+  src: url('/Fonts/Jost/Jost-SemiBold.ttf');
+  font-weight: normal;
+}
+
+
+
+
+
+
+/* UTILITIES */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+main {
+  /* border-style: dotted; */
+  margin-bottom: 100px;
+}
+
+a {
+  text-decoration: none;
+}
+
+li {
+  list-style: none;
+}
+
+
+/* ---------- NEW NAVBAR STYLING ---------- */
+.navbar {
     /* border-style: dotted; */
-    margin-bottom: 100px;
-  }
-  
-  a {
-    text-decoration: none;
-  }
-  
-  li {
-    list-style: none;
-  }
-  
-  
-  /* ---------- NEW NAVBAR STYLING ---------- */
-  .navbar {
-    /* border-bottom: 1px solid black; */
-    padding-bottom: 10px;
-  }
-  
-  .nav-header {
-    font-family: IBM-Plex-Mono-SemiBold;
-    font-size: 20px;
-    margin: 10px 0 0 50px;
-  }
-  
-  ul.top-nav {
-    /* border-style: dotted; */
-    font-family: IBM-Plex-Mono-Regular;
-    font-size: 16px;
-    list-style-type: none;
-    /* float: right; */
-    margin: 20px 0 0 50px;
-    padding: 0;
-    width: 128px;
-  }
-  
-  li a.top-nav-link {
-    display: inline-block;
-    /* background-color: #dddddd; */
-  }
-  
-  .nav-links a {
+    display: flex;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    align-items: center;
+    justify-content: space-between;
+    padding: 8px 0px 8px 0px;
+    background-color: white;
     color: black;
-  }
-  
-  /* LOGO */
-  /* .logo {
-    cursor: pointer;
-    margin-left: 25px;
-  }
-  
-  img.company-logo {
-    width: 250px;
-  } */
-  
-  
-  /* NAVBAR MENU */
-  /* .menu {
+    border-bottom: 1px solid black;
+}
+
+.nav-header {
+  font-family: IBM-Plex-Mono-SemiBold;
+  font-size: 20px;
+  margin: 0 0 0 50px;
+}
+
+.nav-links a {
+    font-family: IBM-Plex-Mono-SemiBold;
+    color: black;
+}
+
+.menu {
     display: flex;
     gap: 1em;
-    font-size: 18px;
+    font-size: 16px;
     margin-right: 50px;
-  } */
-  
-  .menu li:hover {
-    background-color: var(--go-to-grey);
-    border-radius: 5px;
+}
+
+.menu li:hover {
+    background-color: var(--highlight-orange);
+    border-radius: 3px;
     /* transition: 0.3s ease; */
-  }
-  
-  .menu li a:hover {
-    color: black;
-  }
-  
-  /* .menu li {
+}
+
+.menu li a:hover {
+    color: white;
+}
+
+.menu li {
     padding: 6.5px 14px;
-  } */
-  
-  /* ITP BLOG - DROPDOWN MENU */
-  .itp-blog {
+}
+
+
+.dropdown {
     /* border-style: dotted; */
-    position: relative;
-  }
-  
-  .dropdown {
-    /* border-style: dotted; */
-    background-color: #9a4a4a;
-    width: 15em;
+    background-color: #dbdbdb;
     padding: 0 0;
-    margin: 0;
     position: absolute;     /* with respect to parent */
     display: none;
     border-radius: 8px;
-    /* top: 35px; */
-  }
-  
-  .dropdown li a + li {
+    top: 2.6em;
+    right: 4.8em;
+}
+
+.dropdown li a + li {
     /* border-style: dotted; */
-    padding: 0.5px;
-    /* margin: 1px; */
-    /* margin-top: 0px; */
-  }
-  
-  .dropdown li {
+    margin-top: 0px;
+}
+
+.dropdown li {
     /* border-style: dotted; */
     /* padding: 0.5em; */
-    width: 15em;
+    width: 18em;
     text-align: center;
-    /* padding: 1px; */
-  }
-  
-  .dropdown li:hover {
-    background-color: white;
-    border: 0.5px solid black;
+}
+
+.dropdown li:hover {
     /* border-style: dotted; */
-  }
-  
-  .dropdown-menu:hover .dropdown {
+    background-color: var(--highlight-orange);
+}
+
+.dropdown-menu:hover .dropdown {
     /* transition-delay: 1s; */
+    /* border-style: dotted; */
     display: block;
     background-color: #dbdbdb;
-    padding: 0;
-    margin: 0;
-    /* border-style: dotted; */
-  }
-  
-  /* RESPONSIVE NAVBAR */
-  .hack { /* input */
+}
+
+/* RESPONSIVE NAVBAR */
+.hack { /* input */
     display: none
-  }
-  
-  /* HAMBURGER MENU */
-  .hamburger {
+}
+
+/* HAMBURGER MENU */
+.hamburger {
     background-color: white;
     display: none;
     font-size: 24px;
     user-select: none;
     cursor: pointer;
     margin-right: 100px;
-  }
-  /* ---------- ---------- ---------- */
+}
+/* ---------- NEW NAVBAR STYLING ABOVE ---------- */
+
   
   
   /* ---------- MAIN BODY ---------- */
