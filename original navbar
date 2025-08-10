@@ -1,0 +1,129 @@
+/* ---------- NEW NAVBAR STYLING ---------- */
+
+.navbar {
+  /* border-bottom: 1px solid black; */
+  padding-bottom: 10px;
+}
+
+.nav-header {
+  font-family: IBM-Plex-Mono-SemiBold;
+  font-size: 20px;
+  margin: 10px 0 0 50px;
+}
+
+ul.top-nav {
+  /* border-style: dotted; */
+  font-family: IBM-Plex-Mono-Regular;
+  font-size: 16px;
+  list-style-type: none;
+  /* float: right; */
+  margin: 20px 0 0 50px;
+  padding: 0;
+  width: 128px;
+}
+
+li a.top-nav-link {
+  display: inline-block;
+  /* background-color: #dddddd; */
+}
+
+.nav-links a {
+  color: black;
+}
+
+/* LOGO */
+/* .logo {
+  cursor: pointer;
+  margin-left: 25px;
+}
+
+img.company-logo {
+  width: 250px;
+} */
+
+
+/* NAVBAR MENU */
+/* .menu {
+  display: flex;
+  gap: 1em;
+  font-size: 18px;
+  margin-right: 50px;
+} */
+
+.menu li:hover {
+  background-color: var(--go-to-grey);
+  border-radius: 5px;
+  /* transition: 0.3s ease; */
+}
+
+.menu li a:hover {
+  color: black;
+}
+
+/* .menu li {
+  padding: 6.5px 14px;
+} */
+
+/* ITP BLOG - DROPDOWN MENU */
+.itp-blog {
+  /* border-style: dotted; */
+  position: relative;
+}
+
+.dropdown {
+  /* border-style: dotted; */
+  background-color: #9a4a4a;
+  width: 15em;
+  padding: 0 0;
+  margin: 0;
+  position: absolute;     /* with respect to parent */
+  display: none;
+  border-radius: 8px;
+  /* top: 35px; */
+}
+
+.dropdown li a + li {
+  /* border-style: dotted; */
+  padding: 0.5px;
+  /* margin: 1px; */
+  /* margin-top: 0px; */
+}
+
+.dropdown li {
+  /* border-style: dotted; */
+  /* padding: 0.5em; */
+  width: 15em;
+  text-align: center;
+  /* padding: 1px; */
+}
+
+.dropdown li:hover {
+  background-color: white;
+  border: 0.5px solid black;
+  /* border-style: dotted; */
+}
+
+.dropdown-menu:hover .dropdown {
+  /* transition-delay: 1s; */
+  display: block;
+  background-color: #dbdbdb;
+  padding: 0;
+  margin: 0;
+  /* border-style: dotted; */
+}
+
+/* RESPONSIVE NAVBAR */
+.hack { /* input */
+  display: none
+}
+
+/* HAMBURGER MENU */
+.hamburger {
+  background-color: white;
+  display: none;
+  font-size: 24px;
+  user-select: none;
+  cursor: pointer;
+  margin-right: 100px;
+}
+/* ---------- ---------- ---------- */

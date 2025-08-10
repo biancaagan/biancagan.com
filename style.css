@@ -1,7 +1,7 @@
 :root {
   --fcg-green: #81bb4e;
   --go-to-grey: #dddddd;
-  --highlight-orange: #ffac63;
+  --highlight-orange: #ff8c28;
 }
 
 /* https://github.com/garrettboatman/ForTheWolf/blob/master/fonts/Futura-Medium.woff */
@@ -75,132 +75,146 @@ li {
 
 /* ---------- NEW NAVBAR STYLING ---------- */
 .navbar {
-  /* border-bottom: 1px solid black; */
-  padding-bottom: 10px;
+    /* border-style: dotted; */
+    display: flex;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    align-items: center;
+    justify-content: space-between;
+    padding: 8px 0px 8px 0px;
+    background-color: white;
+    color: black;
+    border-bottom: 1px solid black;
 }
 
 .nav-header {
   font-family: IBM-Plex-Mono-SemiBold;
   font-size: 20px;
-  margin: 10px 0 0 50px;
-}
-
-ul.top-nav {
-  /* border-style: dotted; */
-  font-family: IBM-Plex-Mono-Regular;
-  font-size: 16px;
-  list-style-type: none;
-  /* float: right; */
-  margin: 20px 0 0 50px;
-  padding: 0;
-  width: 128px;
-}
-
-li a.top-nav-link {
-  display: inline-block;
-  /* background-color: #dddddd; */
+  margin: 0 0 0 50px;
 }
 
 .nav-links a {
-  color: black;
+    font-family: IBM-Plex-Mono-SemiBold;
+    color: black;
 }
 
-/* LOGO */
-/* .logo {
-  cursor: pointer;
-  margin-left: 25px;
+.menu {
+    display: flex;
+    gap: 1em;
+    font-size: 16px;
+    margin-right: 50px;
 }
-
-img.company-logo {
-  width: 250px;
-} */
-
-
-/* NAVBAR MENU */
-/* .menu {
-  display: flex;
-  gap: 1em;
-  font-size: 18px;
-  margin-right: 50px;
-} */
 
 .menu li:hover {
-  background-color: var(--go-to-grey);
-  border-radius: 5px;
-  /* transition: 0.3s ease; */
+    background-color: var(--highlight-orange);
+    border-radius: 3px;
+    /* transition: 0.3s ease; */
 }
 
 .menu li a:hover {
-  color: black;
+    color: white;
 }
 
-/* .menu li {
-  padding: 6.5px 14px;
-} */
-
-/* ITP BLOG - DROPDOWN MENU */
-.itp-blog {
-  /* border-style: dotted; */
-  position: relative;
+.menu li {
+    padding: 6.5px 14px;
 }
+
 
 .dropdown {
-  /* border-style: dotted; */
-  background-color: #9a4a4a;
-  width: 15em;
-  padding: 0 0;
-  margin: 0;
-  position: absolute;     /* with respect to parent */
-  display: none;
-  border-radius: 8px;
-  /* top: 35px; */
+    /* border-style: dotted; */
+    background-color: #dbdbdb;
+    padding: 0 0;
+    position: absolute;     /* with respect to parent */
+    display: none;
+    border-radius: 8px;
+    top: 2.6em;
+    right: 4.8em;
 }
 
 .dropdown li a + li {
-  /* border-style: dotted; */
-  padding: 0.5px;
-  /* margin: 1px; */
-  /* margin-top: 0px; */
+    /* border-style: dotted; */
+    margin-top: 0px;
 }
 
 .dropdown li {
-  /* border-style: dotted; */
-  /* padding: 0.5em; */
-  width: 15em;
-  text-align: center;
-  /* padding: 1px; */
+    /* border-style: dotted; */
+    /* padding: 0.5em; */
+    width: 18em;
+    text-align: center;
 }
 
 .dropdown li:hover {
-  background-color: white;
-  border: 0.5px solid black;
-  /* border-style: dotted; */
+    /* border-style: dotted; */
+    background-color: var(--highlight-orange);
 }
 
 .dropdown-menu:hover .dropdown {
-  /* transition-delay: 1s; */
-  display: block;
-  background-color: #dbdbdb;
-  padding: 0;
-  margin: 0;
-  /* border-style: dotted; */
+    /* transition-delay: 1s; */
+    /* border-style: dotted; */
+    display: block;
+    background-color: #dbdbdb;
 }
 
 /* RESPONSIVE NAVBAR */
 .hack { /* input */
-  display: none
+    display: none
 }
 
 /* HAMBURGER MENU */
 .hamburger {
-  background-color: white;
-  display: none;
-  font-size: 24px;
-  user-select: none;
-  cursor: pointer;
-  margin-right: 100px;
+    background-color: white;
+    display: none;
+    font-size: 24px;
+    user-select: none;
+    cursor: pointer;
+    margin-right: 100px;
+}
+
+
+
+/* MEDIA QUERIES */
+@media (max-width: 1075px) {
+    .menu {
+        display: none;
+        position: absolute;
+        background-color: white;
+        right: 0;
+        left: 0;
+        text-align: center;
+        padding: 16px 0;
+        margin-top: 50px;
+        width: 100%;
+    }
+
+    .menu li:hover {
+        cursor: pointer;
+        display: inline-block;
+        background-color: var(--fcg-green);
+        transition: 0.3s ease;
+    }
+
+    .hack:checked ~ .menu {
+        display: block;
+    }
+
+    .hamburger {
+        display: block;
+    }
+
+    .dropdown {
+        /* left: 50%; */
+        top: 34px;
+        /* transform: translateX(10%); */
+    }
+
+    .dropdown li:hover {
+        background-color: var(--fcg-green);
+    }
 }
 /* ---------- ---------- ---------- */
+
+
 
 
 
