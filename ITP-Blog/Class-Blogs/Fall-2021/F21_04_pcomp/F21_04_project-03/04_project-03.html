@@ -53,35 +53,294 @@
 
     <main>
         <div class="page-body">
-                <h3 class="page-header">ITP2233 Intro to Computational Media - Week 01</h3>
+                <h3 class="page-header">P-Comp Project 03</h3>
 
                 <hr style="width: 72vw; margin: auto auto 20px auto;">
 
-                <h3 class="page-subtitle">How does computation apply to my interests?</h3>
+                <h3 class="page-title">Idea Sketch & Inspiration</h3>
                 
                 <h3 class="page-text">
-                        Well, there is a lot of programming and software in my line of work in the
-                        audio industry for live sound. Many programs exist in order to do a variety of
-                        things such as monitoring devices in real time, programming devices, and
-                        routing one thing to another. None of these programs would exist to make
-                        my job more doable without the use of computation.
-                        <br><br>
-                        <a class="sub-link" href="https://editor.p5js.org/biancaagan/sketches/eyCoVLUww">Link</a>
-                        to the P5 sketch of the image below:<br>
+                        I wanted to do something with a physical output for this project, and I really
+                        liked the video Yeseul showed us in class of the 
+                        <a class="sub-link" href="https://www.youtube.com/watch?v=YE7XhlgnaEQ" target="_blank" rel="noopener noreferrer">
+                        automat toolkit by DadaMachines</a>.
                 </h3>
-
-                <img class="page-center-image" style="width: 600px;"
-                        src="/ITP-Blog/Class-Blogs/Fall-2021/F21_03_icm/F21_03_week-01/image-1.png" alt="">
 
                 <h3 class="page-text">
-                        While creating the sketch above, I found it difficult to calculate the different
-                        points for the various shapes in order to place them in the right vicinity. Also,
-                        it took me a minute to figure out why when I used a color, everything else
-                        would use it too, until I saw that I have to recall ‘noFill’ in between sections. Is
-                        this the only way to achieve making objects different colors? I found the web
-                        editor pretty easy to use, and the p5 reference guide was very helpful.
+                        So my original idea was to do a physical drum machine, using a similar drum
+                        head from the video, maybe a cowbell, or a triangle. I played with the idea of
+                        either doing a digital interface on P5 or a physical interface like buttons or a
+                        Playstation controller.<br><br>
+                        A basic sketch below is what I thought it could look like and an example of a
+                        digital interface.
                 </h3>
                 
+                <img class="page-center-image" style="width: 80%;" src="/" alt="">
+
+                <h3 class="page-text">
+                        While I was looking at the materials I would need, I decided to do glasses of
+                        water and spoons instead because it would be significantly cheaper. Plus, I
+                        like the idea better of having six glasses all tuned to different notes with the
+                        amount of water in them.<br><br>
+                        While I was home over break, I bought a bunch of spoons from Ikea and had
+                        my step dad help me drill holes into them so that I would be able to mount it
+                        onto a servo motor.<br><br>
+                        The sketch below is what I’d like the layout of the servos / spoons / glasses
+                        to be in.
+                </h3>
+
+                <img class="page-center-image" style="width: 80%;" src="/" alt="">
+
+                <h3 class="page-text">
+                        My thought is to have six glasses of different amounts of water tuned to C – D
+                        – E – F – G – A. And what’s great is that if I want to change the tune I can
+                        simply just change the amount of water. I will also have six buttons
+                        correlating to each ‘note’ as well as a couple of preprogrammed buttons that
+                        will play a tune.<br><br>
+                        I think I will call this project SPOONS. Very creative, I know.<br><br>
+                        Below is a bill of materials and rough production schedule.
+                </h3>
+
+                <img class="page-center-image" style="width: 80%;" src="/" alt="">
+                <img class="page-center-image" style="width: 80%;" src="/" alt="">
+
+                <h3 class="page-text">
+                        I started by making sure that I’d be able to mount the spoons onto the servo
+                        motors.<br><br>
+                        When purchasing the servo motors, I had thought they’d be larger and closer
+                        to the model we’ve been using in class. They’re pretty tiny, BUT luckily the
+                        servo motors have so far managed to hold up and operate as I’d intended.
+                </h3>
+
+                <div class="page-grid">
+                        <div class="page-grid-item">
+                                <img class="page-center-image" style="width: 300px;" src="/" alt="">
+                        </div>
+                        <div class="page-grid-item">
+                                <img class="page-center-image" style="width: 300px;" src="/" alt="">
+                        </div>
+                </div>
+
+                <h3 class="page-text">
+                        And of course I had to test that the little servo could handle the spoon.
+                </h3>
+
+                <img class="page-center-image" style="width: 80%;" src="/" alt="">
+
+                <h3 class="page-text">
+                        Before jumping to six servos and buttons, I started off testing with three.
+                </h3>
+
+                <div class="page-grid">
+                        <div class="page-grid-item">
+                                <img class="page-center-image" style="width: 300px;" src="/" alt="">
+                        </div>
+                        <div class="page-grid-item">
+                                <img class="page-center-image" style="width: 300px;" src="/" alt="">
+                        </div>
+                        <div class="page-grid-item">
+                                <img class="page-center-image" style="width: 300px;" src="/" alt="">
+                        </div>
+                        <div class="page-grid-item">
+                                <img class="page-center-image" style="width: 300px;" src="/" alt="">
+                        </div>
+                </div>
+
+                <h3 class="page-text">
+                        Next, I moved on to rigging up the three spoons to three glasses
+                        of water and I also programmed one button to play a series of
+                        notes. Nothing a little cardboard and gaff tape can’t handle.
+                </h3>
+
+                <img class="page-center-image" style="width: 80%;" src="/" alt="">
+
+                <h3 class="page-text">
+                        So, I spent about half an hour one afternoon trying to ‘tune’ the
+                        glasses to a C, D, E, F, G, and A… only to discover that the glasses
+                        I have purchased will tune to a highest note of G flat at best.
+                        Which eliminates my ability to have an A. The highest note it
+                        tunes to is a kind of sharp G flat, so I’m going to use it to pass as
+                        my G note.<br><br>
+                        Next, I’m planning out the layout of all the glasses and motors/spoons.
+                </h3>
+
+                <div class="page-grid">
+                        <div class="page-grid-item">
+                                <img class="page-center-image" style="width: 300px;" src="/" alt="">
+                        </div>
+                        <div class="page-grid-item">
+                                <img class="page-center-image" style="width: 300px;" src="/" alt="">
+                        </div>
+                </div>
+
+                <h3 class="page-text">
+                        I then mounted the (now) five servos to a small strip of wood in a
+                        straight line, just so I can finish programming everything and testing.
+                        The video below I’ve gotten all five buttons to play each note/servo
+                        correctly.
+                </h3>
+
+                <div class="page-grid">
+                        <div class="page-grid-item">
+                                <img class="page-center-image" style="width: 300px;" src="/" alt="">
+                        </div>
+                        <div class="page-grid-item">
+                                <img class="page-center-image" style="width: 300px;" src="/" alt="">
+                        </div>
+                        <div class="page-grid-item">
+                                <img class="page-center-image" style="width: 300px;" src="/" alt="">
+                        </div>
+                        <div class="page-grid-item">
+                                <img class="page-center-image" style="width: 300px;" src="/" alt="">
+                        </div>
+                </div>
+
+                <h3 class="page-text">
+                        I then moved on to programming a few buttons to play an entire
+                        melody. It’s been a bit tricky finding sheet music that only uses C, D, E, F, G.<br><br>
+                        When coding this, I also wanted a better / cleaner way of writing the
+                        songs. So what I did was made functions for each of the notes, called
+                        them individually for their individual buttons, and that way it made it
+                        much easier to code the tunes, instead of copying and pasting several
+                        lines of code for each note, I simply just had to call the function and
+                        space the notes with a delay.
+                </h3>
+
+                <div class="page-grid">
+                        <div class="page-grid-item">
+                                <img class="page-center-image" style="width: 300px;" src="/" alt="">
+                        </div>
+                        <div class="page-grid-item">
+                                <img class="page-center-image" style="width: 300px;" src="/" alt="">
+                        </div>
+                </div>
+
+                <img class="page-center-image" style="width: 80%;" src="/" alt="">
+
+                <h3 class="page-text">
+                        A lovely (automated) rendition of Jingle Bells.<br><br>
+                        The third servo as you can see in the video spazzes a little, I
+                        need to try and fix that. I’ve since replaced the motor, but it
+                        seems to still do that more than the others, I’ll look into it.<br><br>
+                        Also, on my quest to find songs that only use the five notes I
+                        have, I figured I should just add a B below the C and bring my
+                        number of notes/motors back to my original intended six.<br><br>
+                        Next, I’m going to fabricate the center mount for the motors,
+                        solder everything onto a PCB, figure out the wiring, and also the
+                        interface. I still haven’t decided if I wanted to just use buttons or
+                        make some other type of user interface.<br><br>
+                        So originally I wanted everything to be in a circle, but I figured
+                        creating the center mount would be easier if it were just straight
+                        rows. I also like the idea better of being able to see directly into
+                        the middle of everything.
+                </h3>
+
+                <div class="page-grid">
+                        <div class="page-grid-item">
+                                <img class="page-center-image" style="width: 300px;" src="/" alt="">
+                        </div>
+                        <div class="page-grid-item">
+                                <img class="page-center-image" style="width: 300px;" src="/" alt="">
+                        </div>
+                </div>
+
+                <h3 class="page-text">
+                        After building the mounts for the servos, I worked on moving
+                        everything to protoboards. I need to have a separate protoboard
+                        under the platform where the servos are on, and from the
+                        protoboard it needs to connect to the Arduino, and I need a
+                        second protoboard in the user interface enclosure for the
+                        buttons which will also connect to the Arduino.<br><br>
+                        At the start I was mounting everything onto one protoboard, and
+                        soon realized I needed the two separate ones. On the PCB for
+                        the servos, I solder on dip sockets so that in case a servo
+                        needed to be replaced, it would be easier to swap them out.<br><br>
+                        I purchased screw terminals for the Arduino Uno, because it felt
+                        more sturdy and reliable than just popping the wires into the dip
+                        sockets on the Uno.
+                </h3>
+
+                <div class="page-grid">
+                        <div class="page-grid-item">
+                                <img class="page-center-image" style="width: 300px;" src="/" alt="">
+                        </div>
+                        <div class="page-grid-item">
+                                <img class="page-center-image" style="width: 300px;" src="/" alt="">
+                        </div>
+                </div>
+
+                <h3 class="page-text">
+                        After finishing the servo proto-board, I tested it with my
+                        breadboard that still had the buttons from before.<br><br>
+                        I ran into an issue where two of the servos wouldn’t work. At first
+                        it was the second and third, then it changed. I tried reseating the
+                        header pins and making sure the connections were secure.
+                        Eventually it started working, I’m not exactly sure what the issue
+                        is, but I’m pretty sure it was how the servos were seated in the
+                        dip sockets.
+                </h3>
+
+                <div class="page-grid">
+                        <div class="page-grid-item">
+                                <img class="page-center-image" style="width: 300px;" src="/" alt="">
+                        </div>
+                        <div class="page-grid-item">
+                                <img class="page-center-image" style="width: 300px;" src="/" alt="">
+                        </div>
+                </div>
+
+                <h3 class="page-text">
+                        I then worked on building the enclosure for the buttons and
+                        mounting everything, and hot gluing all of the panels together.<br><br>
+                        I then tested the buttons with the servos after everything was
+                        transferred onto proto-boards. And lo and behold — ISSUES!!!<br><br>
+                        The four buttons programmed to play songs weren’t working. So
+                        I looked all over the board seeing if anything was disconnected,
+                        or shorting, only to finally discover that I forgot to connect the
+                        power lines to the power bus from the Arduino that everything
+                        else is on.
+                </h3>
+
+                <div class="page-grid">
+                        <div class="page-grid-item">
+                                <img class="page-center-image" style="width: 300px;" src="/" alt="">
+                        </div>
+                        <div class="page-grid-item">
+                                <img class="page-center-image" style="width: 300px;" src="/" alt="">
+                        </div>
+                </div>
+
+                <h3 class="page-text">
+                        Once I soldered those connections, I tested it again and all 10
+                        buttons worked, thank god! The last thing to do was to finish
+                        assembling the enclosures. As a precaution, because I had a
+                        weird issue with a couple of the servo connections, I taped them
+                        securely to the header pins on the proto-board with some
+                        electrical tape.<br><br>
+                        The last step was to safely walk it to the floor and play-testing in
+                        class!
+                </h3>
+
+                <div class="page-grid">
+                        <div class="page-grid-item">
+                                <img class="page-center-image" style="width: 300px;" src="/" alt="">
+                        </div>
+                        <div class="page-grid-item">
+                                <img class="page-center-image" style="width: 300px;" src="/" alt="">
+                        </div>
+                        <div class="page-grid-item">
+                                <img class="page-center-image" style="width: 300px;" src="/" alt="">
+                        </div>
+                        <div class="page-grid-item">
+                                <img class="page-center-image" style="width: 300px;" src="/" alt="">
+                        </div>
+                        <div class="page-grid-item">
+                                <img class="page-center-image" style="width: 300px;" src="/" alt="">
+                        </div>
+                        <div class="page-grid-item">
+                                <img class="page-center-image" style="width: 300px;" src="/" alt="">
+                        </div>
+                </div>
 
         </div>
     </main>

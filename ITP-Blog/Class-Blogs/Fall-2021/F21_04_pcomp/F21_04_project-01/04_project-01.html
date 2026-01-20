@@ -53,35 +53,150 @@
 
     <main>
         <div class="page-body">
-                <h3 class="page-header">ITP2233 Intro to Computational Media - Week 01</h3>
+                <h3 class="page-header">P-Comp Project 01</h3>
 
                 <hr style="width: 72vw; margin: auto auto 20px auto;">
 
-                <h3 class="page-subtitle">How does computation apply to my interests?</h3>
+                <h3 class="page-title">Getting some ideas...</h3>
+
+                <h3 class="page-subtitle">Idea 01</h3>
                 
                 <h3 class="page-text">
-                        Well, there is a lot of programming and software in my line of work in the
-                        audio industry for live sound. Many programs exist in order to do a variety of
-                        things such as monitoring devices in real time, programming devices, and
-                        routing one thing to another. None of these programs would exist to make
-                        my job more doable without the use of computation.
-                        <br><br>
-                        <a class="sub-link" href="https://editor.p5js.org/biancaagan/sketches/eyCoVLUww">Link</a>
-                        to the P5 sketch of the image below:<br>
+                        The first idea I had was to make a pressure sensitive microphone tin/holder.
+                        When I work on shows, we have aluminum bread tins that hold wireless
+                        microphones. My thought was to add force sensitive resistors to the base of
+                        it below some type of layer that when something is placed upon it, say a
+                        microphone, after a certain amount of time a light will turn green, signaling
+                        that a microphone is present. The sensors will have a threshold to where it
+                        will turn green, and when that threshold isn’t reached, it will turn red meaning
+                        no microphone is present.<br><br>
+                        Below is a basic sketch.
                 </h3>
 
-                <img class="page-center-image" style="width: 600px;"
-                        src="/ITP-Blog/Class-Blogs/Fall-2021/F21_03_icm/F21_03_week-01/image-1.png" alt="">
+                <img class="page-center-image" style="width: 80%;" src="/" alt="">
+
+                <h3 class="page-subtitle">Idea 02</h3>
+                
+                <h3 class="page-text">
+                        Another idea — which I’ve literally just thought of as I typed the above entry
+                        — is for an automatic LED strip. I have a travel Pelican case that I use to
+                        house tools and other work necessities, and currently I have a strip of LED
+                        lights around the rim of the lid that sometimes turns on when I use the
+                        remote. Something I could possible do is have it turn on automatically when
+                        (1) the case is open and (2) when it’s dark and there is little light present.<br><br>
+                        Below is what it looks like at the moment.
+                </h3>
+
+                <img class="page-center-image" style="width: 80%;" src="/" alt="">
+
+                <h3 class="page-subtitle">Idea 03 - The Chosen One</h3>
+                
+                <h3 class="page-text">
+                        I was thinking about what I could make that involved a combination of sound
+                        or tune of sorts along with buttons and the servo motor. One of the first
+                        things I thought of was the Jeopardy theme, which traumatized me in high
+                        school when my sophomore geometry teacher would play the theme song
+                        as we all raced to fill in a blank circle of pie chart before the song ended.<br><br>
+                        I got this idea from those coin / toy boxes that can sense coins on a platform
+                        and a little hand of a cute animal like a panda reaches out to drag the coin
+                        into the box, or another example is similar but there is a toggle switch that
+                        when you switch it, a hand pops out to switch it back, and this goes back
+                        and forth.<br><br>
+                        My idea is to create a similar style box that when a sequence of buttons are
+                        pushed, it would trigger the playing of the Jeopardy theme while
+                        simultaneously teasing the opening of the lid. Such that the lid will slowly
+                        open, close a little, and back and forth throughout the whole song until the
+                        very end when the lid fully opens. However, my thought was to have a 5
+                        second threshold that if the sequence is pressed again before 5 seconds are
+                        up then the lid would stay open, if not then the lid would close, and if you
+                        wanted to open it, you’d have to listen to the whole tune again.<br><br>
+                        The images below are basic pseudocode and also the notes for the melody.
+                </h3>
+
+                <div class="page-grid">
+                        <div class="page-grid-item">
+                                <img class="page-center-image" style="width: 300px;" src="/" alt="">
+                        </div>
+                        <div class="page-grid-item">
+                                <img class="page-center-image" style="width: 300px;" src="/" alt="">
+                        </div>
+                </div>
 
                 <h3 class="page-text">
-                        While creating the sketch above, I found it difficult to calculate the different
-                        points for the various shapes in order to place them in the right vicinity. Also,
-                        it took me a minute to figure out why when I used a color, everything else
-                        would use it too, until I saw that I have to recall ‘noFill’ in between sections. Is
-                        this the only way to achieve making objects different colors? I found the web
-                        editor pretty easy to use, and the p5 reference guide was very helpful.
+                        My next step is going to program the tune so that it comes out properly,
+                        then to code the sequence of buttons pressed that would trigger the tune.<br><br>
+                        Here I managed to program the jeopardy tune, it’s not perfect, but one can
+                        tell that that’s what it is. The rhythm is a little off, but it is a computer and I
+                        am new to Arduino.<br><br>
+                        At first it was a little tricky, I tried to do bits at a time, and adjust the
+                        noteDuration. For a while, after the last note I programmed it would end on a
+                        different note and just play out continuously. I was using the lab from week 3
+                        as reference using the pitches library and code, and saw that what was
+                        ‘thisNote < 8’ in the lab cod, I needed to adjust to the number of notes I had.
+                        I’m not sure if this was the correct approach, but I was able to end on my last
+                        note that I had entered.
                 </h3>
-                
+
+                <div class="page-grid">
+                        <div class="page-grid-item">
+                                <img class="page-center-image" style="width: 300px;" src="/" alt="">
+                        </div>
+                        <div class="page-grid-item">
+                                <img class="page-center-image" style="width: 300px;" src="/" alt="">
+                        </div>
+                </div>
+
+                <h3 class="page-text">
+                        I DID IT !!!!!<br><br>
+                        By it, I mean I was able to write the code so that when one button is pressed,
+                        it triggers the tune.
+                </h3>
+
+                <img class="page-center-image" style="width: 80%;" src="/" alt="">
+                <img class="page-center-image" style="width: 80%;" src="/" alt="">
+
+                <h3 class="page-text">
+                        Currently, I am struggling a bit to program a button sequence that only when
+                        pressed will it trigger the tune. So far, I’ve been able to program it so that
+                        when all 3 buttons are pressed at once, the tune plays, and most recently,
+                        when a sequence of the 3 buttons are pressed the tune plays. However, it’s
+                        the 3 buttons in any order, not a particular combination.
+                </h3>
+
+                <img class="page-center-image" style="width: 80%;" src="/" alt="">
+
+                <h3 class="page-subtitle">Update:</h3>
+
+                <h3 class="page-text">
+                        I was able to write code so that a pushbutton when pressed will trigger the
+                        tune, and once the tune is done a servo motor will move (door opens) and
+                        after a five second delay the motor resets (door closes).<br><br>
+                        I’m not sure why, but when I try to combine the code for the three button
+                        input that triggers the tune, and the servo actions, it does not work.
+                </h3>
+
+                <img class="page-center-image" style="width: 80%;" src="/" alt="">
+                <img class="page-center-image" style="width: 80%;" src="/" alt="">
+                <img class="page-center-image" style="width: 80%;" src="/" alt="">
+
+                <h3 class="page-text">
+                        Next, I started building the enclosure. I needed to have a door on a hinge,
+                        which was the most difficult part to do because I build a door hinge out of
+                        cardboard, superglue, and some wire.
+                </h3>
+
+                <div class="page-grid">
+                        <div class="page-grid-item">
+                                <img class="page-center-image" style="width: 300px;" src="/" alt="">
+                        </div>
+                        <div class="page-grid-item">
+                                <img class="page-center-image" style="width: 300px;" src="/" alt="">
+                        </div>
+                </div>
+
+                <h3 class="page-title">FINAL - Video</h3>
+
+                <img class="page-center-image" style="width: 80%;" src="/" alt="">
 
         </div>
     </main>

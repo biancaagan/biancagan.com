@@ -53,35 +53,99 @@
 
     <main>
         <div class="page-body">
-                <h3 class="page-header">ITP2233 Intro to Computational Media - Week 01</h3>
+                <h3 class="page-header">P-Comp Week 10 Labs</h3>
 
                 <hr style="width: 72vw; margin: auto auto 20px auto;">
 
-                <h3 class="page-subtitle">How does computation apply to my interests?</h3>
+                <h3 class="page-subtitle">Lab 01: Using a transistor to control high current loads with an Arduino</h3>
+
+                <div class="page-grid">
+                        <div class="page-grid-item">
+                                <img class="page-center-image" style="width: 300px;" src="/" alt="">
+                        </div>
+                        <div class="page-grid-item">
+                                <img class="page-center-image" style="width: 300px;" src="/" alt="">
+                        </div>
+                </div>
                 
                 <h3 class="page-text">
-                        Well, there is a lot of programming and software in my line of work in the
-                        audio industry for live sound. Many programs exist in order to do a variety of
-                        things such as monitoring devices in real time, programming devices, and
-                        routing one thing to another. None of these programs would exist to make
-                        my job more doable without the use of computation.
-                        <br><br>
-                        <a class="sub-link" href="https://editor.p5js.org/biancaagan/sketches/eyCoVLUww">Link</a>
-                        to the P5 sketch of the image below:<br>
+                        To start, we had an issue getting the DC motor to work, we believed it may
+                        have been a bad wire. We troubleshooted and made sure all the connections
+                        were correct, then ultimately decided to change the motor for another, and
+                        that ended up working.
                 </h3>
 
-                <img class="page-center-image" style="width: 600px;"
-                        src="/ITP-Blog/Class-Blogs/Fall-2021/F21_03_icm/F21_03_week-01/image-1.png" alt="">
+                <h3 class="page-subtitle">Lab 02: DC motor control using an H-bridge</h3>
+
+                <div class="page-grid">
+                        <div class="page-grid-item">
+                                <img class="page-center-image" style="width: 300px;" src="/" alt="">
+                        </div>
+                        <div class="page-grid-item">
+                                <img class="page-center-image" style="width: 300px;" src="/" alt="">
+                        </div>
+                </div>
+
+                <h3 class="page-subtitle">Lab 03: Controlling a stepper motor with an H-bridge</h3>
 
                 <h3 class="page-text">
-                        While creating the sketch above, I found it difficult to calculate the different
-                        points for the various shapes in order to place them in the right vicinity. Also,
-                        it took me a minute to figure out why when I used a color, everything else
-                        would use it too, until I saw that I have to recall ‘noFill’ in between sections. Is
-                        this the only way to achieve making objects different colors? I found the web
-                        editor pretty easy to use, and the p5 reference guide was very helpful.
+                        I had some issues with this lab. It was a little hard to translate the schematic
+                        from the lab– there were no more of the H-bridge IC (L293D) chip, so I was
+                        still using the H-bridge TB6612 breakout board from the second lab. Most of the 
+                        schematics were using the IC chip, and none of them involved the
+                        Arduino Nano. The very bottom schematic used an Arduino MKR Zero, so I
+                        attempted to translate the pins using that onto my breadboard.<br><br>
+                        I was unable to get the stepper motor to work. The Arduino serial monitor
+                        was outputting the steps so the code was correct, and the motor did start
+                        to heat up so I know it was receiving voltage, but it didn’t move.
                 </h3>
+
+                <div class="page-grid">
+                        <div class="page-grid-item">
+                                <img class="page-center-image" style="width: 300px;" src="/" alt="">
+                        </div>
+                        <div class="page-grid-item">
+                                <img class="page-center-image" style="width: 300px;" src="/" alt="">
+                        </div>
+                </div>
                 
+                <h3 class="page-subtitle">Lab 04: In-class trial</h3>
+
+                <h3 class="page-text">
+                        Mo and I attempted the stepper motor lab in class. With Yeseul’s help, it
+                        turns out the color orientation of the wires on the stepper motor from the
+                        shop is different according to the wiring in the schematics on the lab.
+                        It works!<br><br>
+                        The steps were very slow, so we reduced the delay to 50 milliseconds.
+                </h3>
+
+                <div class="page-grid">
+                        <div class="page-grid-item">
+                                <img class="page-center-image" style="width: 300px;" src="/" alt="">
+                        </div>
+                        <div class="page-grid-item">
+                                <img class="page-center-image" style="width: 300px;" src="/" alt="">
+                        </div>
+                </div>
+                
+                <h3 class="page-subtitle">Lab 04: In-class trial</h3>
+
+                <h3 class="page-text">
+                        For the second part of this lab, we ran into another issue where the motor
+                        would go counterclockwise, pause for 5 seconds, but then it would continue
+                        in the same direction rather than going clockwise. Yeseul helped us
+                        troubleshoot again and we used her motor, because there is a mismatch
+                        with the leads on the stepper motor we have.
+                </h3>
+
+                <div class="page-grid">
+                        <div class="page-grid-item">
+                                <img class="page-center-image" style="width: 300px;" src="/" alt="">
+                        </div>
+                        <div class="page-grid-item">
+                                <img class="page-center-image" style="width: 300px;" src="/" alt="">
+                        </div>
+                </div>
 
         </div>
     </main>

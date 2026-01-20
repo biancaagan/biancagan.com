@@ -53,35 +53,137 @@
 
     <main>
         <div class="page-body">
-                <h3 class="page-header">ITP2233 Intro to Computational Media - Week 01</h3>
+                <h3 class="page-header">P-Comp Project 02</h3>
 
                 <hr style="width: 72vw; margin: auto auto 20px auto;">
 
-                <h3 class="page-subtitle">How does computation apply to my interests?</h3>
+                <h3 class="page-title">Project Idea</h3>
                 
                 <h3 class="page-text">
-                        Well, there is a lot of programming and software in my line of work in the
-                        audio industry for live sound. Many programs exist in order to do a variety of
-                        things such as monitoring devices in real time, programming devices, and
-                        routing one thing to another. None of these programs would exist to make
-                        my job more doable without the use of computation.
-                        <br><br>
-                        <a class="sub-link" href="https://editor.p5js.org/biancaagan/sketches/eyCoVLUww">Link</a>
-                        to the P5 sketch of the image below:<br>
+                        In one of my other classes, Hacking Audio Hardware, our midterm project is
+                        to create a device that produces noise using gates and oscillators. On this
+                        device, I plan to have four separate variable resistors. My plan for an
+                        application is to combine these projects and create a visual representation
+                        of the different values that the variable resistors are producing. If I can’t
+                        connect it to my gate chip, then I’d like to connect the Arduino with MaxMSP.
+                        Also, this coming weekend I am taking a one credit course called Textile
+                        Interfaces, and I hope to incorporate something from that with this project
+                        as well.<br><br>
+                        I’m not sure exactly what kind of image I want to manipulate using four
+                        different values, but some initial ideas I have were to use the variable
+                        resistors to draw squares, change the sizes, or maybe the color(s).
                 </h3>
 
-                <img class="page-center-image" style="width: 600px;"
-                        src="/ITP-Blog/Class-Blogs/Fall-2021/F21_03_icm/F21_03_week-01/image-1.png" alt="">
+                <img class="page-center-image" style="width: 80%;" src="/" alt="">
+
+                <h3 class="page-subtitle">Prototyping</h3>
+                
+                <h3 class="page-text">
+                        I started off with one potentiometer, and a simple draw sketch to see if I
+                        could manipulate one variable.
+                </h3>
+
+                <img class="page-center-image" style="width: 80%;" src="/" alt=""> 
+                
+                <h3 class="page-text">
+                        Next, I added three more potentiometers for a total of four variable resistors.
+                        I made each of them affect different elements – the number of
+                        squares/circles, and changing the values for RGB.<br><br>
+                        Below is the Arduino code. I would also like to add a pushbutton into the
+                        circuit to control another aspect of the visualization.
+                </h3>
+
+                <div class="page-grid">
+                        <div class="page-grid-item">
+                                <img class="page-center-image" style="width: 300px;" src="/" alt="">
+                        </div>
+                        <div class="page-grid-item">
+                                <img class="page-center-image" style="width: 300px;" src="/" alt="">
+                        </div>
+                </div>
+
+                <div class="page-grid">
+                        <div class="page-grid-item">
+                                <img class="page-center-image" style="width: 300px;" src="/" alt="">
+                        </div>
+                        <div class="page-grid-item">
+                                <img class="page-center-image" style="width: 300px;" src="/" alt="">
+                        </div>
+                </div>
 
                 <h3 class="page-text">
-                        While creating the sketch above, I found it difficult to calculate the different
-                        points for the various shapes in order to place them in the right vicinity. Also,
-                        it took me a minute to figure out why when I used a color, everything else
-                        would use it too, until I saw that I have to recall ‘noFill’ in between sections. Is
-                        this the only way to achieve making objects different colors? I found the web
-                        editor pretty easy to use, and the p5 reference guide was very helpful.
+                        Over Halloween weekend I took a 1-credit course called Textile Interfaces
+                        where we learned to create buttons, digital switches, and circuits using
+                        conductive fabric, thread, and velostat. I’d like to incorporate these textile
+                        sensors into my project, and so below I have three textile sensors along with
+                        a potentiometer controlling different variables in my P5 sketch.
                 </h3>
-                
+
+                <img class="page-center-image" style="width: 80%;" src="/" alt="">
+
+                <h3 class="page-text">
+                        I played around with my P5 code to create something other than simple
+                        rectangles and ellipses. I used a class I created in ICM that makes arcs by
+                        setting parameters for its location, the max size, step size/density, and color.
+                </h3>
+
+                <div class="page-grid">
+                        <div class="page-grid-item">
+                                <img class="page-center-image" style="width: 300px;" src="/" alt="">
+                        </div>
+                        <div class="page-grid-item">
+                                <img class="page-center-image" style="width: 300px;" src="/" alt="">
+                        </div>
+                </div>
+
+                <h3 class="page-text">
+                        Next I worked on creating an enclosure, as well as recreating the textile
+                        analog sensors. My initial idea was to have the three textile sensors on one
+                        pad/piece of felt, with a top layer of felt, with each sensor separated by a
+                        line of stitching. The process of housing it and solder the leads onto the PCB
+                        took priority over adding the top layer, so as it is now the sensors are visible.<br><br>
+                        Instead of creating a cardboard proto enclosure like I have been doing in the
+                        past, I purchased a plastic enclosure and drilled holes into it for the six leads
+                        from the sensors, a potentiometer, and a micro USB port. I added the USB
+                        port so that the Arduino connection can be made easily from outside of the
+                        container.
+                </h3>
+
+                <div class="page-grid">
+                        <div class="page-grid-item">
+                                <img class="page-center-image" style="width: 300px;" src="/" alt="">
+                        </div>
+                        <div class="page-grid-item">
+                                <img class="page-center-image" style="width: 300px;" src="/" alt="">
+                        </div>
+                        <div class="page-grid-item">
+                                <img class="page-center-image" style="width: 300px;" src="/" alt="">
+                        </div>
+                        <div class="page-grid-item">
+                                <img class="page-center-image" style="width: 300px;" src="/" alt="">
+                        </div>
+                        <div class="page-grid-item">
+                                <img class="page-center-image" style="width: 300px;" src="/" alt="">
+                        </div>
+                        <div class="page-grid-item">
+                                <img class="page-center-image" style="width: 300px;" src="/" alt="">
+                        </div>
+                </div>
+
+                <h3 class="page-text">
+                        I also adjusted the P5 sketch and created three arcs. With the four sensor
+                        inputs, I used them across all three arcs to manipulate different elements of
+                        the object.
+                </h3>
+
+                <div class="page-grid">
+                        <div class="page-grid-item">
+                                <img class="page-center-image" style="width: 300px;" src="/" alt="">
+                        </div>
+                        <div class="page-grid-item">
+                                <img class="page-center-image" style="width: 300px;" src="/" alt="">
+                        </div>
+                </div>
 
         </div>
     </main>
