@@ -273,7 +273,7 @@ li {
 
 .page-center-image {
   border: dotted;
-  width: 30vw;
+  /* width: 30vw; */
   display: flex;
   justify-content: center;
   margin: 40px auto 40px auto;
@@ -291,6 +291,7 @@ li {
 .page-grid-item {
   /* Optional: Add some styling so you can see the columns */
   background-color: #f0f0f0;
+  margin: auto;
   padding: 15px;
   border: dotted;
   font-family: Jost-Regular;
