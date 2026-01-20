@@ -222,7 +222,8 @@ li {
 
 /* ---------- PAGE DEFAULT ---------- */
 .page-body{
-  border-style: dotted;
+  border-style: dashed;
+  border-width: 2px;
   width: 75vw;
   margin: 150px auto 200px auto;
   padding: 20px;
@@ -251,29 +252,31 @@ li {
 }
 
 .page-subtitle {
-  border-style: dotted;
+  border-style: dashed;
+  border-width: 2px;
   font-family: Jost-SemiBold;
   width: 98%;
   margin: 20px auto auto auto;
-  font-size: 20px;
+  font-size: 1.8vw;
   text-align: center;
 }
 
 .page-text {
-  border-style: dotted;
+  border-style: dashed;
+  border-width: 2px;
   justify-content: center;
   font-family: Jost-Regular;
   width: 98%;
   margin: 20px auto auto auto;
   /* padding: 0; */
-  font-size: 18px;
+  font-size: 1.4vw;
   word-wrap: break-word;
-  border: dotted;
 }
 
 .page-center-image {
-  border: dotted;
-  /* width: 30vw; */
+  border-style: dashed;
+  border-width: 2px;
+  width: 50%;
   display: flex;
   justify-content: center;
   margin: 40px auto 40px auto;
@@ -293,8 +296,18 @@ li {
   background-color: #f0f0f0;
   margin: auto;
   padding: 15px;
-  border: dotted;
+  border-style: dashed;
+  border-width: 2px;
   font-family: Jost-Regular;
+}
+
+.grid-image {
+  border-style: dashed;
+  border-width: 2px;
+  width: 80%;
+  display: flex;
+  justify-content: center;
+  margin: 40px auto 40px auto;
 }
 
 /* .page-grid-item p {
@@ -308,7 +321,7 @@ li {
 } */
 
 .page-grid-item img {
-  width: 60%;
+  width: 80%;
   /* height: 60%; */
   margin: auto;
   object-fit: cover; 
