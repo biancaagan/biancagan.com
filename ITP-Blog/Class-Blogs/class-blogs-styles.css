@@ -244,8 +244,8 @@ li {
   /* border-style: dotted; */
   /* font-family: Georgia, 'Times New Roman', Times, serif; */
   font-family: IBM-Plex-Mono-Regular;
-  width: fit-content;
-  font-size: 3vw;
+  width: 98%;
+  font-size: 2.4vw;
   margin: 30px auto auto auto;
   padding: 20px;
 }
@@ -253,7 +253,7 @@ li {
 .page-subtitle {
   border-style: dotted;
   font-family: Jost-SemiBold;
-  width: 72vw;
+  width: 98%;
   margin: 20px auto auto auto;
   font-size: 20px;
   text-align: center;
@@ -261,10 +261,11 @@ li {
 
 .page-text {
   border-style: dotted;
+  justify-content: center;
   font-family: Jost-Regular;
-  width: 72vw;
+  width: 98%;
   margin: 20px auto auto auto;
-  padding: 0;
+  /* padding: 0; */
   font-size: 18px;
   word-wrap: break-word;
   border: dotted;

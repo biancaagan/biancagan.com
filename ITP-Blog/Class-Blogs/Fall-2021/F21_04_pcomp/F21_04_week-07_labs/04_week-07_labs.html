@@ -53,35 +53,122 @@
 
     <main>
         <div class="page-body">
-                <h3 class="page-header">ITP2233 Intro to Computational Media - Week 01</h3>
+                <h3 class="page-header">ITP2233 Intro to Computational Media - Week 07</h3>
 
                 <hr style="width: 72vw; margin: auto auto 20px auto;">
 
-                <h3 class="page-subtitle">How does computation apply to my interests?</h3>
-                
+                <h3 class="page-title">Two-Way (Duplex) Serial Communication Using Arduino and p5</h3>
+
+                <h3 class="page-subtitle">Sending multiple serial data using punctuation</h3>
+
+                <div class="page-grid">
+                        <div class="page-grid-item">
+                                <img class="page-center-image" style="width: 300px;" src="/" alt="">
+                        </div>
+                        <div class="page-grid-item">
+                                <img class="page-center-image" style="width: 300px;" src="/" alt="">
+                        </div>
+                </div>
+
+                <h3 class="page-subtitle">Receing multiple serial data in p5</h3>
+
+                <div class="page-grid">
+                        <div class="page-grid-item">
+                                <img class="page-center-image" style="width: 300px;" src="/" alt="">
+                        </div>
+                        <div class="page-grid-item">
+                                <img class="page-center-image" style="width: 300px;" src="/" alt="">
+                        </div>
+                </div>
+
+                <h3 class="page-subtitle">Flow control: call and response (handshaking)</h3>
+
+                <div class="page-grid">
+                        <div class="page-grid-item">
+                                <img class="page-center-image" style="width: 300px;" src="/" alt="">
+                        </div>
+                        <div class="page-grid-item">
+                                <img class="page-center-image" style="width: 300px;" src="/" alt="">
+                        </div>
+                </div>
+
+                <h3 class="page-title">Build Your Own Application</h3>
+
                 <h3 class="page-text">
-                        Well, there is a lot of programming and software in my line of work in the
-                        audio industry for live sound. Many programs exist in order to do a variety of
-                        things such as monitoring devices in real time, programming devices, and
-                        routing one thing to another. None of these programs would exist to make
-                        my job more doable without the use of computation.
-                        <br><br>
-                        <a class="sub-link" href="https://editor.p5js.org/biancaagan/sketches/eyCoVLUww">Link</a>
-                        to the P5 sketch of the image below:<br>
+                        My goal is to build direction controls like on a video game controller. At first, I
+                        started off with the base code from the two-way (duplex) lab where we had
+                        a pushbutton and two potentiometers connected to the Arduino. I adjusted
+                        the Arduino code accordingly to reflect two pushbuttons to start off with.<br><br>
+                        could keep track of when the code would or would not work. With these first
+                        two pushbuttons, I wanted to make a circle on the screen of P5 move to the
+                        right and also down.<br><br>
+                        At the beginning I was able to kind of do this, however once I ran the P5 code
+                        the ellipse would start at the correct coordinates but when I selected the
+                        correct port from the dropdown menu, the ellipse would move to the
+                        coordinates (0, 0). When I pressed the first pushbutton (right) there was a
+                        bit of a delay before the circle would move to the right, but return to (0, 0),
+                        and same thing with the second pushbutton (down) except it would lag then
+                        move down and return to (0, 0). As I continued to press the buttons, the
+                        delay would grow longer and eventually it would just stop working.<br><br>
+                        Below is a video of what my original P5 code would do as well as the Arduino
+                        code.
                 </h3>
 
-                <img class="page-center-image" style="width: 600px;"
-                        src="/ITP-Blog/Class-Blogs/Fall-2021/F21_03_icm/F21_03_week-01/image-1.png" alt="">
+                <div class="page-grid">
+                        <div class="page-grid-item">
+                                <img class="page-center-image" style="width: 300px;" src="/" alt="">
+                        </div>
+                        <div class="page-grid-item">
+                                <img class="page-center-image" style="width: 300px;" src="/" alt="">
+                        </div>
+                </div>
 
                 <h3 class="page-text">
-                        While creating the sketch above, I found it difficult to calculate the different
-                        points for the various shapes in order to place them in the right vicinity. Also,
-                        it took me a minute to figure out why when I used a color, everything else
-                        would use it too, until I saw that I have to recall ‘noFill’ in between sections. Is
-                        this the only way to achieve making objects different colors? I found the web
-                        editor pretty easy to use, and the p5 reference guide was very helpful.
+                        During office hours with Yeseul, she was able to help me trouble shoot my
+                        main issues:<br><br>
+                        &emsp;1. The delay between button presses<br>
+                        &emsp;2. Having the ellipse start at the correct coordinates<br>
+                        &emsp;3. Incrementing the x movements so that it would keep moving to the
+                        right/down<br><br>
+                        By adding a delay of 10 milliseconds at the end of my Arduino code, this
+                        allowed the program to run and not lag.<br><br>
+                        In my P5 code, I had to change the sensor reading inputs to read as an
+                        integer. This along with declaring more variables, we were able to get the
+                        ellipse to move to the right and down as the buttons were pressed.<br><br>
+                        Below is the code along with a video demonstrating four buttons causing the
+                        ellipse to move to the right, left, up and down.
                 </h3>
-                
+
+                <div class="page-grid">
+                        <div class="page-grid-item">
+                                <img class="page-center-image" style="width: 300px;" src="/" alt="">
+                        </div>
+                        <div class="page-grid-item">
+                                <img class="page-center-image" style="width: 300px;" src="/" alt="">
+                        </div>
+                </div>
+
+                <h3 class="page-text">
+                        Next, I worked on hooking up arcade buttons instead of the pushbuttons,
+                        and also moving my circuit onto a proto-board...
+                </h3>
+
+                <img class="page-center-image" style="width: 80%;" src="/" alt="">
+
+                <div class="page-grid">
+                        <div class="page-grid-item">
+                                <img class="page-center-image" style="width: 300px;" src="/" alt="">
+                        </div>
+                        <div class="page-grid-item">
+                                <img class="page-center-image" style="width: 300px;" src="/" alt="">
+                        </div>
+                        <div class="page-grid-item">
+                                <img class="page-center-image" style="width: 300px;" src="/" alt="">
+                        </div>
+                        <div class="page-grid-item">
+                                <img class="page-center-image" style="width: 300px;" src="/" alt="">
+                        </div>
+                </div>
 
         </div>
     </main>

@@ -53,35 +53,93 @@
 
     <main>
         <div class="page-body">
-                <h3 class="page-header">ITP2233 Intro to Computational Media - Week 01</h3>
+                <h3 class="page-header">ITP2233 Intro to Computational Media - Week 02</h3>
 
                 <hr style="width: 72vw; margin: auto auto 20px auto;">
 
-                <h3 class="page-subtitle">How does computation apply to my interests?</h3>
-                
-                <h3 class="page-text">
-                        Well, there is a lot of programming and software in my line of work in the
-                        audio industry for live sound. Many programs exist in order to do a variety of
-                        things such as monitoring devices in real time, programming devices, and
-                        routing one thing to another. None of these programs would exist to make
-                        my job more doable without the use of computation.
-                        <br><br>
-                        <a class="sub-link" href="https://editor.p5js.org/biancaagan/sketches/eyCoVLUww">Link</a>
-                        to the P5 sketch of the image below:<br>
-                </h3>
+                <h3 class="page-title">Digital Input and Output with an Arduino</h3>
+
+                <h3 class="page-subtitle">Preparing the breadboard and adding a pushbutton</h3>
 
                 <img class="page-center-image" style="width: 600px;"
-                        src="/ITP-Blog/Class-Blogs/Fall-2021/F21_03_icm/F21_03_week-01/image-1.png" alt="">
+                        src="/" alt="">
 
                 <h3 class="page-text">
-                        While creating the sketch above, I found it difficult to calculate the different
-                        points for the various shapes in order to place them in the right vicinity. Also,
-                        it took me a minute to figure out why when I used a color, everything else
-                        would use it too, until I saw that I have to recall ‘noFill’ in between sections. Is
-                        this the only way to achieve making objects different colors? I found the web
-                        editor pretty easy to use, and the p5 reference guide was very helpful.
+                        Why does the pulldown resistor need to be a 10kΩ? How does it correlate to
+                        the button/switch?
                 </h3>
-                
+
+                <h3 class="page-subtitle">Adding digital outputs &#40;LEDs&#41; and programming the Arduino</h3>
+
+                <img class="page-center-image" style="width: 600px;"
+                        src="/" alt="">
+
+                <h3 class="page-text">
+                        When it came to programming the board, I wrote out all the code and got to
+                        the compiling and uploading stage only to receive errors saying that the programmer wasn’t 
+                        responding and there were sync issues.<br><br>
+                        This is how I attempted to troubleshoot:<br><br>
+                        First, I made sure the connection between the Arduino and my computer
+                        were secure.<br><br>
+                        Then I tried unplugging and plugging the cable back (both to the Arduino
+                        and also my computer).<br><br>
+                        Made sure I had the correct port selected, it was.<br><br>
+                        I did notice that the /Board submenu was still set to the Arduino Uno, so I
+                        changed it to the Arduino Nano 33 IoT. Then I recompiled and tried to upload
+                        again, I was faced with the same error messages.<br><br>
+                        I tried restarting the Arduino IDE software, still no changes.<br><br>
+                        I went back to read the lab directions and followed the steps again to make
+                        sure I had done everything correctly. In the /board manager window I
+                        researched the Nano 33 and noticed the version dropdown menu I hadn’t
+                        noticed before, and when rereading the instructions, realized I had not
+                        installed the 1.8.9 version of the board definition.<br><br>
+                        That fixed my issue and I was finally able to upload the program.
+                </h3>
+
+                <div class="page-grid">
+                        <div class="page-grid-item">
+                                <img class="page-center-image" style="width: 300px;"
+                                        src="/" alt="">
+                        </div>
+                        <div class="page-grid-item">
+                                <img class="page-center-image" style="width: 300px;"
+                                        src="/" alt="">
+                        </div>
+                </div>
+
+                <h3 class="page-title">Analog Input</h3>
+
+                <h3 class="page-subtitle">Adding a potentiometer and LED, and programming the module</h3>
+
+                <div class="page-grid">
+                        <div class="page-grid-item">
+                                <img class="page-center-image" style="width: 300px;"
+                                        src="/" alt="">
+                        </div>
+                        <div class="page-grid-item">
+                                <img class="page-center-image" style="width: 300px;"
+                                        src="/" alt="">
+                        </div>
+                </div>
+
+                <h3 class="page-text">
+                        At first I got some errors, but then quickly realized that in order to establish
+                        the global variables I had to place that bit of code at the very beginning.
+                </h3>
+
+                <h3 class="page-subtitle">Using a force sensitivev resistor</h3>
+
+                <img class="page-center-image" style="width: 600px;" src="/" alt="">
+
+                <h3 class="page-title">Sensor Change Detection</h3>
+
+                <h3 class="page-subtitle">Programming the Arduino to read the pushbutton's state change</h3>
+
+                <h3 class="page-subtitle">Counting button presses</h3>
+
+                <h3 class="page-subtitle">Detecting a long press or a short press</h3>
+
+                <h3 class="page-subtitle">Reading a sensor threshold crossing</h3>
 
         </div>
     </main>

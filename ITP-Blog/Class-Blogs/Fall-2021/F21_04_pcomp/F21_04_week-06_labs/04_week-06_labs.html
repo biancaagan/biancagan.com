@@ -53,35 +53,125 @@
 
     <main>
         <div class="page-body">
-                <h3 class="page-header">ITP2233 Intro to Computational Media - Week 01</h3>
+                <h3 class="page-header">ITP2233 Intro to Computational Media - Week 06</h3>
 
-                <hr style="width: 72vw; margin: auto auto 20px auto;">
+                <hr style="width: 98%; margin: auto auto 20px auto;">
 
-                <h3 class="page-subtitle">How does computation apply to my interests?</h3>
+                <h3 class="page-title">Intro the Asynchronous Serial Communications</h3>
+
+                <h3 class="page-subtitle">A serial output sketch</h3>
+
+                <div class="page-grid">
+                        <div class="page-grid-item">
+                            <img class="page-center-image" style="width: 300px;" src="/" alt="">    
+                        </div>
+                        <div class="page-grid-item">
+                            <img class="page-center-image" style="width: 300px;" src="/" alt="">    
+                        </div>
+                </div>
                 
                 <h3 class="page-text">
-                        Well, there is a lot of programming and software in my line of work in the
-                        audio industry for live sound. Many programs exist in order to do a variety of
-                        things such as monitoring devices in real time, programming devices, and
-                        routing one thing to another. None of these programs would exist to make
-                        my job more doable without the use of computation.
-                        <br><br>
-                        <a class="sub-link" href="https://editor.p5js.org/biancaagan/sketches/eyCoVLUww">Link</a>
-                        to the P5 sketch of the image below:<br>
+                        A had a bit of an issue starting this lab where my Arduino would not power
+                        on. It wasn’t the USB cable, and it would power on if I unplugged the Arduino
+                        from my breadboard, so it had to be something connected on the board. I unplugged 
+                        everything trying to find the problem, turns out it was a bad pot.
+                        So I swapped it out for another and the Arduino turned on and I was able to
+                        move on with the labs.
                 </h3>
 
-                <img class="page-center-image" style="width: 600px;"
-                        src="/ITP-Blog/Class-Blogs/Fall-2021/F21_03_icm/F21_03_week-01/image-1.png" alt="">
+                <h3 class="page-subtitle">Sending the data in many formats</h3>
+
+                <div class="page-grid">
+                        <div class="page-grid-item">
+                            <img class="page-center-image" style="width: 300px;" src="/" alt="">    
+                        </div>
+                        <div class="page-grid-item">
+                            <img class="page-center-image" style="width: 300px;" src="/" alt="">    
+                        </div>
+                </div>
+
+                <h3 class="page-subtitle">Formatting multiple serial data: punctuation</h3>
+
+                <div class="page-grid">
+                        <div class="page-grid-item">
+                            <img class="page-center-image" style="width: 300px;" src="/" alt="">    
+                        </div>
+                        <div class="page-grid-item">
+                            <img class="page-center-image" style="width: 300px;" src="/" alt="">    
+                        </div>
+                </div>
+
+                <h3 class="page-text">With two potentiometers and a pushbutton.</h3>
+
+                <h3 class="page-subtitle">Flow control: call and response (handshaking)</h3>
+
+                <div class="page-grid">
+                        <div class="page-grid-item">
+                            <img class="page-center-image" style="width: 300px;" src="/" alt="">    
+                        </div>
+                        <div class="page-grid-item">
+                            <img class="page-center-image" style="width: 300px;" src="/" alt="">    
+                        </div>
+                </div>
+
+                <h3 class="page-title">Serial Input to P5.js</h3>
+
+                <h3 class="page-subtitle">Program P5 to list the available serial ports</h3>
+
+                <img class="page-center-image" style="width: 80%;" src="/" alt="">
+
+                <h3 class="page-subtitle">Reading a sensor and displaying the results in P5</h3>
+
+                <img class="page-center-image" style="width: 80%;" src="/" alt="">
 
                 <h3 class="page-text">
-                        While creating the sketch above, I found it difficult to calculate the different
-                        points for the various shapes in order to place them in the right vicinity. Also,
-                        it took me a minute to figure out why when I used a color, everything else
-                        would use it too, until I saw that I have to recall ‘noFill’ in between sections. Is
-                        this the only way to achieve making objects different colors? I found the web
-                        editor pretty easy to use, and the p5 reference guide was very helpful.
+                        I had one small hiccup here where the port kept reading undefined. I was
+                        reading through my code to see if I had missed or misspelled anything when
+                        I noticed my port name was “/dev/cu.usbmodem143201” which is what it is in
+                        Arduino IDE, however in the p5.serialcontrol software it reads
+                        “/dev/tty.usbmodem143201”, so once I fixed the name it worked.
                 </h3>
-                
+
+                <h3 class="page-subtitle">Adding a serial port select menu</h3>
+
+                <img class="page-center-image" style="width: 80%;" src="/" alt="">
+
+                <h3 class="page-subtitle">Draw a graph with the sensor values</h3>
+
+                <img class="page-center-image" style="width: 80%;" src="/" alt="">
+
+                <h3 class="page-title">Serial Output from P5.js</h3>
+
+                <h3 class="page-subtitle">Draw a graph with the sensor values</h3>
+
+                <img class="page-center-image" style="width: 80%;" src="/" alt="">
+                <img class="page-center-image" style="width: 80%;" src="/" alt="">
+
+                <h3 class="page-subtitle">Sending ASCII-encoded serial data</h3>
+
+                <div class="page-grid">
+                        <div class="page-grid-item">
+                                <img class="page-center-image" style="width: 300px;" src="/" alt="">
+                        </div>
+                        <div class="page-grid-item">
+                                <img class="page-center-image" style="width: 300px;" src="/" alt="">
+                        </div>
+                </div>
+
+                <h3 class="page-subtitle">Program P5.js to control the LED</h3>
+
+                <h3 class="page-text">
+                        Adjusted the keyPressed function to turn the LED on or off when 'H' or 'L' is pressed on the keyboard.
+                </h3>
+
+                <div class="page-grid">
+                        <div class="page-grid-item">
+                                <img class="page-center-image" style="width: 300px;" src="/" alt="">
+                        </div>
+                        <div class="page-grid-item">
+                                <img class="page-center-image" style="width: 300px;" src="/" alt="">
+                        </div>
+                </div>
 
         </div>
     </main>
