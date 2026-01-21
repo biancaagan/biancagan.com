@@ -268,7 +268,7 @@ li {
   font-family: Jost-Regular;
   width: 98%;
   margin: 20px auto auto auto;
-  /* padding: 0; */
+  padding: 1vw;
   font-size: 1.4vw;
   word-wrap: break-word;
 }
@@ -280,6 +280,7 @@ li {
   display: flex;
   justify-content: center;
   margin: 40px auto 40px auto;
+  padding: 1vw;
 }
 
 .page-grid {
@@ -295,15 +296,15 @@ li {
   /* Optional: Add some styling so you can see the columns */
   background-color: #f0f0f0;
   margin: auto;
-  padding: 15px;
+  padding: 1vw 0 1vw 0;
   border-style: dashed;
   border-width: 2px;
   font-family: Jost-Regular;
 }
 
 .grid-image {
-  border-style: dashed;
-  border-width: 2px;
+  /* border-style: dashed;
+  border-width: 2px; */
   width: 80%;
   display: flex;
   justify-content: center;
