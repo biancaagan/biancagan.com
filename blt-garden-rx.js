@@ -71,7 +71,7 @@ function onSubscribe(response, error) {
 function onMessage(topic, message) {
     // Message is a buffer, convert to a string:
     const msgString = message.toString();
-    const data = JSON.parse(msgString);
+    // const data = JSON.parse(msgString);
 
     // console.log(topic + ": " + message.toString());
 
@@ -80,7 +80,7 @@ function onMessage(topic, message) {
     // } catch (err) {
     //     console.log("Invalid JSON:", msgString);
     //     return;
-    // }
+    }
 
     // Individual JSON values:
     let pumpState = data.state;
