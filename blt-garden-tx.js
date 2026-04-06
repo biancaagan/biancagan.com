@@ -25,8 +25,8 @@ txClient.on("connect", () => {
     setInterval(() => {
         const payload = { 
           state: "Watering...", 
-          moisture1: Math.random(100), 
-          moisture2: Math.random(100) 
+          moisture1: Math.floor(Math.random() * 100) + 1, 
+          moisture2: Math.floor(Math.random() * 100) + 1
         };
         txClient.publish("blt", JSON.stringify(payload));
         console.log("Published:", payload); // this should appear in console
