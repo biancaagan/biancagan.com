@@ -88,9 +88,9 @@ function onMessage(topic, message) {
     let moisture2 = data.moisture2;
 
     // Update statusDiv:
-    statusDiv.innerHTML = "Status: " + pumpState;
-    moisture1Div.innerHTML = "Sensor 1: " + moisture1;
-    moisture2Div.innerHTML = "Sensor 2: " +moisture2;
+    statusDiv.innerHTML = pumpState;
+    moisture1Div.innerHTML = moisture1;
+    moisture2Div.innerHTML = moisture2;
 }
 
 

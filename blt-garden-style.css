@@ -84,7 +84,7 @@ li {
 
 
 #title {
-    border-style: dotted;
+    /* border-style: dotted; */
     font-family: IBM-Plex-Mono-Bold;
     text-align: center;
     font-size: 40px;
@@ -92,7 +92,7 @@ li {
 }
 
 #date-time {
-    border-style: dotted;
+    /* border-style: dotted; */
     font-family: IBM-Plex-Mono-Regular;
     text-align: center;
     margin: 20px auto 20px auto;
@@ -112,31 +112,37 @@ li {
 }
 
 #mainDiv {
-    border-style: dotted;
+    /* border-style: dotted; */
     /* font-family: IBM-Plex-Mono-Bold; */
     text-align: center;
     padding: 10px;
 }
 
 #brokerDiv {
-    border-style: dotted;
+    /* border-style: dotted; */
     font-family: IBM-Plex-Mono-Bold;
+    margin: 10px auto 40px auto;
+    padding: 10px;
+}
+
+#dataDiv {
+    /* border-style: dotted; */
     margin: 10px auto 10px auto;
     padding: 10px;
 }
 
 #statusDiv {
-    border-style: dotted;
+    /* border-style: dotted; */
     font-family: IBM-Plex-Mono-Regular;
-    margin: 10px auto 10px auto;
-    padding: 10px;
+    /* margin: 10px auto 10px auto;
+    padding: 10px; */
 }
 
 #moisture1Div, #moisture2Div {
-    border-style: dotted;
+    /* border-style: dotted; */
     font-family: IBM-Plex-Mono-Regular;
-    margin: 10px auto 10px auto;
-    padding: 10px;
+    /* margin: 10px auto 10px auto;
+    padding: 10px; */
 }
 
 
@@ -159,7 +165,7 @@ li {
 
 /* ---------- FOOTER ---------- */
 footer {
-    border-style: dotted;
+    /* border-style: dotted; */
     font-family: IBM-Plex-Mono-Regular;
     position: fixed;
     left: 0;
