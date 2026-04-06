@@ -71,7 +71,7 @@ function onSubscribe(response, error) {
 function onMessage(topic, message) {
     // Message is a buffer, convert to a string:
     const msgString = message.toString();
-    // const data = JSON.parse(msgString);
+    const data = JSON.parse(msgString);
 
     // console.log(topic + ": " + message.toString());
 
