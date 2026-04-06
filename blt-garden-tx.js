@@ -34,10 +34,9 @@
 
 
 // Use the global 'mqtt' object provided by the script tag
-const client = mqtt.connect("wss://blt-garden-v1.cloud.shiftr.io", {
-    clientId: "blt-tx-" + Math.random().toString(16).substr(2,8),
-    username: "blt-garden-v1",
-    password: "LxTKpBMbMyOsQfnz"
+// Attempt to connect:
+const client = mqtt.connect("mqtt://blt-garden-v1:LxTKpBMbMyOsQfnz@blt-garden-v1.cloud.shiftr.io", {
+  clientId: "blt-tx",
 });
 
 client.on("connect", function() {
