@@ -83,9 +83,9 @@ function onMessage(topic, message) {
     // }
 
     // Individual JSON values:
-    let pumpState = data.state;
-    let moisture1 = data.moisture1;
-    let moisture2 = data.moisture2;
+    let pumpState = data.val1;
+    let moisture1 = data.val2;
+    let moisture2 = data.val3;
 
     // Update statusDiv:
     statusDiv.innerHTML = "Status: " + pumpState;
