@@ -23,7 +23,11 @@ txClient.on("connect", () => {
 
     // Messages will only send if this interval is set after connection
     setInterval(() => {
-        const payload = { state: "Watering...", moisture1: 80, moisture2: 43 };
+        const payload = { 
+          state: "Watering...", 
+          moisture1: Math.random(100), 
+          moisture2: Math.random(100) 
+        };
         txClient.publish("blt", JSON.stringify(payload));
         console.log("Published:", payload); // this should appear in console
     }, 5000);
