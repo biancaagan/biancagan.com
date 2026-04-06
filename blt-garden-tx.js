@@ -16,6 +16,8 @@ client.on("connect", function () {
       moisture2: 43
     }), 5000);
 
+    
+
   //   client.publish("blt", "{state: Watering..., moisture1: 80}");
   // }, 5000);
 });
