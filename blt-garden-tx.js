@@ -1,7 +1,7 @@
 const mqtt = require("mqtt"); // skip in browser
 
 const client = mqtt.connect("mqtt://blt-garden-v1:LxTKpBMbMyOsQfnz@blt-garden-v1.cloud.shiftr.io", {
-  clientId: "blt-test-2",
+  clientId: "blt-tx",
 });
 
 client.on("connect", function () {
