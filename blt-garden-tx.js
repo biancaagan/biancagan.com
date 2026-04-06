@@ -4,23 +4,29 @@ const txClient = mqtt.connect("wss://blt-garden-v1:LxTKpBMbMyOsQfnz@blt-garden-v
   clientId: "blt-tx",
 });
 
-client.on("connect", function () {
-  console.log("Connected!");
+// client.on("connect", function () {
+//   console.log("Connected!");
 
-  txClient.subscribe("blt");
+//   txClient.subscribe("blt");
 
-  setInterval(function () {
-  txClient.publish("blt", JSON.stringify({
-    state: "Watering...",
-    moisture1: 80,
-    moisture2: 43
-  }));
-}, 5000);
+//   setInterval(function () {
+//   txClient.publish("blt", JSON.stringify({
+//     state: "Watering...",
+//     moisture1: 80,
+//     moisture2: 43
+//   }));
+// }, 5000);
+// });
 
-    
+txClient.on("connect", () => {
+    // console.log("✅ Transmitter connected!");
 
-  //   client.publish("blt", "{state: Watering..., moisture1: 80}");
-  // }, 5000);
+    // Messages will only send if this interval is set after connection
+    setInterval(() => {
+        const payload = { state: "Watering...", moisture1: 80, moisture2: 43 };
+        txClient.publish("blt", JSON.stringify(payload));
+        console.log("Published:", payload); // this should appear in console
+    }, 5000);
 });
 
 // client.on("message", function (topic, message) {
