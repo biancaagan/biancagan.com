@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/mqtt/4.3.7/mqtt.min.js"
+        integrity="sha512-tc5xpAPaQDl/Uxd7ZVbV66v94Lys0IefMJSdlABPuzyCv0IXmr9TkqEQvZiWKRoXMSlP5YPRwpq2a+v5q2uzMg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="https://unpkg.com/mqtt/dist/mqtt.min.js"></script>
+    <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/mqtt/4.3.7/mqtt.min.js"></script> -->
+    <script src="/BLT Garden/blt-garden-rx.js"></script>
+    <script src="/BLT Garden/blt-garden-tx.js"></script>
+    <link rel="stylesheet" href="/BLT Garden/blt-garden-style.css">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>BLT's Garden</title>
+
+</head>
+
+<body>
+    <div id="header">
+        <h1 id="title">BLT's Garden</h1>
+
+        <!-- <div>
+            <ul id="navBar">
+                <li><a href="/"></a></li>
+                <li><a href="/"></a></li>
+                <li><a href="/"></a></li>
+            </ul>
+        </div> -->
+
+        <div id="date-time">
+            <h2 id="date"></h2>
+            <script>
+                document.getElementById("date").innerHTML = new Date().toLocaleDateString();
+            </script>
+
+            <h2 id="current-time"></h2>
+            <script>
+                function updateClock() {
+                    const now = new Date();
+                    document.getElementById('current-time').innerHTML = now.toLocaleTimeString();
+                }
+                // Update the clock every 1000 milliseconds (1 second)
+                setInterval(updateClock, 1000);
+            </script>
+        </div>
+
+
+
+    </div>
+
+
+    <div id="mainDiv">
+        <div id='brokerDiv'></div>
+
+        <div id="statusDiv"><span style="font-family: IBM-Plex-Mono-Bold;">Status: </span></div>
+
+        <div id="moisture1Div"><span style="font-family: IBM-Plex-Mono-Bold;">Sensor 1: </span></div>
+
+        <div id="moisture2Div"><span style="font-family: IBM-Plex-Mono-Bold;">Sensor 2: </span></div>
+    </div>
+
+    <!-- <div id="canvas-container">
+        <canvas id="calCanvas" width="800px" height="1000px"></canvas>
+    </div> -->
+
+    <footer>
+        <h2>&copy; 2026 bianca gan | blt's garden</h2>
+
+        <!-- <div class="footer-credits-div">
+            <h2 class="footer-credits">&copy; 2026 bianca gan | blt's garden</h2>
+        </div> -->
+
+        <!-- <div>
+        <p>&copy; 2026 bianca gan | blt's garden</p>
+    </div> -->
+    </footer>
+
+
+</body>
+
+</html>
