@@ -1,7 +1,7 @@
 // const mqtt = require("mqtt"); // skip in browser
 
 let topic = 'blt';
-let rxrxClient;
+let rxClient;
 
 // Divs to show messages:
 let brokerDiv, statusDiv, moisture1Div, moisture2Div;
