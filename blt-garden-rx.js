@@ -83,9 +83,9 @@ function onMessage(topic, message) {
     // }
 
     // Individual JSON values:
-    let pumpState = data.val1;
-    let moisture1 = data.val2;
-    let moisture2 = data.val3;
+    let pumpState = data.state;
+    let moisture1 = data.moisture1;
+    let moisture2 = data.moisture2;
 
     // Update statusDiv:
     statusDiv.innerHTML = "Status: " + pumpState;
@@ -97,7 +97,7 @@ function onMessage(topic, message) {
 // On page load, call the setup function:
 document.addEventListener('DOMContentLoaded', setup);
 // // Run a loop every 2 seconds:
-// setInterval(loop, 2000);
+// setInterval(loop, 3000);
 
 
 
