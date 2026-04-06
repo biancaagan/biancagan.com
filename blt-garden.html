@@ -7,7 +7,6 @@
         integrity="sha512-tc5xpAPaQDl/Uxd7ZVbV66v94Lys0IefMJSdlABPuzyCv0IXmr9TkqEQvZiWKRoXMSlP5YPRwpq2a+v5q2uzMg=="
         crossorigin="anonymous" referrerpolicy="no-referrer"></script>
     <script src="https://unpkg.com/mqtt/dist/mqtt.min.js"></script>
-    <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/mqtt/4.3.7/mqtt.min.js"></script> -->
     <script src="/blt-garden-rx.js"></script>
     <script src="/blt-garden-tx.js"></script>
     <link rel="stylesheet" href="/blt-garden-style.css">
@@ -49,36 +48,9 @@
         </div>
     </div>
 
-    <!-- <script>
-        const client = mqtt.connect("wss://blt-garden-v1.cloud.shiftr.io", {
-            clientId: "blt-tx-" + Math.random().toString(16).substr(2, 8),
-            username: "blt-garden-v1",
-            password: "LxTKpBMbMyOsQfnz"
-        });
-
-        client.on("connect", function () {
-            console.log("Connected to broker!");
-
-            setInterval(function () {
-                const payload = {
-                    state: "Watering...",
-                    moisture1: Math.floor(Math.random() * 100),
-                    moisture2: Math.floor(Math.random() * 100)
-                };
-                client.publish("blt", JSON.stringify(payload));
-                console.log("Published:", payload);
-            }, 5000);
-        });
-
-        client.on("error", function (err) {
-            console.error("Connection error:", err);
-        });
-    </script> -->
-
-
     <div id="mainDiv">
         <div id='brokerDiv'></div>
-
+        
         <div id="statusDiv"><span style="font-family: IBM-Plex-Mono-Bold;">Status: </span></div>
 
         <div id="moisture1Div"><span style="font-family: IBM-Plex-Mono-Bold;">Sensor 1: </span></div>
