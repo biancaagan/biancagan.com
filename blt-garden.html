@@ -9,7 +9,7 @@
     <script src="https://unpkg.com/mqtt/dist/mqtt.min.js"></script>
     <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/mqtt/4.3.7/mqtt.min.js"></script> -->
     <script src="/blt-garden-rx.js"></script>
-    <script src="/blt-garden-tx.js"></script>
+    <!-- <script src="/blt-garden-tx.js"></script> -->
     <link rel="stylesheet" href="/blt-garden-style.css">
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -47,10 +47,33 @@
                 setInterval(updateClock, 1000);
             </script>
         </div>
-
-
-
     </div>
+
+    <script>
+        const client = mqtt.connect("wss://blt-garden-v1.cloud.shiftr.io", {
+            clientId: "blt-tx-" + Math.random().toString(16).substr(2, 8),
+            username: "blt-garden-v1",
+            password: "LxTKpBMbMyOsQfnz"
+        });
+
+        client.on("connect", function () {
+            console.log("Connected to broker!");
+
+            setInterval(function () {
+                const payload = {
+                    state: "Watering...",
+                    moisture1: Math.floor(Math.random() * 100),
+                    moisture2: Math.floor(Math.random() * 100)
+                };
+                client.publish("blt", JSON.stringify(payload));
+                console.log("Published:", payload);
+            }, 5000);
+        });
+
+        client.on("error", function (err) {
+            console.error("Connection error:", err);
+        });
+    </script>
 
 
     <div id="mainDiv">
