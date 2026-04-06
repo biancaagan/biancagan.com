@@ -80,7 +80,7 @@ function onMessage(topic, message) {
     // } catch (err) {
     //     console.log("Invalid JSON:", msgString);
     //     return;
-    }
+    // }
 
     // Individual JSON values:
     let pumpState = data.state;
