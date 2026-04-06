@@ -1,11 +1,11 @@
 // const mqtt = require("mqtt"); // skip in browser
 
 let topic = 'blt';
-let client;
+let rxrxClient;
 
 // Divs to show messages:
 let brokerDiv, statusDiv, moisture1Div, moisture2Div;
-// Whether the client should be publishing or not:
+// Whether the rxClient should be publishing or not:
 let publishing = true;
 
 function setup() {
@@ -19,15 +19,15 @@ function setup() {
     brokerDiv.innerHTML = 'Trying to connect...';
 
     // Attempt to connect:
-    client = mqtt.connect("wss://blt-garden-v1:eBikWJ95547eTzBs@blt-garden-v1.cloud.shiftr.io", {
+    rxClient = mqtt.connect("wss://blt-garden-v1:eBikWJ95547eTzBs@blt-garden-v1.cloud.shiftr.io", {
         clientId: "blt-rx",
     });
 
     // Set listeners:
-    client.on('connect', onConnect);
-    client.on('close', onDisconnect);
-    client.on('message', onMessage);
-    client.on('error', onError);
+    rxClient.on('connect', onConnect);
+    rxClient.on('close', onDisconnect);
+    rxClient.on('message', onMessage);
+    rxClient.on('error', onError);
 
 }
 
@@ -36,7 +36,7 @@ function setup() {
 function onConnect() {
     // Update brokerDiv text:
     brokerDiv.innerHTML = 'Connected to broker.';
-    client.subscribe(topic);
+    rxClient.subscribe(topic);
     // Can subscribe to multiple topics
 }
 

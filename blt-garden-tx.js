@@ -1,16 +1,16 @@
 // const mqtt = require("mqtt"); // skip in browser
 
-const client = mqtt.connect("mqtt://blt-garden-v1:LxTKpBMbMyOsQfnz@blt-garden-v1.cloud.shiftr.io", {
+const txClient = mqtt.connect("mqtt://blt-garden-v1:LxTKpBMbMyOsQfnz@blt-garden-v1.cloud.shiftr.io", {
   clientId: "blt-tx",
 });
 
 client.on("connect", function () {
   console.log("Connected!");
 
-  client.subscribe("blt");
+  txClient.subscribe("blt");
 
   setInterval(function () {
-  client.publish("blt", JSON.stringify({
+  txClient.publish("blt", JSON.stringify({
     state: "Watering...",
     moisture1: 80,
     moisture2: 43
