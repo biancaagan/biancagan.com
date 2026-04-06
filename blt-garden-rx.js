@@ -20,7 +20,7 @@ function setup() {
 
     // Attempt to connect:
     rxClient = mqtt.connect("wss://blt-garden-v1:eBikWJ95547eTzBs@blt-garden-v1.cloud.shiftr.io", {
-        clientId: "blt-rx",
+        clientId: "blt-rx" + Math.floor(Math.random() * 100) + 1
     });
 
     // Set listeners:
