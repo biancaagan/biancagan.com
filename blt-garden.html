@@ -79,14 +79,22 @@
             <button type="button" id="waterButton" onclick="waterOverride()">Water</button>
         </div>
         <p id="note" style="font-family: IBM-Plex-Mono-Regular;">
-            * the manual watering doesn't work yet. clicking the button does nothing. *
+            the manual watering function only works if you have the password
         </p>
         <p id="hiddenText"></p>
     </div>
 
     <script>
         function waterOverride() {
-            document.getElementById("hiddenText").innerHTML = "Why did you click it?";
+            document.getElementById("hiddenText").innerHTML = "Do you have the password?";
+
+            // Select the element by its ID
+            const waterUserInput = document.getElementById("waterInput");
+            
+            // Access the value property
+            const waterVal = waterUserInput.value;
+
+            rxClient.publish("blt/test", waterVal);
         }
     </script>
 
