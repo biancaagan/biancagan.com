@@ -89,8 +89,8 @@ function onMessage(topic, message) {
 
     // Update statusDiv:
     statusDiv.innerHTML = pumpState;
-    moisture1Div.innerHTML = moisture1;
-    moisture2Div.innerHTML = moisture2;
+    moisture1Div.innerHTML = moisture1 + "%";
+    moisture2Div.innerHTML = moisture2 + "%";
 }
 
 
