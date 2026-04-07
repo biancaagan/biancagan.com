@@ -67,7 +67,28 @@
             <span style="font-family: IBM-Plex-Mono-Bold;">Jalapeño: </span>
             <div id="moisture3Div"></div>
         </div>
+
+        <hr style="width: 80%; margin: 40px auto;">
+
+        <div id="manualDiv">
+            <!-- Label -->
+            <span style="font-family: IBM-Plex-Mono-Bold;">Manual watering: </span>
+            <!-- Text input -->
+            <input type="text" id="waterInput" placeholder="type # of seconds">
+            <!-- Button -->
+            <button type="button" id="waterButton" onclick="waterOverride()">Water</button>
+        </div>
+        <p id="note" style="font-family: IBM-Plex-Mono-Regular;">
+            * the manual watering doesn't work yet. clicking the button does nothing. *
+        </p>
+        <p id="hiddenText"></p>
     </div>
+
+    <script>
+        function waterOverride() {
+            document.getElementById("hiddenText").innerHTML = "Why did you click it?";
+        }
+    </script>
 
     <!-- <div id="canvas-container">
         <canvas id="calCanvas" width="800px" height="1000px"></canvas>

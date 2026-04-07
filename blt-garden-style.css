@@ -146,6 +146,31 @@ li {
     padding: 10px; */
 }
 
+#manualDiv {
+    /* border-style: dotted; */
+    margin: 20px auto 10px auto;
+}
+
+#waterInput {
+    /* border-style: dotted; */
+    padding: 8px 12px;
+}
+
+#waterButton {
+    /* border-style: dotted; */
+    padding: 8px 12px;
+}
+
+#note {
+    margin: 10px;
+    font-size: 12px;
+    text-decoration: underline;
+}
+
+#hiddenText {
+    font-family: IBM-Plex-Mono-Regular;
+    font-size: 12px;
+}
 
 #canvas-container {
     width: 100%;
@@ -176,7 +201,7 @@ footer {
     padding: 20px;
     color: black;
     text-align: center;
-    font-size: 10px;
+    font-size: 8px;
 }
 
 /* ---------- ---------- ---------- */
