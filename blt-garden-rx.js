@@ -4,7 +4,7 @@ let topic = 'blt';
 let rxClient;
 
 // Divs to show messages:
-let brokerDiv, statusDiv, moisture1Div, moisture2Div;
+let brokerDiv, statusDiv, moisture1Div, moisture2Div, moisture3Div;
 // Whether the rxClient should be publishing or not:
 let publishing = true;
 
@@ -14,6 +14,7 @@ function setup() {
     statusDiv = document.getElementById('statusDiv');
     moisture1Div = document.getElementById('moisture1Div');
     moisture2Div = document.getElementById('moisture2Div');
+    moisture3Div = document.getElementById('moisture3Div');
 
     // Set text of brokerDiv:
     brokerDiv.innerHTML = 'Trying to connect...';
@@ -93,6 +94,7 @@ function onMessage(topic, message) {
     moisture1Div.innerHTML = moisture1 + "%";
     moisture2Div.innerHTML = moisture2 + "%";
     moisture3Div.innerHTML = moisture3 + "%";
+    
 }
 
 
