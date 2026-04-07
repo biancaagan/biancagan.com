@@ -86,11 +86,13 @@ function onMessage(topic, message) {
     let pumpState = data.state;
     let moisture1 = data.moisture1;
     let moisture2 = data.moisture2;
+    let moisture3 = data.moisture3;
 
     // Update statusDiv:
     statusDiv.innerHTML = pumpState;
     moisture1Div.innerHTML = moisture1 + "%";
     moisture2Div.innerHTML = moisture2 + "%";
+    moisture3Div.innerHTML = moisture3 + "%";
 }
 
 
