@@ -115,6 +115,7 @@ li {
     /* border-style: dotted; */
     /* font-family: IBM-Plex-Mono-Bold; */
     text-align: center;
+    margin: 40px auto 120px auto;
     padding: 10px;
 }
 
@@ -167,8 +168,8 @@ li {
 footer {
     /* border-style: dotted; */
     font-family: IBM-Plex-Mono-Regular;
-    position: fixed;
-    left: 0;
+    /* position: fixed; */
+    /* left: 0; */
     bottom: 0;
     width: 100%;
     /* margin: 20px auto 20px auto; */
