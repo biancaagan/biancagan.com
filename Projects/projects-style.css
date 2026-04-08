@@ -53,10 +53,13 @@
 
 
 /* UTILITIES */
+
+
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  text-decoration: none !important;
 }
 
 main {
@@ -97,6 +100,7 @@ li {
 .nav-links a {
     font-family: IBM-Plex-Mono-SemiBold;
     color: black;
+    text-decoration: underline;
 }
 
 .menu {
@@ -184,69 +188,156 @@ li {
     border-style: dotted;
     width: 75vw;
     margin: 150px auto 200px auto;
+    padding: 20px;
     word-wrap: break-word;
+    /* text-decoration: none; */
   }
   
   .page-header{
+    border-style: dotted;
+    width: 100%;
     font-family: IBM-Plex-Mono-Bold;
-    font-size: 22px;
-    /* border-style: dotted; */
-    /* border-radius: 20px; */
+    font-size: 3.4vw;
+    border-style: dotted;
     text-align: left;
-    width: 75vw;
-    margin: 20px auto 10px auto;
-    padding: 10px 20px 0px 20px;
+    margin: auto auto 10px auto;
   }
-  
+
   .page-title {
     /* border-style: dotted; */
-    /* font-family: Georgia, 'Times New Roman', Times, serif; */
+    width: 100%;
+    font-family: IBM-Plex-Mono-Bold;
+    font-size: 3.4vw;
+    text-align: left;
+    margin: auto auto 10px auto;
+  }
+  
+  .page-header-subtext{
+    /* border-style: dotted; */
+    width: 100%;
     font-family: IBM-Plex-Mono-Regular;
-    width: fit-content;
-    font-size: 4.5vw;
-    margin: 30px auto auto auto;
-    padding: 20px;
+    font-size: 1.8vw;
+    text-align: left;
+  } 
+
+  .page-divider{
+    width: 100%;
+    margin: 20px auto;
   }
   
   .page-subtitle {
     /* border-style: dotted; */
+    width: 100%;
+    margin: 10px auto;
     font-family: Jost-SemiBold;
-    width: fit-content;
-    margin: 20px 0 0 20px;
-    font-size: 22px;
+    font-size: 2.4vw;
+    text-align: left;
   }
   
   .page-text {
     /* border-style: dotted; */
+    width: 100%;
+    margin: 10px auto;
     font-family: Jost-Regular;
-    width: 75vw;
-    margin: 10px auto auto auto;
-    padding: 20px;
-    font-size: 18px;
-    word-wrap: break-word;
+    font-size: 2vw;
+    text-align: left;
+  }
+
+  ul.page-text {
+    list-style-type: disc;
   }
 
   .main-link {
-    font-family: Jost-SemiBold;
-    width: fit-content;
-    margin: 30px 0 0 20px;
-    font-size: 20px;
-    color: black;
+    /* border-style: dotted; */
+    width: 100%;
+    margin: 10px auto;
+    font-family: Jost-Regular;
+    font-size: 22px;
+    border-style: dotted;
+    text-align: left;
   }
+
+  .page-center-image {
+  border-style: dashed;
+  border-width: 2px;
+  width: 68%;
+  display: flex;
+  justify-content: center;
+  margin: 40px auto 40px auto;
+  padding: 1vw;
+}
+
+.page-grid {
+  display: grid;
+  /* Creates two columns, each taking up one equal fraction (1fr) of the available space */
+  grid-template-columns: 1fr 1fr;
+  /* Adds a gap (gutter) between the columns for spacing */
+  gap: 20px;
+  margin: 20px;
+}
+
+.page-grid-item {
+  /* Optional: Add some styling so you can see the columns */
+  background-color: #f0f0f0;
+  margin: auto;
+  padding: 1vw 0 1vw 0;
+  border-style: dashed;
+  border-width: 2px;
+  font-family: Jost-Regular;
+}
+
+.grid-image {
+  /* border-style: dashed;
+  border-width: 2px; */
+  width: 80%;
+  display: flex;
+  justify-content: center;
+  margin: 40px auto 40px auto;
+}
+
+/* .page-grid-item p {
+  border: dotted;
+  margin: auto;
+  justify-content: center;
+  align-items: center;
+  object-fit: cover; 
+  object-position: center; 
+  display: block;
+} */
+
+.page-grid-item img {
+  width: 80%;
+  /* height: 60%; */
+  margin: auto;
+  object-fit: cover; 
+  object-position: center; 
+  display: block;
+}
 
   .main-link:hover {
     background-color: var(--go-to-grey);
     border-radius: 5px;
   }
   
-  .sub-link {
-    color: black;
+  a.sub-link {
+    /* border-style: dotted; */
+    width: 100%;
+    font-family: Jost-SemiBold;
+    font-size: 2vw;
+    text-align: left;
+    text-decoration: underline;
+    color: var(--highlight-orange);
   }
   
   .sub-link:hover {
     background-color: var(--go-to-grey);
     border-radius: 5px;
   }
+
+  .sub-link:visited {
+    color: var(--highlight-orange);
+  }
+  
   /* ---------- ---------- ---------- */
 
 

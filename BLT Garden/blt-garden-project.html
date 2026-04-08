@@ -61,15 +61,51 @@
 
                 <hr class="page-divider">
 
-                <h3 class="page-subtitle">This is a .page-subtitle.</h3>
-
-                <h3 class="main-link"><a href="/" style="color: black;">Here is what a .main-link -- like a project -- would look like.</a></h3>
+                <h3 class="page-subtitle">Component List:</h3>
 
                 <p class="page-text">
-                    Here is some plain old .page-text abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ1234567890.
+                    &bull; Arduino UNO R4 WiFi<br>
+                    &bull; 12V submersible water pump + added in-line filter<br>
+                    &bull; 5V relay<br>
+                    &bull; 1/2" tubing for the mainline<br>
+                    &bull; 1/4" tubing for jumps from the mainline to the micro bubblers/sprayers<br>
+                    &bull; Sparkfun soil moisture sensors<br>
+                    <br>
+                    The Arduino controls the water pump, and I currently have it set to water at 9:00AM pacific time. I used
+                    NTP (network time protocol) to control the clock. It currently waters about 15 minutes earlier (at 8:45AM),
+                    which I will have to debug later. There are also 3x soil moisture sensors attached, these go to the two tomato
+                    plants and the jalapeño plant. They are currently not mapped accurately, and overall just aren't the most accurate reading.
+                    <br><br>
+                    I am also sending data to my Shiftr.io broker like this:<br><br>
+                    "{\"state\":\"" + stateVal +<br> 
+                    "\",\"moisture1\":" + String(map(analogRead(soil1Pin), 350, 880, 0, 100)) + <br>
+                    ",\"moisture2\":" + String(map(analogRead(soil2Pin), 350, 880, 0, 100)) +<br>
+                    ",\"moisture3\":" + String(map(analogRead(soil3Pin), 350, 880, 0, 100)) + "}";<br>
+                    <br>
+                    On the webpage side, I use javascript to parse out the data and display them in the browser.
+                    <br><br>
+                    The webpage also has the option to manually water for x amount of seconds. Anyone with the password
+                    can send a message to the broker which gets read by Arduino to specify a specific amount of seconds to water, 
+                    outside of the preset watering times.
+                    <br><br>
+                    Below is the overall flow of the system:<br>
                 </p>
 
-                <p class="sub-link"><a href="/">This is a .sub-link, it will probably be within the page text.</a>
+                <img class="page-center-image"
+                        src="https://biancagan.sfo3.cdn.digitaloceanspaces.com/BLT-Garden/Flow%20Chart.jpg" alt="">
+
+                <!-- <div class="page-grid">
+                        <div class="page-grid-item">
+                                <img class="grid-image"
+                                        src="/" alt="">
+                        </div>
+                        <div class="page-grid-item">
+                                <video class="grid-image" controls>
+                                        <source src="/">
+                                </video>
+                        </div>
+                </div> -->
+
 
         </div>
     </main>
