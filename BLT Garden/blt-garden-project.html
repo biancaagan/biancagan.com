@@ -82,7 +82,9 @@
                     ",\"moisture2\":" + String(map(analogRead(soil2Pin), 350, 880, 0, 100)) +<br>
                     ",\"moisture3\":" + String(map(analogRead(soil3Pin), 350, 880, 0, 100)) + "}";<br>
                     <br>
-                    On the webpage side, I use javascript to parse out the data and display them in the browser.
+                    On the webpage side, I use javascript to parse out the data and display them in the browser. You can 
+                    visit the webpage <a class="sub-link" href="https://biancagan.com/blt-garden" target="_blank">here</a>.
+                    It will also keep a brief recent history as long as the page isn't refreshed.
                     <br><br>
                     The webpage also has the option to manually water for x amount of seconds. Anyone with the password
                     can send a message to the broker which gets read by Arduino to specify a specific amount of seconds to water, 
