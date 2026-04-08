@@ -4,7 +4,7 @@ let topic = 'blt';
 let rxClient;
 
 // Divs to show messages:
-let brokerDiv, statusDiv, moisture1Div, moisture2Div, moisture3Div;
+let brokerDiv, statusDiv, moisture1Div, moisture2Div, moisture3Div, historyDiv;
 // Whether the rxClient should be publishing or not:
 let publishing = true;
 
@@ -15,6 +15,7 @@ function setup() {
     moisture1Div = document.getElementById('moisture1Div');
     moisture2Div = document.getElementById('moisture2Div');
     moisture3Div = document.getElementById('moisture3Div');
+    historyDiv = document.getElementById('historyDiv');
 
     // Set text of brokerDiv:
     brokerDiv.innerHTML = 'Trying to connect...';
@@ -94,7 +95,12 @@ function onMessage(topic, message) {
     moisture1Div.innerHTML = moisture1 + "%";
     moisture2Div.innerHTML = moisture2 + "%";
     moisture3Div.innerHTML = moisture3 + "%";
-    
+
+    // Update historyDiv:
+    if (pumpState != "The next watering cycle will be tomorrow at 9:00AM."){
+        const historyTimestamp = new Date();
+        historyDiv.innerHTML += "<br>" + new Date().toLocaleDateString() + " at " + historyTimestamp.toLocaleTimeString() + " -- " + pumpState;
+    }
 }
 
 

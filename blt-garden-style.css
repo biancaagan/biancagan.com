@@ -172,6 +172,11 @@ li {
     font-size: 12px;
 }
 
+#historyDiv {
+    font-family: IBM-Plex-Mono-Regular;
+    font-size: 12px;
+}
+
 #canvas-container {
     width: 100%;
     text-align: center;
