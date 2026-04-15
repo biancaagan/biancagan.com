@@ -90,12 +90,12 @@ function onMessage(topic, message) {
 
     // console.log(topic + ": " + message.toString());
 
-    // try {
-    //     data = JSON.parse(msgString);
-    // } catch (err) {
-    //     console.log("Invalid JSON:", msgString);
-    //     return;
-    // }
+    try {
+        data = JSON.parse(msgString);
+    } catch (err) {
+        console.log("Invalid JSON:", msgString);
+        return;
+    }
 
     // Individual JSON values:
     let pumpState = data.state;
@@ -114,7 +114,7 @@ function onMessage(topic, message) {
     let today = d.toDateString();
 
     // 
-    if (topic == 'blt/moisture'){
+    if (topic.includes('blt/moisture')){
         // Update statusDiv:
         moisture1Div.innerHTML = moisture1 + "%";
         moisture2Div.innerHTML = moisture2 + "%";
