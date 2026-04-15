@@ -105,35 +105,35 @@ function onMessage(topic, message) {
     // Load existing history from localStorage:
     let storedHistory = JSON.parse(localStorage.getItem("history")) || [];
 
-    // Update historyDiv:
-    if (day != 0){
-        // Add most recent message:
-        const entry = {
-            state: pumpState,
-            time: d.toLocaleString()
-        };
-
-        storedHistory.push(entry);
-
-        // Save back to localStorage:
-        localStorage.setItem("history", JSON.stringify(storedHistory));
-
-        // Updated historyDiv:
-        historyDiv.innerHTML += "<br>" + entry.time + " -- " + entry.state;
-   
-    } else if (day == 0){
-        // Sunday = clear history
-        storedHistory = [];
-        localStorage.removeItem("history");
-        historyDiv.innerHTML = "";
-    }
-
-
     // // Update historyDiv:
-    // if (pumpState != "The next watering cycle will be tomorrow at 9:00AM."){
-    //     const historyTimestamp = new Date();
-    //     historyDiv.innerHTML += "<br>" + new Date().toLocaleDateString() + " at " + historyTimestamp.toLocaleTimeString() + " -- " + pumpState;
+    // if (day != 0){
+    //     // Add most recent message:
+    //     const entry = {
+    //         state: pumpState,
+    //         time: d.toLocaleString()
+    //     };
+
+    //     storedHistory.push(entry);
+
+    //     // Save back to localStorage:
+    //     localStorage.setItem("history", JSON.stringify(storedHistory));
+
+    //     // Updated historyDiv:
+    //     historyDiv.innerHTML += "<br>" + entry.time + " -- " + entry.state;
+   
+    // } else if (day == 0){
+    //     // Sunday = clear history
+    //     storedHistory = [];
+    //     localStorage.removeItem("history");
+    //     historyDiv.innerHTML = "";
     // }
+
+
+    // Update historyDiv:
+    if (pumpState != "The next watering cycle will be tomorrow at 9:00AM."){
+        const historyTimestamp = new Date();
+        historyDiv.innerHTML += "<br>" + new Date().toLocaleDateString() + " at " + historyTimestamp.toLocaleTimeString() + " -- " + pumpState;
+    }
 }
 
 function loadHistory() {
