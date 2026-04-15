@@ -1,7 +1,10 @@
 // const mqtt = require("mqtt"); // skip in browser
 
 let topic = 'blt';
+// let topic = 'blt-testing'; // for testing
 let rxClient;
+
+let history = [];
 
 // Divs to show messages:
 let brokerDiv, statusDiv, moisture1Div, moisture2Div, moisture3Div, historyDiv;
@@ -96,16 +99,57 @@ function onMessage(topic, message) {
     moisture2Div.innerHTML = moisture2 + "%";
     moisture3Div.innerHTML = moisture3 + "%";
 
+    let d = new Date();
+    let day = d.getDay();
+
+    // Load existing history from localStorage:
+    let storedHistory = JSON.parse(localStorage.getItem("history")) || [];
+
     // Update historyDiv:
-    if (pumpState != "The next watering cycle will be tomorrow at 9:00AM."){
-        const historyTimestamp = new Date();
-        historyDiv.innerHTML += "<br>" + new Date().toLocaleDateString() + " at " + historyTimestamp.toLocaleTimeString() + " -- " + pumpState;
+    if (day != 0){
+        // Add most recent message:
+        const entry = {
+            state: pumpState,
+            time: d.toLocaleString()
+        };
+
+        storedHistory.push(entry);
+
+        // Save back to localStorage:
+        localStorage.setItem("history", JSON.stringify(storedHistory));
+
+        // Updated historyDiv:
+        historyDiv.innerHTML += "<br>" + entry.time + " -- " + entry.state;
+   
+    } else if (day == 0){
+        // Sunday = clear history
+        storedHistory = [];
+        localStorage.removeItem("history");
+        historyDiv.innerHTML = "";
     }
+
+
+    // // Update historyDiv:
+    // if (pumpState != "The next watering cycle will be tomorrow at 9:00AM."){
+    //     const historyTimestamp = new Date();
+    //     historyDiv.innerHTML += "<br>" + new Date().toLocaleDateString() + " at " + historyTimestamp.toLocaleTimeString() + " -- " + pumpState;
+    // }
+}
+
+function loadHistory() {
+    let storedHistory = JSON.parse(localStorage.getItem("history")) || [];
+
+    historyDiv.innerHTML = "";
+
+    storedHistory.forEach(entry => {
+        historyDiv.innerHTML += "<br>" + entry.time + " -- " + entry.state;
+    });
 }
 
 
 // On page load, call the setup function:
 document.addEventListener('DOMContentLoaded', setup);
+document.addEventListener('DOMContentLoaded', loadHistory);
 // // Run a loop every 2 seconds:
 // setInterval(loop, 3000);
 
