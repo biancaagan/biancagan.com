@@ -215,7 +215,7 @@ function renderHistory() {
     historyDiv.innerHTML = "";
 
     history.forEach(entry => {
-        historyDiv.innerHTML += `<br>${entry.time} -- ${entry.state}`;
+        historyDiv.innerHTML += `<br>${entry.time} -- ${entry.state}.`;
     });
 }
   
