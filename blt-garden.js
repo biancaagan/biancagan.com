@@ -96,10 +96,6 @@ function isWriter() {
 function waterOverride() {
     document.getElementById("hiddenText").innerHTML = "Do you have the password?";
 
-    const cleanVal = waterVal.replace(/,\s*no lettuce/, "").trim();
-    const date = wateringTimestamp.toLocaleDateString();
-    const time = wateringTimestamp.toLocaleTimeString();
-
     if (!isWriter()) return;
 
     // Select the element by its ID
@@ -112,6 +108,10 @@ function waterOverride() {
 
     // Update last watering:
     const wateringTimestamp = new Date();
+
+    const cleanVal = waterVal.replace(/,\s*no lettuce/, "").trim();
+    const date = wateringTimestamp.toLocaleDateString();
+    const time = wateringTimestamp.toLocaleTimeString();
 
     const entry = {
         state: `Last watered for ${cleanVal} seconds on ${date} at ${time}`,
