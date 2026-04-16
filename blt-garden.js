@@ -39,11 +39,22 @@ function setup() {
 
 // Handler for MQTT connect event:
 function onConnect() {
+    if (topic === "blt/history/request") {
+    const history = getHistory();
+    history.forEach(entry => {
+        rxClient.publish("blt/history", JSON.stringify(entry));
+    });
+    return;
+}
+
     // Update brokerDiv text:
     brokerDiv.innerHTML = 'Connected to broker.';
     rxClient.subscribe(topic);
     rxClient.subscribe("blt/history");
     // Can subscribe to multiple topics
+
+    // Send history:
+    rxClient.publish("blt/history/request", "get");
 }
 
 
