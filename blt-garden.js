@@ -109,7 +109,7 @@ function waterOverride() {
     // Update last watering:
     const wateringTimestamp = new Date();
 
-    statusDiv.innerHTML = `Last watered for ${waterVal.replace(/,\s*no lettuce/, "")} seconds on ${wateringTimestamp.toLocaleDateString()} at ${wateringTimestamp.toLocaleTimeString()}`;
+    statusDiv.innerHTML = `Last watered for ${waterVal.replace(/,\s*no lettuce/, "")}seconds on ${wateringTimestamp.toLocaleDateString()} at ${wateringTimestamp.toLocaleTimeString()}`;
 
     const entry = {
     state: `Last watered for ${waterVal.replace(/,\s*no lettuce/, "")} seconds.`,
