@@ -96,6 +96,10 @@ function isWriter() {
 function waterOverride() {
     document.getElementById("hiddenText").innerHTML = "Do you have the password?";
 
+    const cleanVal = waterVal.replace(/,\s*no lettuce/, "").trim();
+    const date = wateringTimestamp.toLocaleDateString();
+    const time = wateringTimestamp.toLocaleTimeString();
+
     if (!isWriter()) return;
 
     // Select the element by its ID
@@ -114,7 +118,7 @@ function waterOverride() {
         time: wateringTimestamp.toLocaleString()
     };
 
-    statusDiv.innerHTML = last.state;
+    statusDiv.innerHTML = entry.state;
 
     const history = getHistory();
     history.push(entry);
@@ -195,7 +199,7 @@ function loadLastStatus() {
 
     const last = history[history.length - 1];
 
-    statusDiv.innerHTML = `${last.state} on ${last.time}`;
+    statusDiv.innerHTML = last.state;
 }
 
 function getHistory() {
