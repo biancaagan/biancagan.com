@@ -42,6 +42,7 @@ function onConnect() {
     // Update brokerDiv text:
     brokerDiv.innerHTML = 'Connected to broker.';
     rxClient.subscribe(topic);
+    rxClient.subscribe("blt/history");
     // Can subscribe to multiple topics
 }
 
@@ -116,6 +117,8 @@ function waterOverride() {
     history.push(entry);
     saveHistory(history);
 
+    rxClient.publish("blt/history", JSON.stringify(entry));
+
     renderHistory();
 
     weeklyResetCheck();
@@ -127,20 +130,51 @@ function waterOverride() {
 function onMessage(topic, message) {
     // Message is a buffer, convert to a string:
     const msgString = message.toString();
-    
-    let data;
 
-    try {
-        data = JSON.parse(msgString);
-    } catch (err) {
-        console.log("Invalid JSON:", msgString);
-        return;
+    // FOR MOISTURE READINGS:
+    if (topic === "blt/moisture"){
+        let data;
+
+        try {
+            data = JSON.parse(msgString);
+        } catch (err) {
+            console.log("Invalid JSON:", msgString);
+            return;
+        }
+
+        // Update statusDiv:
+        moisture1Div.innerHTML = data.moisture1 + "%";
+        moisture2Div.innerHTML = data.moisture2 + "%";
+        moisture3Div.innerHTML = data.moisture3 + "%";
     }
+    
+    if (topic === "blt/history"){
+        let entry;
 
-    // Update statusDiv:
-    moisture1Div.innerHTML = data.moisture1 + "%";
-    moisture2Div.innerHTML = data.moisture2 + "%";
-    moisture3Div.innerHTML = data.moisture3 + "%";
+        try {
+            entry = JSON.parse(msgString);
+        } catch (err) {
+            console.log("Invalid history:", msgString);
+            return;
+        }
+
+        // Load current history
+        const history = getHistory();
+
+        // Avoid duplicates (important for MQTT echo)
+        const exists = history.some(h =>
+            h.time === entry.time && h.state === entry.state
+        );
+
+        if (!exists) {
+            history.push(entry);
+            saveHistory(history);
+        }
+
+        renderHistory();
+        loadLastStatus();
+    }
+    
 
 }
 
