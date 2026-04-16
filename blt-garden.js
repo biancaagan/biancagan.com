@@ -39,14 +39,6 @@ function setup() {
 
 // Handler for MQTT connect event:
 function onConnect() {
-    if (topic === "blt/history/request") {
-    const history = getHistory();
-    history.forEach(entry => {
-        rxClient.publish("blt/history", JSON.stringify(entry));
-    });
-    return;
-}
-
     // Update brokerDiv text:
     brokerDiv.innerHTML = 'Connected to broker.';
     rxClient.subscribe(topic);
@@ -141,6 +133,14 @@ function waterOverride() {
 function onMessage(topic, message) {
     // Message is a buffer, convert to a string:
     const msgString = message.toString();
+
+    if (topic === "blt/history/request") {
+        const history = getHistory();
+        history.forEach(entry => {
+            rxClient.publish("blt/history", JSON.stringify(entry));
+        });
+        return;
+    }
 
     // FOR MOISTURE READINGS:
     if (topic === "blt/moisture"){
