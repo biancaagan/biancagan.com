@@ -100,7 +100,7 @@ function waterOverride() {
     // Access the value property
     const waterVal = waterUserInput.value;
 
-    rxClient.publish("blt/test", waterVal);
+    rxClient.publish("blt/water", waterVal);
 
     // Update last watering:
     const wateringTimestamp = new Date();
@@ -144,6 +144,15 @@ function onMessage(topic, message) {
 
 }
 
+function loadLastStatus() {
+    const history =getHistory();
+    if (history.length === 0) return;
+
+    const last = history[history.length - 1];
+
+    statusDiv.innerHTML = `${last.state} on ${last.time}`;
+}
+
 function getHistory() {
     return JSON.parse(localStorage.getItem("history")) || [];
 }
@@ -180,6 +189,7 @@ document.addEventListener('DOMContentLoaded', () => {
     setup();
     weeklyResetCheck();
     renderHistory();
+    loadLastStatus();
 });
 
 
