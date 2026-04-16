@@ -2,6 +2,7 @@
 
 // let topic = 'blt';
 // let topic = 'blt-testing'; // for testing
+let topic = 'blt/moisture';
 let rxClient;
 
 let history = [];
@@ -82,6 +83,64 @@ function isWriter() {
     return false;
 }
 
+
+function waterOverride() {
+    document.getElementById("hiddenText").innerHTML = "Do you have the password?";
+
+    // Select the element by its ID
+    const waterUserInput = document.getElementById("waterInput");
+    
+    // Access the value property
+    const waterVal = waterUserInput.value;
+
+    rxClient.publish("blt/test", waterVal);
+
+    // Update last watering:
+    const wateringTimestamp = new Date();
+    statusDiv.innerHTML = "Last watered for :" + waterVal + " seconds on " + new Date().toLocaleDateString() + " at " + wateringTimestamp.toLocaleTimeString();
+
+    let d = new Date();
+    let day = d.getDay();
+
+    // Load existing history from localStorage:
+    let storedHistory = JSON.parse(localStorage.getItem("history")) || [];
+
+    // Get last reset date:
+    let lastReset = localStorage.getItem("lastResetDate");
+    let today = d.toDateString();
+
+    if (!isWriter()) return;
+
+    // Update statusDiv:
+    // statusDiv.innerHTML = pumpState;
+
+    if (day != 0){      // Not Sunday
+        // Add most recent message:
+        const entry = {
+            state: "Last watered for :" + waterVal + " seconds on " + new Date().toLocaleDateString() + " at " + wateringTimestamp.toLocaleTimeString(),
+            time: d.toLocaleString()
+        };
+
+        storedHistory.push(entry);
+
+        // Save back to localStorage:
+        localStorage.setItem("history", JSON.stringify(storedHistory));
+
+        // Updated historyDiv:
+        historyDiv.innerHTML += "<br>" + entry.time + " -- " + entry.state;
+
+    } else {
+        // Sunday = clear history ONCE:
+        if (lastReset !== today){
+            storedHistory = [];
+            localStorage.removeItem("history");
+            localStorage.setItem("lastResetDate", today);
+            historyDiv.innerHTML = "";
+        }
+    }
+}
+
+
 // Handler for MQTT message received event:
 function onMessage(topic, message) {
     // Message is a buffer, convert to a string:
@@ -98,59 +157,63 @@ function onMessage(topic, message) {
     }
 
     // Individual JSON values:
-    let pumpState = data.state;
     let moisture1 = data.moisture1;
     let moisture2 = data.moisture2;
     let moisture3 = data.moisture3;
 
-    let d = new Date();
-    let day = d.getDay();
+    // let d = new Date();
+    // let day = d.getDay();
 
-    // Load existing history from localStorage:
-    let storedHistory = JSON.parse(localStorage.getItem("history")) || [];
+    // // Load existing history from localStorage:
+    // let storedHistory = JSON.parse(localStorage.getItem("history")) || [];
 
-    // Get last reset date:
-    let lastReset = localStorage.getItem("lastResetDate");
-    let today = d.toDateString();
+    // // Get last reset date:
+    // let lastReset = localStorage.getItem("lastResetDate");
+    // let today = d.toDateString();
 
-    // 
-    if (topic.includes('blt/moisture')){
-        // Update statusDiv:
-        moisture1Div.innerHTML = moisture1 + "%";
-        moisture2Div.innerHTML = moisture2 + "%";
-        moisture3Div.innerHTML = moisture3 + "%";
-    } else if (topic == 'blt/water'){
-        if (!isWriter()) return;
+    // Update statusDiv:
+    moisture1Div.innerHTML = moisture1 + "%";
+    moisture2Div.innerHTML = moisture2 + "%";
+    moisture3Div.innerHTML = moisture3 + "%";
 
-        // Update statusDiv:
-        statusDiv.innerHTML = pumpState;
+}
 
-        if (day != 0){
-            // Add most recent message:
-            const entry = {
-                state: pumpState,
-                time: d.toLocaleString()
-            };
+    // // 
+    // if (topic.includes('blt/moisture')){
+    //     // Update statusDiv:
+    //     moisture1Div.innerHTML = moisture1 + "%";
+    //     moisture2Div.innerHTML = moisture2 + "%";
+    //     moisture3Div.innerHTML = moisture3 + "%";
+    // } else if (topic == 'blt/water'){
+        // if (!isWriter()) return;
 
-            storedHistory.push(entry);
+        // // Update statusDiv:
+        // statusDiv.innerHTML = pumpState;
 
-            // Save back to localStorage:
-            localStorage.setItem("history", JSON.stringify(storedHistory));
+        // if (day != 0){      // Not Sunday
+        //     // Add most recent message:
+        //     const entry = {
+        //         state: pumpState,
+        //         time: d.toLocaleString()
+        //     };
 
-            // Updated historyDiv:
-            historyDiv.innerHTML += "<br>" + entry.time + " -- " + entry.state;
+        //     storedHistory.push(entry);
+
+        //     // Save back to localStorage:
+        //     localStorage.setItem("history", JSON.stringify(storedHistory));
+
+        //     // Updated historyDiv:
+        //     historyDiv.innerHTML += "<br>" + entry.time + " -- " + entry.state;
     
-        } else {
-            // Sunday = clear history ONCE:
-            if (lastReset !== today){
-                storedHistory = [];
-                localStorage.removeItem("history");
-                localStorage.setItem("lastResetDate", today);
-                historyDiv.innerHTML = "";
-            }
-        }
-    }
-
+        // } else {
+        //     // Sunday = clear history ONCE:
+        //     if (lastReset !== today){
+        //         storedHistory = [];
+        //         localStorage.removeItem("history");
+        //         localStorage.setItem("lastResetDate", today);
+        //         historyDiv.innerHTML = "";
+        //     }
+        // }
 
 
     // // Update historyDiv:
@@ -177,24 +240,25 @@ function onMessage(topic, message) {
     // }
 
 
-}
 
-function loadHistory() {
-    let storedHistory = JSON.parse(localStorage.getItem("history")) || [];
+function weeklyResetCheck() {
+    const d = new Date();
+    const day = d.getDay(); // 0 = Sunday
+    const today = d.toDateString();
 
-    historyDiv.innerHTML = "";
+    let lastReset = localStorage.getItem("lastResetDate");
 
-    storedHistory.forEach(entry => {
-        historyDiv.innerHTML += "<br>" + entry.time + " -- " + entry.state;
-    });
+    if (day === 0 && lastReset !== today) {
+        localStorage.removeItem("history");
+        localStorage.setItem("lastResetDate", today);
+    }
 }
 
 
 // On page load, call the setup function:
 document.addEventListener('DOMContentLoaded', setup);
-document.addEventListener('DOMContentLoaded', loadHistory);
-// // Run a loop every 2 seconds:
-// setInterval(loop, 3000);
+document.addEventListener('DOMContentLoaded', weeklyResetCheck);
+
 
 
 
