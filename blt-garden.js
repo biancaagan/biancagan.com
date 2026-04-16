@@ -106,15 +106,17 @@ function waterOverride() {
     const wateringTimestamp = new Date();
 
     const entry = {
-        state: `Last watered for ${waterVal} seconds on ${wateringTimestamp.toLocaleDateString()} at ${wateringTimestamp.toLocaleTimeString()}`,
-        time: wateringTimestamp.toLocaleString()
-    };
+    state: `Last watered for ${waterVal.replace(/,\s*no lettuce/, "")} seconds on ${wateringTimestamp.toLocaleDateString()} at ${wateringTimestamp.toLocaleTimeString()}`,
+    time: wateringTimestamp.toLocaleString()
+};
 
     const history = getHistory();
     history.push(entry);
     saveHistory(history);
 
     // Update historyDiv:
+    historyDiv.innerHTML += `<br>${entry.time} -- ${entry.state}`;
+
     renderHistory();
 
     weeklyResetCheck();
