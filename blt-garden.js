@@ -199,7 +199,7 @@ function loadLastStatus() {
 
     const last = history[history.length - 1];
 
-    statusDiv.innerHTML = last.state;
+    statusDiv.innerHTML = entry.state + " on " + new Date().toLocaleDateString() + " at " + wateringTimestamp.toLocaleTimeString();
 }
 
 function getHistory() {
