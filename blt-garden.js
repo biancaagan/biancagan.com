@@ -114,11 +114,11 @@ function waterOverride() {
     const time = wateringTimestamp.toLocaleTimeString();
 
     const entry = {
-        state: `Last watered for ${cleanVal} seconds on ${date} at ${time}`,
+        state: `Last watered for ${cleanVal} seconds`,
         time: wateringTimestamp.toLocaleString()
     };
 
-    statusDiv.innerHTML = entry.state;
+    statusDiv.innerHTML = entry.state + " on " + new Date().toLocaleDateString() + " at " + wateringTimestamp.toLocaleTimeString();
 
     const history = getHistory();
     history.push(entry);
