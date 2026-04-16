@@ -194,12 +194,12 @@ function onMessage(topic, message) {
 }
 
 function loadLastStatus() {
-    const history =getHistory();
+    const history = getHistory();
     if (history.length === 0) return;
 
     const last = history[history.length - 1];
 
-    statusDiv.innerHTML = last.state + " on " + new Date().toLocaleDateString() + " at " + wateringTimestamp.toLocaleTimeString();
+    statusDiv.innerHTML = entry.state + " on " + new Date().toLocaleDateString() + " at " + wateringTimestamp.toLocaleTimeString();
 }
 
 function getHistory() {
