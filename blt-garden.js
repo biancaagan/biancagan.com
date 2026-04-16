@@ -114,11 +114,12 @@ function waterOverride() {
     const wateringTimestamp = new Date();
 
     const entry = {
-        state: `Last watered for ${cleanVal} seconds on ${date} at ${time}`,
-        time: wateringTimestamp.toLocaleString()
+        seconds: cleanVal,
+        date: wateringTimestamp.toLocaleDateString(),
+        time: wateringTimestamp.toLocaleTimeString()
     };
 
-    statusDiv.innerHTML = entry.state;
+    statusDiv.innerHTML = `Last watered for ${entry.seconds} seconds on ${entry.date} at ${entry.time}`;
 
     const history = getHistory();
     history.push(entry);
@@ -199,7 +200,7 @@ function loadLastStatus() {
 
     const last = history[history.length - 1];
 
-    statusDiv.innerHTML = last.state;
+    statusDiv.innerHTML = `Last watered for ${last.seconds} seconds on ${last.date} at ${last.time}`;
 }
 
 function getHistory() {
@@ -212,11 +213,10 @@ function saveHistory(history) {
 
 function renderHistory() {
     const history = getHistory();
-    historyDiv.innerHTML = "";
 
-    history.forEach(entry => {
-        historyDiv.innerHTML += `<br>${entry.time} -- ${entry.state}`;
-    });
+    historyDiv.innerHTML = history
+        .map(entry => `Last watered for ${entry.seconds} seconds on ${entry.date} at ${entry.time}`)
+        .join("<br>");
 }
   
 function weeklyResetCheck() {
