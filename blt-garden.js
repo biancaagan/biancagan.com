@@ -136,9 +136,9 @@ function waterOverride() {
     
 }
 
-function waterCancel() {
-    const btn = document.getElementById("cancelButton");
+const btn = document.getElementById("cancelButton");
 
+function waterCancel() {
     if (btn.disabled) return;
 
     btn.disabled = true;
