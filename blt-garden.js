@@ -132,6 +132,12 @@ function waterOverride() {
     
 }
 
+function waterCancel() {
+    // rxClient.publish("blt/water", "stop");
+
+    statusDiv.innerHTML += "<br>* CANCELLED *";
+}
+
 
 // Handler for MQTT message received event:
 function onMessage(topic, message) {

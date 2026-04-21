@@ -154,11 +154,13 @@ li {
 #waterInput {
     /* border-style: dotted; */
     padding: 8px 12px;
+    font-family: IBM-Plex-Mono-Regular;
 }
 
-#waterButton {
+#waterButton, #cancelButton {
     /* border-style: dotted; */
     padding: 8px 12px;
+    font-family: IBM-Plex-Mono-Regular;
 }
 
 #note {
