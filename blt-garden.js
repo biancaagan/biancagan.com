@@ -136,12 +136,12 @@ function waterOverride() {
     
 }
 
-const btn = document.getElementById("cancelButton");
+let cancelSent = false;
 
 function waterCancel() {
-    if (btn.disabled) return;
+    if (cancelSent) return; // ignore extra clicks
 
-    btn.disabled = true;
+    cancelSent = true;
 
     rxClient.publish("blt/water", "stop");
     statusDiv.innerHTML += "<br>* CANCELLED *";
