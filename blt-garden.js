@@ -96,6 +96,10 @@ function isWriter() {
 function waterOverride() {
     document.getElementById("hiddenText").innerHTML = "Do you have the password?";
 
+    // Re-enable the cancel button:
+    btn.disabled = false;
+    cancelSent = false;
+
     if (!isWriter()) return;
 
     // Select the element by its ID
@@ -133,8 +137,13 @@ function waterOverride() {
 }
 
 function waterCancel() {
-    rxClient.publish("blt/water", "stop");
+    const btn = document.getElementById("cancelButton");
 
+    if (btn.disabled) return;
+
+    btn.disabled = true;
+
+    rxClient.publish("blt/water", "stop");
     statusDiv.innerHTML += "<br>* CANCELLED *";
 }
 
