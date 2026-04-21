@@ -133,7 +133,7 @@ function waterOverride() {
 }
 
 function waterCancel() {
-    // rxClient.publish("blt/water", "stop");
+    rxClient.publish("blt/water", "stop");
 
     statusDiv.innerHTML += "<br>* CANCELLED *";
 }
