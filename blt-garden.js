@@ -97,8 +97,8 @@ function waterOverride() {
     document.getElementById("hiddenText").innerHTML = "Do you have the password?";
 
     // Re-enable the cancel button:
-    btn.disabled = false;
-    cancelSent = false;
+    // btn.disabled = false;
+    // cancelSent = false;
 
     if (!isWriter()) return;
 
