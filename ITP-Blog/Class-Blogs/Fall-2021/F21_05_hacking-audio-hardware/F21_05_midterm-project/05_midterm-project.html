@@ -1,0 +1,302 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" type="image/png" href="/Media/FCG Logo 2.png">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="/ITP-Blog/Class-Blogs/class-blogs-styles.css" />
+    <title>BG</title>
+</head>
+
+<body>
+
+    <!-- ----------------------- NEW NAV BAR ----------------------- -->
+    <nav class="navbar">
+        <div class="nav-header">
+            <h3><a href="/" style="color: black;">BG</a></h3>
+        </div>
+
+        <ul class="nav-links top-nav">
+            <!-- USING CHECKBOX HACK -->
+            <input type="checkbox" class="hack" id="checkbox_toggle" />
+            <label for="checkbox_toggle" class="hamburger">&#9776;</label>
+
+            <div class="menu">
+                <li class="top-nav-link"><a href="/">Home</a></li>
+                <li class="top-nav-link"><a href="/About/about.html">About</a></li>
+                <li class="top-nav-link"><a href="/Work-Credits/work-credits.html">Work Credits</a></li>
+                <li class="top-nav-link"><a href="/Projects/projects.html">Projects</a></li>
+                <div class="dropdown-menu">
+                    <li class="itp-blog top-nav-link">
+                        <a href="/ITP-Blog/itp-blog.html">ITP Blog&nbsp;<i class="fa fa-caret-down"></i></a>
+
+                        <!-- DROPDOWN MENU ITEMS -->
+                        <ul class="dropdown">
+                            <li><a href="/ITP-Blog/Research-Residency/residency.html">Research Residency</a></li>
+                            <li><a href="/ITP-Blog/Thesis/thesis-adm.html">Thesis - ADM</a></li>
+                            <li><a href="/ITP-Blog/Class-Blogs/Fall-2021/fall_2021.html">Fall 2021</a></li>
+                            <li><a href="/ITP-Blog/Class-Blogs/Spring-2022/spring-2022.html">Spring 2022</a></li>
+                            <li><a href="/ITP-Blog/Class-Blogs/Fall-2022/fall_2022.html">Fall 2022</a></li>
+                            <li><a href="/ITP-Blog/Class-Blogs/Spring-2023/spring_2023.html">Spring 2023</a></li>
+                        </ul>
+                    </li>
+                </div>
+                <li><a href="/Contact/contact.html">Contact</a></li>
+            </div>
+
+        </ul>
+    </nav>
+    <!-- ----------------------- ----------- ----------------------- -->
+
+    <main>
+        <div class="page-body">
+            <h3 class="page-header">HAH Midterm Project</h3>
+
+            <hr class="page-divider">
+
+            <h3 class="page-title">Phase 1 - Planning</h3>
+
+            <!-- <h3 class="page-subtitle">[ Subtitle Here ]</h3> -->
+
+            <h3 class="page-text">
+                Before coming up with a design for my circuit, I thought about what I want it
+                to include. Ideally I’d like to have four gated oscillators, two of which can be
+                controlled by either a fader or a photoresistor, a third by a potentiometer,
+                and a fourth controlled by a textile interface or potentiometer.
+                <br><br>
+                A rough sketch is below along with a draft PCB layout.
+            </h3>
+
+            <img class="page-center-image" id="horizontal"
+                src="https://media.biancagan.com/ITP-Blog/Fall-2021/F21_05_hacking-audio-hardware/F21_05_midterm-project/01.jpg" alt="">
+
+            <img class="page-center-image" id="horizontal"
+                src="https://media.biancagan.com/ITP-Blog/Fall-2021/F21_05_hacking-audio-hardware/F21_05_midterm-project/02.jpg" alt="">
+
+            <h3 class="page-text">
+                List of materials needed:<br><br>
+                - PCB boards(s)<br>
+                - Plastic enclosure<br>
+                - Slide potentiometers (10K, 50K)<br>
+                - Fader caps<br>
+                - Knobs<br>
+                - Switches<br>
+                - On/Off switch<br>
+                <br>
+                I started playing around with different values of variable resistors and
+                capacitors.<br><br>
+                Here is a schematic and sample audio file of one circuit.
+            </h3>
+
+            <img class="page-center-image" id="horizontal" 
+                src="https://media.biancagan.com/ITP-Blog/Fall-2021/F21_05_hacking-audio-hardware/F21_05_midterm-project/03.jpg" alt="">
+
+            <audio controls class="page-audio-file">
+                <source src="https://media.biancagan.com/ITP-Blog/Fall-2021/F21_05_hacking-audio-hardware/F21_05_midterm-project/audio-01.wav" type="">
+            </audio>
+
+            <h3 class="page-text">
+                Here is a second circuit and sample recording where I changed up
+                some of the values.
+            </h3>
+
+            <img class="page-center-image" id="horizontal" 
+                src="https://media.biancagan.com/ITP-Blog/Fall-2021/F21_05_hacking-audio-hardware/F21_05_midterm-project/04.jpg" alt="">
+
+            <audio controls class="page-audio-file">
+                <source src="https://media.biancagan.com/ITP-Blog/Fall-2021/F21_05_hacking-audio-hardware/F21_05_midterm-project/audio-02.wav" type="">
+            </audio>
+
+            <h3 class="page-title">Phase 2 - Breadboard to Protoboard</h3>
+
+            <h3 class="page-text">
+                A lot of my parts arrived a little later so I’ve finnally just been able to start
+                testing the faders and moving to a protoboard.
+                <br><br>
+                I was able to figure out the pinout of the fader through some trial and error.
+                <br><br>
+                So far, I’ve solder leads onto the three pins of the fader once I figured out the
+                correct wiring, and I attached some heat-shrink over the joints to make sure
+                nothing ever shorts.
+                <br><br>
+                I have also soldered on the dip sockets for the 4093 chip.
+            </h3>
+
+            <div class="page-grid">
+                <div class="page-grid-item">
+                    <img class="grid-image" src="https://media.biancagan.com/ITP-Blog/Fall-2021/F21_05_hacking-audio-hardware/F21_05_midterm-project/05.JPG" alt="">
+                </div>
+                <div class="page-grid-item">
+                    <img class="grid-image" src="https://media.biancagan.com/ITP-Blog/Fall-2021/F21_05_hacking-audio-hardware/F21_05_midterm-project/06.JPG" alt="">
+                </div>
+            </div>
+
+            <h3 class="page-text">
+                I am still messing around with different values of potentiometers and
+                capacitors. The two faders I have are both 50K. Previously, I was using other
+                value of pots in place of the faders, so now I am having to adjust cap values
+                so find a sound I like.
+            </h3>
+
+            <video class="page-center-video" controls>
+                <source src="https://media.biancagan.com/ITP-Blog/Fall-2021/F21_05_hacking-audio-hardware/F21_05_midterm-project/07.MOV">
+            </video>
+
+            <h3 class="page-title">Update: As of 11/21/21</h3>
+
+
+            <h3 class="page-text">
+                Everything on the breadboard.
+                <br><br>
+                I have soldered all of my components (2 faders, 4 switches, 2 pots, 2
+                photoresistors) ready to be mounted onto the PCB.
+            </h3>
+
+            <video class="page-center-video" controls>
+                <source src="https://media.biancagan.com/ITP-Blog/Fall-2021/F21_05_hacking-audio-hardware/F21_05_midterm-project/08.mov">
+            </video>
+
+            <h3 class="page-text">
+                Unfortunately, I broke my skinny soldering tip, and had to use a larger one,
+                which made it a little challenging to solder on the PCB. But it went alright,
+                and I made sure to take my multimeter and check for any wrong
+                connections.
+            </h3>
+
+            <div class="page-grid">
+                <div class="page-grid-item">
+                    <img class="grid-image" src="https://media.biancagan.com/ITP-Blog/Fall-2021/F21_05_hacking-audio-hardware/F21_05_midterm-project/09.JPG" alt="">
+                </div>
+                <div class="page-grid-item">
+                    <img class="grid-image" src="https://media.biancagan.com/ITP-Blog/Fall-2021/F21_05_hacking-audio-hardware/F21_05_midterm-project/10.JPG" alt="">
+                </div>
+            </div>
+
+            <h3 class="page-text">
+                It’s hard keeping track of all the solder joints and what’s what and where
+                things need to go, and when going over all of the connections, I came across
+                a few things I missed which became an issue when powering it up, luckily it
+                wasn’t too bad of a problem.
+                <br><br>
+                I had some issues with the IC and its connection – I have a weird dip-socket
+                that I had purchased from Adafruit for a previous PComp project, and while
+                it works with other things like an Arduino, the short legs of the 4093 chip are
+                a little shorter so it doesn’t feel like it sits properly. I meant to go to the ID
+                M
+                floor and grab one of the dip-sockets from the drawer – while I could’ve
+                gone sooner, I meant to go on Thursday but caught a stupid cold and spent
+                the weekend not allowed on campus until my Covid results came back. So
+                instead, I had to figure something else out, and I ended up soldering header
+                pins onto the chip, so that it would seat better into the dip-socket.
+                Miraculously it worked … I think.
+            </h3>
+
+            <div class="page-grid">
+                <div class="page-grid-item">
+                    <img class="grid-image" src="https://media.biancagan.com/ITP-Blog/Fall-2021/F21_05_hacking-audio-hardware/F21_05_midterm-project/11.JPG" alt="">
+                </div>
+                <div class="page-grid-item">
+                    <img class="grid-image" src="https://media.biancagan.com/ITP-Blog/Fall-2021/F21_05_hacking-audio-hardware/F21_05_midterm-project/12.JPG" alt="">
+                </div>
+            </div>
+
+            <h3 class="page-text">
+                Before I worked on mounting everything into the enclosure, I wanted to test
+                the circuit.
+                <br><br>
+                It didn’t work.
+                <br><br>
+                I kept checking and rechecking all of the connections and found that one of
+                the capacitors was connected to the wrong pin of the chip. After fixing that,
+                it worked! Mostly.
+                <br><br>
+                While the circuit works as I had intended it, it does not sound like it did when
+                on the breadboard. It’s very crunchy and crackly. I’m really not quite sure
+                what the issue is, it must be a connection, or a bad solder joint, but I was
+                unable to figure it out. After troubleshooting for a while, I was just satisfied it
+                made sound. And while it doesn’t sound how I would have hoped, it still
+                makes some pretty gnarly noises.
+                <br><br>
+                Another thing I’d like to point out are the faders. They’re a little spotty, and
+                seem to only work about half the length of the slide. I want to say it’s due to
+                them being cheap, but it could possibly be a connection issue or something
+                else.
+                <br><br>
+                When building out the enclosure, I rand into some difficulty making the cuts
+                for the fader, and while there is a MUCH better / easier / efficient way, I was
+                at home making this and had to use what I had. Honestly, it turned out pretty
+                decent considering how I did it, but with that being said there are spots
+                where the fader gets a little caught. But not too shabby for a drill and a knife!
+                I did break a drill bit.
+            </h3>
+
+            <div class="page-grid">
+                <div class="page-grid-item">
+                    <img class="grid-image" src="https://media.biancagan.com/ITP-Blog/Fall-2021/F21_05_hacking-audio-hardware/F21_05_midterm-project/13.JPG" alt="">
+                </div>
+                <div class="page-grid-item">
+                    <img class="grid-image" src="https://media.biancagan.com/ITP-Blog/Fall-2021/F21_05_hacking-audio-hardware/F21_05_midterm-project/14.JPG" alt="">
+                </div>
+            </div>
+
+            <h3 class="page-text">
+                Final walthrough demo and film -- <i>film it while it works before it doesn't --</i>
+                I talk a bunch and sound extremely nasally. Just skip through the video.
+                (Edit: I had to chop the video into two for uploading purposes)
+            </h3>
+
+            <video class="page-center-video" controls>
+                <source src="https://media.biancagan.com/ITP-Blog/Fall-2021/F21_05_hacking-audio-hardware/F21_05_midterm-project/15.MOV">
+            </video>
+
+            <div class="page-grid">
+                <div class="page-grid-item">
+                    <video class="grid-image" controls>
+                        <source src="https://media.biancagan.com/ITP-Blog/Fall-2021/F21_05_hacking-audio-hardware/F21_05_midterm-project/16.MOV">
+                    </video>
+                </div>
+                <div class="page-grid-item">
+                    <video class="grid-image" controls>
+                        <source src="https://media.biancagan.com/ITP-Blog/Fall-2021/F21_05_hacking-audio-hardware/F21_05_midterm-project/17.MOV">
+                    </video>
+                </div>
+            </div>
+
+        </div>
+    </main>
+
+
+    <!-- ----------------------- FOOTER ----------------------- -->
+    <footer>
+        <div class="footer-nav">
+            <ul>
+                <li class="footer-nav-link"><a href="/">Home</a></li>
+                <li class="footer-nav-link"><a href="/About/about.html">About</a></li>
+                <li class="footer-nav-link"><a href="/Work Credits/work-credits.html">Work Credits</a></li>
+                <li class="footer-nav-link"><a href="/Projects/projects.html">Projects</a></li>
+                <li class="footer-nav-link"><a href="/ITP Blog/itp-blog.html">ITP Blog</a></li>
+                <li class="footer-nav-link"><a href="#contact">Contact</a></li>
+            </ul>
+        </div>
+
+        <div class="social-links">
+            <a class="social-icon" href="http://www.instagram.com/biancaaagan" target="_blank">
+                <img src="/Media/icon-instagram.png" width="25px">
+            </a>
+            <a class="social-icon" href="http://www.linkedin.com/in/biancagan" target="_blank">
+                <img src="/Media/icon-linkedin.png" width="25px">
+            </a>
+        </div>
+
+        <div class="footer-credits-div">
+            <h2 class="footer-credits"><a id="copyright" href="https://www.needafreq.com/">&copy;</a> 2024 | Bianca Gan
+            </h2>
+        </div>
+    </footer>
+    <!-- ----------------------- ----------------------- ----------------------- -->
+</body>
+
+</html>

@@ -86,6 +86,7 @@ li {
     background-color: white;
     color: black;
     border-bottom: 1px solid black;
+    z-index: 1000;
 }
 
 .nav-header {
@@ -232,7 +233,7 @@ li {
 
 .page-header{
   font-family: IBM-Plex-Mono-Bold;
-  font-size: 22px;
+  font-size: 2.4vw;
   /* border-style: dotted; */
   /* border-radius: 20px; */
   text-align: left;
@@ -246,7 +247,7 @@ li {
   /* font-family: Georgia, 'Times New Roman', Times, serif; */
   font-family: IBM-Plex-Mono-Regular;
   width: 98%;
-  font-size: 2.4vw;
+  font-size: 2.2vw;
   margin: 30px auto auto auto;
   padding: 20px;
   text-align: center;
@@ -284,6 +285,32 @@ li {
   padding: 1vw;
 }
 
+.page-center-video {
+  border-style: dashed;
+  border-width: 2px;
+  width: 50%;
+  display: flex;
+  justify-content: center;
+  margin: 40px auto 40px auto;
+  padding: 1vw;
+}
+
+#horizontal {
+  width: 70%;
+}
+
+.page-audio-file {
+  border-style: dashed;
+  border-width: 2px;
+  width: 50%;
+  display: flex;
+  justify-content: center;
+  margin: 40px auto 40px auto;
+  padding: 1vw;
+  position: relative;
+  z-index: 1;
+}
+
 .page-grid {
   display: grid;
   /* Creates two columns, each taking up one equal fraction (1fr) of the available space */
@@ -311,6 +338,7 @@ li {
   justify-content: center;
   margin: 40px auto 40px auto;
 }
+
 
 /* .page-grid-item p {
   border: dotted;

@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" type="image/png" href="/Media/FCG Logo 2.png">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="/ITP-Blog/Class-Blogs/class-blogs-styles.css" />
+    <title>BG</title>
+</head>
+
+<body>
+
+    <!-- ----------------------- NEW NAV BAR ----------------------- -->
+    <nav class="navbar">
+        <div class="nav-header">
+            <h3><a href="/" style="color: black;">BG</a></h3>
+        </div>
+
+        <ul class="nav-links top-nav">
+            <!-- USING CHECKBOX HACK -->
+            <input type="checkbox" class="hack" id="checkbox_toggle" />
+            <label for="checkbox_toggle" class="hamburger">&#9776;</label>
+
+            <div class="menu">
+                <li class="top-nav-link"><a href="/">Home</a></li>
+                <li class="top-nav-link"><a href="/About/about.html">About</a></li>
+                <li class="top-nav-link"><a href="/Work-Credits/work-credits.html">Work Credits</a></li>
+                <li class="top-nav-link"><a href="/Projects/projects.html">Projects</a></li>
+                <div class="dropdown-menu">
+                    <li class="itp-blog top-nav-link">
+                        <a href="/ITP-Blog/itp-blog.html">ITP Blog&nbsp;<i class="fa fa-caret-down"></i></a>
+
+                        <!-- DROPDOWN MENU ITEMS -->
+                        <ul class="dropdown">
+                            <li><a href="/ITP-Blog/Research-Residency/residency.html">Research Residency</a></li>
+                            <li><a href="/ITP-Blog/Thesis/thesis-adm.html">Thesis - ADM</a></li>
+                            <li><a href="/ITP-Blog/Class-Blogs/Fall-2021/fall_2021.html">Fall 2021</a></li>
+                            <li><a href="/ITP-Blog/Class-Blogs/Spring-2022/spring-2022.html">Spring 2022</a></li>
+                            <li><a href="/ITP-Blog/Class-Blogs/Fall-2022/fall_2022.html">Fall 2022</a></li>
+                            <li><a href="/ITP-Blog/Class-Blogs/Spring-2023/spring_2023.html">Spring 2023</a></li>
+                        </ul>
+                    </li>
+                </div>
+                <li><a href="/Contact/contact.html">Contact</a></li>
+            </div>
+
+        </ul>
+    </nav>
+    <!-- ----------------------- ----------- ----------------------- -->
+
+    <main>
+        <div class="page-body">
+            <h3 class="page-header">HAH Final Project</h3>
+
+            <hr class="page-divider">
+
+            <h3 class="page-title">Circuit Bending A Musical Toy TV Remote<br>&#40;I thought it was a toy phone&#41;</h3>
+
+            <!-- <h3 class="page-subtitle">[ Subtitle Here ]</h3> -->
+
+            <img class="page-center-image" 
+                src="https://media.biancagan.com/ITP-Blog/Fall-2021/F21_05_hacking-audio-hardware/F21_05_final-project/01.JPG" alt="">
+
+            <h3 class="page-text">
+                Once I cracked open the enclosure, I disconnected the the red and black
+                wire from the battery compartment and reconnected it using a couple of
+                alligator clips.
+                <br><br>
+                I took a small wire and just started touching different points of the circuit
+                board. However, I was unable to locate the main chip, and realized that the
+                black circle in the middle of the board is most likely covering it (according to
+                the internet). It was a solid material and I tried poking at it with an exacto
+                knife and it’s something I’m unable to remove without probably destroying
+                the chip.
+                <br><br>
+                So I just continued to make different connections in hope that I could find
+                something that would work. I found a few points that would trigger different
+                sound effects, and finally found two points that would change the pitch of
+                the sounds. I actually found two different pairs that I could affect the sound
+                with a variable resistor, however, one of the connections was on a trace on
+                the surface of the PCB, which I ended up overheating and removing.
+            </h3>
+
+            <img class="page-center-image" 
+                src="https://media.biancagan.com/ITP-Blog/Fall-2021/F21_05_hacking-audio-hardware/F21_05_final-project/02.JPG" alt="">
+
+            <h3 class="page-text">
+                Another effect I found was triggering a sound effect, and when I tried to
+                attach wires, I also removed the traces. So ultimately I tried to stick to
+                mounting it to one of through connections on the PCB. One mod was
+                changing the pitch with a pot, and another I found could trigger one of the
+                LED lights with a button.
+                <br><br>
+                So I moved to soldering those connections.
+            </h3>
+
+            <div class="page-grid">
+                <div class="page-grid-item">
+                    <img class="grid-image" src="https://media.biancagan.com/ITP-Blog/Fall-2021/F21_05_hacking-audio-hardware/F21_05_final-project/03.JPG" alt="">
+                </div>
+                <div class="page-grid-item">
+                    <img class="grid-image" src="https://media.biancagan.com/ITP-Blog/Fall-2021/F21_05_hacking-audio-hardware/F21_05_final-project/04.JPG" alt="">
+                </div>
+            </div>
+
+            <h3 class="page-text">
+                There wasn’t really a way to mount the button or potentiometer to the
+                enclosure because of the tight space inside, so I just fed the wires through a
+                couple of holes I drilled onto the front.
+                <br><br>
+                I had a hard time arranging the wires inside because of the lack of space.
+            </h3>
+
+            <div class="page-grid">
+                <div class="page-grid-item">
+                    <img class="grid-image" src="https://media.biancagan.com/ITP-Blog/Fall-2021/F21_05_hacking-audio-hardware/F21_05_final-project/05.JPG" alt="">
+                </div>
+                <div class="page-grid-item">
+                    <img class="grid-image" src="https://media.biancagan.com/ITP-Blog/Fall-2021/F21_05_hacking-audio-hardware/F21_05_final-project/06.JPG" alt="">
+                </div>
+            </div>
+
+            <h3 class="page-text">
+                I cleaned up the wiring and shortened the wires and soldered the other ends
+                onto the potentiometer and button.
+                <br><br>
+                And then I struggled quite a bit tucking the wires around the circuit board in
+                order to close and secure the enclosure.
+                <br><br>
+                The pitch adjustment is a little faint but you can hear it better on certain
+                sounds, and the button flashes the left light when sounds are being played.
+            </h3>
+
+            <div class="page-grid">
+                <div class="page-grid-item">
+                    <img class="grid-image" src="https://media.biancagan.com/ITP-Blog/Fall-2021/F21_05_hacking-audio-hardware/F21_05_final-project/07.JPEG" alt="">
+                </div>
+                <div class="page-grid-item">
+                    <video class="grid-image" controls>
+                        <source src="https://media.biancagan.com/ITP-Blog/Fall-2021/F21_05_hacking-audio-hardware/F21_05_final-project/08.MOV">
+                    </video>
+                </div>
+            </div>
+        </div>
+    </main>
+
+
+    <!-- ----------------------- FOOTER ----------------------- -->
+    <footer>
+        <div class="footer-nav">
+            <ul>
+                <li class="footer-nav-link"><a href="/">Home</a></li>
+                <li class="footer-nav-link"><a href="/About/about.html">About</a></li>
+                <li class="footer-nav-link"><a href="/Work Credits/work-credits.html">Work Credits</a></li>
+                <li class="footer-nav-link"><a href="/Projects/projects.html">Projects</a></li>
+                <li class="footer-nav-link"><a href="/ITP Blog/itp-blog.html">ITP Blog</a></li>
+                <li class="footer-nav-link"><a href="#contact">Contact</a></li>
+            </ul>
+        </div>
+
+        <div class="social-links">
+            <a class="social-icon" href="http://www.instagram.com/biancaaagan" target="_blank">
+                <img src="/Media/icon-instagram.png" width="25px">
+            </a>
+            <a class="social-icon" href="http://www.linkedin.com/in/biancagan" target="_blank">
+                <img src="/Media/icon-linkedin.png" width="25px">
+            </a>
+        </div>
+
+        <div class="footer-credits-div">
+            <h2 class="footer-credits"><a id="copyright" href="https://www.needafreq.com/">&copy;</a> 2024 | Bianca Gan
+            </h2>
+        </div>
+    </footer>
+    <!-- ----------------------- ----------------------- ----------------------- -->
+</body>
+
+</html>
