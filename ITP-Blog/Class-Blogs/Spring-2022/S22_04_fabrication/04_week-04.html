@@ -1,0 +1,328 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" type="image/png" href="/Media/FCG Logo 2.png">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="/ITP-Blog/Class-Blogs/class-blogs-styles.css" />
+    <title>BG</title>
+</head>
+
+<body>
+
+    <!-- ----------------------- NEW NAV BAR ----------------------- -->
+    <nav class="navbar">
+        <div class="nav-header">
+            <h3><a href="/" style="color: black;">BG</a></h3>
+        </div>
+
+        <ul class="nav-links top-nav">
+            <!-- USING CHECKBOX HACK -->
+            <input type="checkbox" class="hack" id="checkbox_toggle" />
+            <label for="checkbox_toggle" class="hamburger">&#9776;</label>
+
+            <div class="menu">
+                <li class="top-nav-link"><a href="/">Home</a></li>
+                <li class="top-nav-link"><a href="/About/about.html">About</a></li>
+                <li class="top-nav-link"><a href="/Work-Credits/work-credits.html">Work Credits</a></li>
+                <li class="top-nav-link"><a href="/Projects/projects.html">Projects</a></li>
+                <div class="dropdown-menu">
+                    <li class="itp-blog top-nav-link">
+                        <a href="/ITP-Blog/itp-blog.html">ITP Blog&nbsp;<i class="fa fa-caret-down"></i></a>
+
+                        <!-- DROPDOWN MENU ITEMS -->
+                        <ul class="dropdown">
+                            <li><a href="/ITP-Blog/Research-Residency/residency.html">Research Residency</a></li>
+                            <li><a href="/ITP-Blog/Thesis/thesis-adm.html">Thesis - ADM</a></li>
+                            <li><a href="/ITP-Blog/Class-Blogs/Fall-2021/fall_2021.html">Fall 2021</a></li>
+                            <li><a href="/ITP-Blog/Class-Blogs/Spring-2022/spring-2022.html">Spring 2022</a></li>
+                            <li><a href="/ITP-Blog/Class-Blogs/Fall-2022/fall_2022.html">Fall 2022</a></li>
+                            <li><a href="/ITP-Blog/Class-Blogs/Spring-2023/spring_2023.html">Spring 2023</a></li>
+                        </ul>
+                    </li>
+                </div>
+                <li><a href="/Contact/contact.html">Contact</a></li>
+            </div>
+
+        </ul>
+    </nav>
+    <!-- ----------------------- ----------- ----------------------- -->
+
+    <main>
+        <div class="page-body">
+            <h3 class="page-header">Intro to Fab - Week 04</h3>
+
+            <hr class="page-divider">
+
+            <h3 class="page-title">Enclosure</h3>
+
+            <!-- <h3 class="page-subtitle">[ Subtitle Here ]</h3> -->
+
+            <h3 class="page-text">
+                Had a few ideas to start out with but I think I’ve narrowed it down. I plan to
+                build a simplified version of my midterm project from a Hacking Audio
+                Hardware class last semester. I had this huge plastic enclosure I bought off
+                of Amazon because I needed enough surface area for two faders, two knobs,
+                three switches, two photoresistors, and a textile sensor — just on the top —
+                on the sides there was also another switch for ON/OFF and a 1/4″ audio
+                output. The goal now is to make a small oscillator with a cleaner and nicer
+                enclosure.
+                <br><br>
+                Much nicer and cleaner than this:
+            </h3>
+
+            <div class="page-grid">
+                <div class="page-grid-item">
+                    <img class="grid-image" src="https://media.biancagan.com/ITP-Blog/Spring-2022/S22_04_fabrication/04_week-04/01.JPG" alt="">
+                </div>
+                <div class="page-grid-item">
+                    <img class="grid-image" src="https://media.biancagan.com/ITP-Blog/Spring-2022/S22_04_fabrication/04_week-04/02.JPG" alt="">
+                </div>
+            </div>
+
+            <img class="page-center-image" src="https://media.biancagan.com/ITP-Blog/Spring-2022/S22_04_fabrication/04_week-04/03.JPG" alt="">
+
+            <h3 class="page-text">
+                <a class="sub-link" href="/ITP-Blog/Class-Blogs/Fall-2021/F21_05_hacking-audio-hardware/F21_05_midterm-project/05_midterm-project.html">Link</a> to HAH midterm.
+                <br><br>
+                I promise, I’m generally more OCD with cable management but this was just
+                horrendous.
+                <br><br>
+                The plan is to make a wooden enclosure, and I’d like to make it round. I feel
+                like wood and a round shape isn’t usually a thing when it comes to audio
+                hardware.
+                <br><br>
+                Here’s a quick sketch and also the circuit:
+            </h3>
+
+            <div class="page-grid">
+                <div class="page-grid-item">
+                    <img class="grid-image" src="https://media.biancagan.com/ITP-Blog/Spring-2022/S22_04_fabrication/04_week-04/04.JPG" alt="">
+                </div>
+                <div class="page-grid-item">
+                    <video class="grid-image" controls>
+                        <source src="https://media.biancagan.com/ITP-Blog/Spring-2022/S22_04_fabrication/04_week-04/05.MOV">
+                    </video>
+                </div>
+            </div>
+
+            <h3 class="page-text">
+                I'm going to use the laser cutter to cut out layers to stack and glue
+                on top of each other to make the enclosure.
+                <br><br>
+                Started ordering and gathering my parts and made a bill of materials:
+            </h3>
+
+            <img class="page-center-image" id="horizontal" src="https://media.biancagan.com/ITP-Blog/Spring-2022/S22_04_fabrication/04_week-04/06.PNG" alt="">
+
+            <h3 class="page-text">
+                Took a field trip to Midtown Lumber and got a few sheets of (slightly less
+                than) 1/4″ sheets of birchwood. Thankfully they were able to cut them into
+                12″ x 24″ sections.
+                <br><br>
+                I sketched out a vague idea of the layers I would need, as well as a schematic
+                for my protoboard.
+                <br><br>
+                The layers consist of the top with labels and holes for the ON/OFF switch,
+                LED indicator, 1/4″ jack, and two potentiometers. Another layer is a mid-layer
+                that I will mount the PCB to, a bottom cover, and a layer that will be near the
+                bottom which the cover will magnetically secure to, and the most used layer
+                is the mid layer used to create space throughout the enclosure.
+                <br><br>
+                All of the layers aside from the top and bottom cover, have four holes to help
+                with alignment when I glue and clamp them altogether.
+            </h3>
+
+            <div class="page-grid">
+                <div class="page-grid-item">
+                    <img class="grid-image" src="https://media.biancagan.com/ITP-Blog/Spring-2022/S22_04_fabrication/04_week-04/07.JPG" alt="">
+                </div>
+                <div class="page-grid-item">
+                    <img class="grid-image" src="https://media.biancagan.com/ITP-Blog/Spring-2022/S22_04_fabrication/04_week-04/08.JPG" alt="">
+                </div>
+            </div>
+            
+            <h3 class="page-text">
+                Moved over to illustrator and drew up the actual layers.
+            </h3>
+
+            <img class="page-center-image" id="horizontal" 
+                src="https://media.biancagan.com/ITP-Blog/Spring-2022/S22_04_fabrication/04_week-04/09.PNG" alt="">
+
+            <h3 class="page-text">
+                I did a few test cuts on some cardboard, as well as a small piece of wood.
+            </h3>
+
+            <img class="page-center-image" id="horizontal" 
+                src="https://media.biancagan.com/ITP-Blog/Spring-2022/S22_04_fabrication/04_week-04/10.JPG" alt="">
+
+            <h3 class="page-text">
+                Then I just went for it. I moved on to cutting some of the official layers. I
+                didn’t cut out a top layer (aside from the test cut) because I still need to
+                measure the actual size of the 1/4″ jack that I’m going to mount to it. I also
+                did not cut out a bottom cover or the bottom layer because both need to be
+                etched to a specific depth to fit the magnets, which haven’t been delivered
+                yet.
+                <br><br>
+                I cut out 16 of the middle layer as well as a few of the PCB mount layer
+                because I adjusted the spacing of the holes that the PCB/standoffs will
+                screw to. Had a couple mishaps with some tear-out so I cut a couple extras
+                to make up for them. Also after that, I now have a very large supply of
+                generic wooden coasters.
+            </h3>
+
+            <div class="page-grid">
+                <div class="page-grid-item">
+                    <img class="grid-image" src="https://media.biancagan.com/ITP-Blog/Spring-2022/S22_04_fabrication/04_week-04/11.JPG" alt="">
+                </div>
+                <div class="page-grid-item">
+                    <img class="grid-image" src="https://media.biancagan.com/ITP-Blog/Spring-2022/S22_04_fabrication/04_week-04/12.JPG" alt="">
+                </div>
+            </div>
+
+            <div class="page-grid">
+                <div class="page-grid-item">
+                    <img class="grid-image" src="https://media.biancagan.com/ITP-Blog/Spring-2022/S22_04_fabrication/04_week-04/13.JPG" alt="">
+                </div>
+                <div class="page-grid-item">
+                    <img class="grid-image" src="https://media.biancagan.com/ITP-Blog/Spring-2022/S22_04_fabrication/04_week-04/14.JPG" alt="">
+                </div>
+            </div>
+
+            <h3 class="page-text">
+                Here's what the enclosure looks like with test and actual layers together.
+            </h3>
+
+            <div class="page-grid">
+                <div class="page-grid-item">
+                    <img class="grid-image" src="https://media.biancagan.com/ITP-Blog/Spring-2022/S22_04_fabrication/04_week-04/15.JPG" alt="">
+                </div>
+                <div class="page-grid-item">
+                    <img class="grid-image" src="https://media.biancagan.com/ITP-Blog/Spring-2022/S22_04_fabrication/04_week-04/16.JPG" alt="">
+                </div>
+            </div>
+
+            <h3 class="page-text">
+                Maybe I’ll make the top cover removable as well?
+                <br><br>
+                Update: Got the last few bits I needed, so I soldered the protoboard and cut
+                out the rest of the layers.
+            </h3>
+            
+            <div class="page-grid">
+                <div class="page-grid-item">
+                    <img class="grid-image" src="https://media.biancagan.com/ITP-Blog/Spring-2022/S22_04_fabrication/04_week-04/17.JPG" alt="">
+                </div>
+                <div class="page-grid-item">
+                    <img class="grid-image" src="https://media.biancagan.com/ITP-Blog/Spring-2022/S22_04_fabrication/04_week-04/18.JPG" alt="">
+                </div>
+            </div>
+
+            <h3 class="page-text">
+                Next, I made sure everything fit through the holes and had enough thread for
+                it to be mounted to the top. Then started to glue everything together.
+            </h3>
+            
+            <div class="page-grid">
+                <div class="page-grid-item">
+                    <img class="grid-image" src="https://media.biancagan.com/ITP-Blog/Spring-2022/S22_04_fabrication/04_week-04/19.JPG" alt="">
+                </div>
+                <div class="page-grid-item">
+                    <img class="grid-image" src="https://media.biancagan.com/ITP-Blog/Spring-2022/S22_04_fabrication/04_week-04/20.JPG" alt="">
+                </div>
+            </div>
+
+            <img class="page-center-image" id="horizontal" src="https://media.biancagan.com/ITP-Blog/Spring-2022/S22_04_fabrication/04_week-04/21.JPG" alt="">
+
+            <h3 class="page-text">
+                Continued to put all of the layers together.
+                <br><br>
+                I knew this was going to be an issue (as I’ve ran into it before), but it was the
+                last protoboard I had of this size — the corner holes for mounting the
+                protoboard are smaller than the standoff screws that I own. I’ve drilled
+                through them before to make them wider, so I figured I would do that again. It
+                worked, except I broke one of the corners so it’s only mounted by three
+                corners.
+            </h3>
+
+            <div class="page-grid">
+                <div class="page-grid-item">
+                    <img class="grid-image" src="https://media.biancagan.com/ITP-Blog/Spring-2022/S22_04_fabrication/04_week-04/22.JPG" alt="">
+                </div>
+                <div class="page-grid-item">
+                    <img class="grid-image" src="https://media.biancagan.com/ITP-Blog/Spring-2022/S22_04_fabrication/04_week-04/23.JPG" alt="">
+                </div>
+            </div>
+
+            <h3 class="page-text">
+                So, when it came down to the bottom layers and the magnetic cover, I cut
+                out an additional piece so that I could glue two of the layers together and
+                glue the magnets down. I had some issues mainly a superglue mishap and a
+                magnet mishap where I got it stuck and had to dig it out. I’ll probably revisit
+                the cover/magnet situation so that it fits better. However, it actually closes
+                pretty well. I do need to add finger notches.
+                <br><br>
+                I haven’t completely secured the entire enclosure because I still want to
+                sand it all down and maybe treat it with some oil. I also need to trim down
+                the second pot so that the knob sits nearly flush to the top like the first
+                knob/pot. Also, might readdress the whole cover/magnet thing.
+            </h3>
+
+            <div class="page-grid">
+                <div class="page-grid-item">
+                    <img class="grid-image" src="https://media.biancagan.com/ITP-Blog/Spring-2022/S22_04_fabrication/04_week-04/24.JPG" alt="">
+                </div>
+                <div class="page-grid-item">
+                    <video class="grid-image" controls>
+                        <source src="https://media.biancagan.com/ITP-Blog/Spring-2022/S22_04_fabrication/04_week-04/25.MOV">
+                    </video>
+                </div>
+            </div>
+
+            <h3 class="page-text">
+                Also, not that the circuit was really any part of this assignment, but it works
+                which is cool.
+            </h3>
+
+            <video class="page-center-video" controls>
+                <source src="https://media.biancagan.com/ITP-Blog/Spring-2022/S22_04_fabrication/04_week-04/26.MOV">
+            </video>
+
+        </div>
+    </main>
+
+
+    <!-- ----------------------- FOOTER ----------------------- -->
+    <footer>
+        <div class="footer-nav">
+            <ul>
+                <li class="footer-nav-link"><a href="/">Home</a></li>
+                <li class="footer-nav-link"><a href="/About/about.html">About</a></li>
+                <li class="footer-nav-link"><a href="/Work Credits/work-credits.html">Work Credits</a></li>
+                <li class="footer-nav-link"><a href="/Projects/projects.html">Projects</a></li>
+                <li class="footer-nav-link"><a href="/ITP Blog/itp-blog.html">ITP Blog</a></li>
+                <li class="footer-nav-link"><a href="#contact">Contact</a></li>
+            </ul>
+        </div>
+
+        <div class="social-links">
+            <a class="social-icon" href="http://www.instagram.com/biancaaagan" target="_blank">
+                <img src="/Media/icon-instagram.png" width="25px">
+            </a>
+            <a class="social-icon" href="http://www.linkedin.com/in/biancagan" target="_blank">
+                <img src="/Media/icon-linkedin.png" width="25px">
+            </a>
+        </div>
+
+        <div class="footer-credits-div">
+            <h2 class="footer-credits"><a id="copyright" href="https://www.needafreq.com/">&copy;</a> 2024 | Bianca Gan
+            </h2>
+        </div>
+    </footer>
+    <!-- ----------------------- ----------------------- ----------------------- -->
+</body>
+
+</html>
