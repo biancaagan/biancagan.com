@@ -1,0 +1,388 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" type="image/png" href="/Media/FCG Logo 2.png">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="/ITP-Blog/Class-Blogs/class-blogs-styles.css" />
+    <title>BG</title>
+</head>
+
+<body>
+
+    <!-- ----------------------- NEW NAV BAR ----------------------- -->
+    <nav class="navbar">
+        <div class="nav-header">
+            <h3><a href="/" style="color: black;">BG</a></h3>
+        </div>
+
+        <ul class="nav-links top-nav">
+            <!-- USING CHECKBOX HACK -->
+            <input type="checkbox" class="hack" id="checkbox_toggle" />
+            <label for="checkbox_toggle" class="hamburger">&#9776;</label>
+
+            <div class="menu">
+                <li class="top-nav-link"><a href="/">Home</a></li>
+                <li class="top-nav-link"><a href="/About/about.html">About</a></li>
+                <li class="top-nav-link"><a href="/Work-Credits/work-credits.html">Work Credits</a></li>
+                <li class="top-nav-link"><a href="/Projects/projects.html">Projects</a></li>
+                <div class="dropdown-menu">
+                    <li class="itp-blog top-nav-link">
+                        <a href="/ITP-Blog/itp-blog.html">ITP Blog&nbsp;<i class="fa fa-caret-down"></i></a>
+
+                        <!-- DROPDOWN MENU ITEMS -->
+                        <ul class="dropdown">
+                            <li><a href="/ITP-Blog/Research-Residency/residency.html">Research Residency</a></li>
+                            <li><a href="/ITP-Blog/Thesis/thesis-adm.html">Thesis - ADM</a></li>
+                            <li><a href="/ITP-Blog/Class-Blogs/Fall-2021/fall_2021.html">Fall 2021</a></li>
+                            <li><a href="/ITP-Blog/Class-Blogs/Spring-2022/spring-2022.html">Spring 2022</a></li>
+                            <li><a href="/ITP-Blog/Class-Blogs/Fall-2022/fall_2022.html">Fall 2022</a></li>
+                            <li><a href="/ITP-Blog/Class-Blogs/Spring-2023/spring_2023.html">Spring 2023</a></li>
+                        </ul>
+                    </li>
+                </div>
+                <li><a href="/Contact/contact.html">Contact</a></li>
+            </div>
+
+        </ul>
+    </nav>
+    <!-- ----------------------- ----------- ----------------------- -->
+
+    <main>
+        <div class="page-body">
+            <h3 class="page-header">Intro to Fab - Week 06</h3>
+
+            <hr class="page-divider">
+
+            <h3 class="page-title">Working with Motors</h3>
+
+            <!-- <h3 class="page-subtitle">[ Subtitle Here ]</h3> -->
+
+            <h3 class="page-text">
+                So initially I played around with the idea of revisiting a couple projects from
+                pcomp — a musical box that opened after the whole jeopardy theme song
+                played (which had a motor held by a janky cardboard mount and an even
+                more janky cardboard hinge) or my final pcomp project which was a
+                motorized version of playing musical spoons using sad little servos.
+            </h3>
+
+            <div class="page-grid">
+                <div class="page-grid-item">
+                    <img class="grid-image" src="" alt="">
+                </div>
+                <div class="page-grid-item">
+                    <img class="grid-image" src="" alt="">
+                </div>
+            </div>
+
+            <h3 class="page-text">
+                Instead, I decided to go a new / different route. I really like the mechanism of
+                <a class="sub-link" target="_blank"
+                    href="https://www.instagram.com/p/BTMrBR2Arks/?utm_source=ig_embed&utm_campaign=embed_video_watch_again">this</a>
+                from class and wanted to use it in this assignment. Took a while to come up
+                with an idea but I landed on building a magic 8 ball shaker, because why
+                shake it with your hand when you can press a button and it will do it for you.
+                <br><br>
+                Honestly I have found this bit quite challenging and am still having some
+                difficulties getting the right movement working.
+                <br><br>
+                Here are some bad sporadic sketches of trying to figure things out--
+            </h3>
+
+            <div class="page-grid">
+                <div class="page-grid-item">
+                    <img class="grid-image" src="" alt="">
+                </div>
+                <div class="page-grid-item">
+                    <img class="grid-image" src="" alt="">
+                </div>
+            </div>
+
+            <div class="page-grid">
+                <div class="page-grid-item">
+                    <img class="grid-image" src="" alt="">
+                </div>
+                <div class="page-grid-item">
+                    <img class="grid-image" src="" alt="">
+                </div>
+            </div>
+
+            <img class="page-center-image" src="" alt="">
+
+            <h3 class="page-text">
+                This has been tricky because with the magic 8 ball, the window poses a bit
+                of an issue. At first, the movement I thought I needed kept the window
+                horizontal, and the ball rotating on its center axis, which essentially kept the
+                window flat and didn’t allow it to shake enough so that a new answer would
+                appear. So I moved on to having it either twist on the x or z axis so that the
+                window would move.
+                <br><br>
+                It was hard to visualize everything in my head so I made test cuts using
+                cardboard and then test cuts with acrylic as well.
+            </h3>
+
+            <div class="page-grid">
+                <div class="page-grid-item">
+                    <img class="grid-image" src="" alt="">
+                </div>
+                <div class="page-grid-item">
+                    <img class="grid-image" src="" alt="">
+                </div>
+            </div>
+
+            <img class="page-center-image" src="" alt="">
+
+            <div class="page-grid">
+                <div class="page-grid-item">
+                    <img class="grid-image" src="" alt="">
+                </div>
+                <div class="page-grid-item">
+                    <video class="grid-image" controls>
+                        <source src="">
+                    </video>
+                </div>
+            </div>
+
+            <h3 class="page-text">
+                However, as I kept running into issues with making that piston action as well
+                as the nuts and washers coming off of the screws as things rotated — dumb
+                question but how do I keep them in place without tightening too much
+                where nothing can rotate?
+                <br><br>
+                Anyways, because I kept running into issues with that mechanism and I knew
+                more issues would come up like mounting it all, I decided to try using a DC
+                motor instead of a tt motor. And because it spins so fast, I mounted the
+                magic 8 ball straight on it in its mount and just had it spin on its center axis
+                really fast, and luckily after it slows down when the button is released, the
+                answers in the window do in fact change. I will keep this for my back up in
+                case I really can’t get the other way to work for me in time.
+                <br><br>
+                Also, on the breadboard for the third video, I have two pairs of buttons that
+                change the direction of the motor to help slow it down a little quicker — is
+                this probably bad for the motor? Perhaps.
+                Here’s some testing footage--
+            </h3>
+
+            <div class="page-grid">
+                <div class="page-grid-item">
+                    <video class="grid-image" controls>
+                        <source src="">
+                    </video>
+                </div>
+                <div class="page-grid-item">
+                    <video class="grid-image" controls>
+                        <source src="">
+                    </video>
+                </div>
+            </div>
+
+            <video class="page-center-video" controls>
+                <source src="">
+            </video>
+
+            <h3 class="page-text">
+                LOCK NUTS — the answer to a good chunk of my problems. Was at Bruno’s
+                this morning and saw them and didn’t know why I didn’t think of them. Then
+                saw Ben’s example which uses lock nuts — so back on the somewhat right
+                track.
+                <br><br>
+                Here’s test footage with the updated mechanism with lock nuts in place, as
+                well as the double version, also — from Ben’s suggestion of only needing a
+                single movement instead of using both sides of the motor, I tried to test out
+                the motion with the 8 ball, it was a bit finicky because the suction base of
+                the vise grip wouldn’t work, but I think once I mount the 8 ball as its intended
+                to be — horizontally instead of vertically — to its housing/structure which will
+                be made of wood I can do a better test (I’m also going to mount it on both
+                ends so it’s not putting too much strain on the motor spindle)--
+            </h3>
+
+            <div class="page-grid">
+                <div class="page-grid-item">
+                    <video class="grid-image" controls>
+                        <source src="">
+                    </video>
+                </div>
+                <div class="page-grid-item">
+                    <video class="grid-image" controls>
+                        <source src="">
+                    </video>
+                </div>
+            </div>
+
+            <video class="page-center-video" controls>
+                <source src="">
+            </video>
+
+            <h3 class="page-text">
+                Cut out the magic 8 ball holder out of 1/8" clear acrylic.
+            </h3>
+
+            <div class="page-grid">
+                <div class="page-grid-item">
+                    <img class="grid-image" src="" alt="">
+                </div>
+                <div class="page-grid-item">
+                    <img class="grid-image" src="" alt="">
+                </div>
+            </div>
+
+            <h3 class="page-text">
+                Started designing the actual mount for the motor and things, a tedious
+                process with all of the tiny measurements but it’s come together. I made a
+                test version with some wood and marked down some adjustments/additions
+                that I need to make or forgot to include.
+            </h3>
+
+            <div class="page-grid">
+                <div class="page-grid-item">
+                    <img class="grid-image" src="" alt="">
+                </div>
+                <div class="page-grid-item">
+                    <img class="grid-image" src="" alt="">
+                </div>
+            </div>
+
+            <video class="page-center-video" controls>
+                <source src="">
+            </video>
+
+            <h3 class="page-text">
+                So originally, I was using the axis of the DC motor as a means for the 8 ball to
+                rotate, with the intention of having the DC motor as a backup if I couldn’t get
+                the tt motor mechanism working in time. However, it was hard to find out the
+                correct screw size for mounting the DC motor — wasn’t an M2, or a #2-56 or
+                #4-40 — so after looking at different screw size charts both metric and
+                imperial and looking on metric screw kits on Amazon, I made a guess and
+                ordered M2.5 screws — how annoying.
+                <br><br>
+                Side note — on my hunt to find out what the screw size was, I came across a
+                lovely Amazon q and a pictured below.
+                <br><br>
+                But before those got delivered, Ben and I figured it’d be less painful to just
+                use a metal rod. Thankfully he had some 1/4″ flanged couplers and I had 1/4″
+                aluminum rods. Although, the aluminum rods didn’t quite work but luckily I
+                had 1/4″ wooden dowels that were a tad smaller so they were able to slot
+                into the couplers.
+                <br><br>
+                Once I recut parts of the 8 ball mount to accommodate the new couplers, I
+                worked on figuring out the structure that everything will be mounted to. I
+                measured out at what height I wanted the 8 ball suspended at, stacked two
+                1×4 pieces of wood and used the drill press to make 1/4″ holes so that the 8
+                ball / rods would be level.
+                <br><br>
+                UPDATE: The screw size for the DC motors is in fact M2.5. Annoying.
+                <br><br>
+                In terms of the base, I drilled a 1″ hole roughly 3/4 of the way into the base
+                and then a (I think) 7/8″ hole perpendicular to the 1″ hole for some wiring.
+                This is where the motor will be mounted.
+            </h3>
+
+            <div class="page-grid">
+                <div class="page-grid-item">
+                    <img class="grid-image" src="" alt="">
+                </div>
+                <div class="page-grid-item">
+                    <img class="grid-image" src="" alt="">
+                </div>
+            </div>
+
+            <img class="page-center-image" src="" alt="">
+
+            <h3 class="page-text">
+                Next, I cut out the entire mount for the motor out of acrylic. After a stupid
+                amount of resizing the slot for the motor’s spindle, finally had it right.
+                Honestly assembling it all was a real pain in my ass.
+            </h3>
+
+            <div class="page-grid">
+                <div class="page-grid-item">
+                    <img class="grid-image" src="" alt="">
+                </div>
+                <div class="page-grid-item">
+                    <img class="grid-image" src="" alt="">
+                </div>
+            </div>
+
+            <img class="page-center-image" src="" alt="">
+
+            <img class="page-center-image" src="" alt="">
+
+            <img class="page-center-image" src="" alt="">
+
+            <h3 class="page-text">
+
+            </h3>
+
+
+
+
+
+            <div class="page-grid">
+                <div class="page-grid-item">
+                    <img class="grid-image" src="" alt="">
+                </div>
+                <div class="page-grid-item">
+                    <video class="grid-image" controls>
+                        <source src="">
+                    </video>
+                </div>
+            </div>
+
+
+            <audio controls class="page-audio-file">
+                <source src="" type="">
+            </audio>
+
+
+            <h3 class="page-text">
+                Text here text here text here text here text here text here
+                text here text here text here text here text here text here
+                text here text here text here text here text here text here.
+            </h3>
+
+            <img class="page-center-image" src="" alt="">
+
+
+            <video class="page-center-video" controls>
+                <source src="">
+            </video>
+
+
+        </div>
+    </main>
+
+
+    <!-- ----------------------- FOOTER ----------------------- -->
+    <footer>
+        <div class="footer-nav">
+            <ul>
+                <li class="footer-nav-link"><a href="/">Home</a></li>
+                <li class="footer-nav-link"><a href="/About/about.html">About</a></li>
+                <li class="footer-nav-link"><a href="/Work Credits/work-credits.html">Work Credits</a></li>
+                <li class="footer-nav-link"><a href="/Projects/projects.html">Projects</a></li>
+                <li class="footer-nav-link"><a href="/ITP Blog/itp-blog.html">ITP Blog</a></li>
+                <li class="footer-nav-link"><a href="#contact">Contact</a></li>
+            </ul>
+        </div>
+
+        <div class="social-links">
+            <a class="social-icon" href="http://www.instagram.com/biancaaagan" target="_blank">
+                <img src="/Media/icon-instagram.png" width="25px">
+            </a>
+            <a class="social-icon" href="http://www.linkedin.com/in/biancagan" target="_blank">
+                <img src="/Media/icon-linkedin.png" width="25px">
+            </a>
+        </div>
+
+        <div class="footer-credits-div">
+            <h2 class="footer-credits"><a id="copyright" href="https://www.needafreq.com/">&copy;</a> 2024 | Bianca Gan
+            </h2>
+        </div>
+    </footer>
+    <!-- ----------------------- ----------------------- ----------------------- -->
+</body>
+
+</html>
