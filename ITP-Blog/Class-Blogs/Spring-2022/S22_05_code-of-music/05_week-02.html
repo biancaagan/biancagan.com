@@ -53,46 +53,62 @@
 
     <main>
         <div class="page-body">
-            <h3 class="page-header">[ Header Here ]</h3>
+            <h3 class="page-header">Code of Music - Week 02</h3>
 
             <hr class="page-divider">
 
-            <h3 class="page-title">[ Title Here ]</h3>
+            <!-- <h3 class="page-title">[ Title Here ]</h3> -->
 
-            <h3 class="page-subtitle">[ Subtitle Here ]</h3>
-
-            <div class="page-grid">
-                <div class="page-grid-item">
-                    <img class="grid-image" src="" alt="">
-                </div>
-                <div class="page-grid-item">
-                    <video class="grid-image" controls>
-                        <source src="">
-                    </video>
-                </div>
-            </div>
-
-
-            <audio controls class="page-audio-file">
-                <source src="" type="">
-            </audio>
-
+            <!-- <h3 class="page-subtitle">[ Subtitle Here ]</h3> -->
 
             <h3 class="page-text">
-                Text here text here text here text here text here text here
-                text here text here text here text here text here text here
-                text here text here text here text here text here text here.
+                So for this assignment, I was thinking of other way to make a fun interactive
+                stem mixer like the <a class="sub-link" target="_blank" href="http://www.unseen-music.com/yume/">Yume</a>
+                example we looked at in class. I was thinking back to my undergraduate
+                program where in one of my classes we had stems of popular songs —
+                usually vocals, guitar, drums, bass, etc. — and we had to mix the levels and
+                try to match the actual final recording of the song. After thinking of this, I
+                kind of thought it would be fun to make a sort of game where I would store
+                values and if the user got them within a close enough range they would ‘win’
+                or ‘pass’.
+                <br><br>
+                In terms of visual aspects, I was thinking of ways I could make the user
+                interface fun and attractive, and I thought about a keyboard and the keys
+                acting as the sliders to control different stems.
+                <br><br>
+                Here are some first sketches of ideas:
             </h3>
 
-            <img class="page-center-image" 
-                src="" alt=""
-            >
+            <img class="page-center-image" id="horizontal"
+                src="https://media.biancagan.com/ITP-Blog/Spring-2022/SS_05_code-of-music/05_week-02/01.JPG" alt="">
 
+            <h3 class="page-text">
+                At first, I wanted the sliders to work if a user clicked and dragged certain
+                keys of the piano, however I found it a bit tricky tracking all of the mouseX/Y
+                movements and mapping it properly.
+                <br><br>
+                Here’s a short video demonstration using the mouseDragged function:
+            </h3>
 
-            <video class="page-center-video" controls>
-                <source src="">
+            <video class="page-center-video" id="horizontal" controls>
+                <source src="https://media.biancagan.com/ITP-Blog/Spring-2022/SS_05_code-of-music/05_week-02/02.MOV">
             </video>
 
+            <h3 class="page-text">
+                In order to make my life a bit easier, I decided to use the keyTyped function
+                to control the +/- volume for each track. I also added a waveform graphic in
+                the background, I thought it looked cool. I wanted to create buttons that
+                could toggle between two different stems for each track, but I was having
+                some issues calling a new track/player. Instead I made mute buttons. There’s
+                a small bug where if you mute a track, but then increase the volume of it it
+                overrides the mute. I haven’t looked into fixing it yet.
+                <br><br>
+                Here's a video demonstration as well as the current <a class="sub-link" target="_blank" href="https://editor.p5js.org/biancaagan/sketches/CAWikDG2t">code</a>
+            </h3>
+
+            <video class="page-center-video" id="horizontal" controls>
+                <source src="https://media.biancagan.com/ITP-Blog/Spring-2022/SS_05_code-of-music/05_week-02/03.MOV">
+            </video>
 
         </div>
     </main>
