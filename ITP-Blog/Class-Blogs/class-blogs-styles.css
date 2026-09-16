@@ -283,6 +283,15 @@ li {
   justify-content: center;
   margin: 40px auto 40px auto;
   padding: 1vw;
+
+  cursor: zoom-in;
+  transform: transform 0.2s ease;
+}
+
+.page-center-image:hover {
+  transform: scale(1.5);
+  position: relative;
+  z-index: 100;
 }
 
 .page-center-video {
@@ -337,6 +346,15 @@ li {
   display: flex;
   justify-content: center;
   margin: 40px auto 40px auto;
+
+  cursor: zoom-in;
+  transform: transform 0.2s ease;
+}
+
+.grid-image:hover {
+  transform: scale(2);
+  position: relative;
+  z-index: 100;
 }
 
 

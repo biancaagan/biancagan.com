@@ -53,46 +53,63 @@
 
     <main>
         <div class="page-body">
-            <h3 class="page-header">[ Header Here ]</h3>
+            <h3 class="page-header">Week 04 - Game Controller</h3>
 
             <hr class="page-divider">
 
-            <h3 class="page-title">[ Title Here ]</h3>
+            <!-- <h3 class="page-title">[ Title Here ]</h3> -->
 
-            <h3 class="page-subtitle">[ Subtitle Here ]</h3>
+            <!-- <h3 class="page-subtitle">[ Subtitle Here ]</h3> -->
+
+            <h3 class="page-text">
+                For my game controller I decided to use the accelerometer as the controller.
+                Last semester, in Code of Music I programmed a ‘musical’ version of the
+                game pong, and later in the Haptics class I learned how to access the
+                accelerometer/gyroscope and used to serial to talk to p5 and incorporated
+                haptic feedback for the game.
+                <br><br>
+                Here is the Arduino <a class="sub-link" target="_blank" href="https://github.com/biancaagan/P5-Projects/blob/main/Tone-Pong-Arduino">code</a>
+                and the link to the <a class="sub-link" target="_blank" href="https://editor.p5js.org/biancaagan/sketches/ARu3j3nzC">p5 sketch</a>.
+            </h3>
+
+            <video class="page-center-video" id="horizontal" controls>
+                <source src="https://media.biancagan.com/ITP-Blog/Fall-2022/F22_01_understanding-networks/01_week-04/01.MOV">
+            </video>
+
+            <h3 class="page-text">
+                The next step was to incorporate code I've used for my version of Pong into the Ball Drop Game
+                for this class.
+            </h3>
 
             <div class="page-grid">
                 <div class="page-grid-item">
-                    <img class="grid-image" src="" alt="">
+                    <img class="grid-image" src="https://media.biancagan.com/ITP-Blog/Fall-2022/F22_01_understanding-networks/01_week-04/02.PNG" alt="">
                 </div>
                 <div class="page-grid-item">
                     <video class="grid-image" controls>
-                        <source src="">
+                        <source src="https://media.biancagan.com/ITP-Blog/Fall-2022/F22_01_understanding-networks/01_week-04/03.MOV">
                     </video>
                 </div>
             </div>
 
-
-            <audio controls class="page-audio-file">
-                <source src="" type="">
-            </audio>
-
-
             <h3 class="page-text">
-                Text here text here text here text here text here text here
-                text here text here text here text here text here text here
-                text here text here text here text here text here text here.
+                I was able to get connection to my WiFi at home, and was attempting to test
+                connecting to my computer’s IP address to see the results in terminal
+                (thanks Gracy) however, when I typed
+                ‘nc -l 8080’ in Terminal nothing would happen. And in the Arduino serial
+                monitor it would never connect but just keep saying ‘connecting’.
             </h3>
 
-            <img class="page-center-image" id="horizontal"
-                src="" alt=""
-            >
-
-
-            <video class="page-center-video" controls>
-                <source src="">
-            </video>
-
+            <div class="page-grid">
+                <div class="page-grid-item">
+                    <img class="grid-image" src="https://media.biancagan.com/ITP-Blog/Fall-2022/F22_01_understanding-networks/01_week-04/04.PNG" alt="">
+                </div>
+                <div class="page-grid-item">
+                    <video class="grid-image" controls>
+                        <source src="https://media.biancagan.com/ITP-Blog/Fall-2022/F22_01_understanding-networks/01_week-04/05.MOV">
+                    </video>
+                </div>
+            </div>
 
         </div>
     </main>

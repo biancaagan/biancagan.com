@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" type="image/png" href="/Media/FCG Logo 2.png">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="/ITP-Blog/Class-Blogs/class-blogs-styles.css" />
+    <title>BG</title>
+</head>
+
+<body>
+
+    <!-- ----------------------- NEW NAV BAR ----------------------- -->
+    <nav class="navbar">
+        <div class="nav-header">
+            <h3><a href="/" style="color: black;">BG</a></h3>
+        </div>
+
+        <ul class="nav-links top-nav">
+            <!-- USING CHECKBOX HACK -->
+            <input type="checkbox" class="hack" id="checkbox_toggle" />
+            <label for="checkbox_toggle" class="hamburger">&#9776;</label>
+
+            <div class="menu">
+                <li class="top-nav-link"><a href="/">Home</a></li>
+                <li class="top-nav-link"><a href="/About/about.html">About</a></li>
+                <li class="top-nav-link"><a href="/Work-Credits/work-credits.html">Work Credits</a></li>
+                <li class="top-nav-link"><a href="/Projects/projects.html">Projects</a></li>
+                <div class="dropdown-menu">
+                    <li class="itp-blog top-nav-link">
+                        <a href="/ITP-Blog/itp-blog.html">ITP Blog&nbsp;<i class="fa fa-caret-down"></i></a>
+
+                        <!-- DROPDOWN MENU ITEMS -->
+                        <ul class="dropdown">
+                            <li><a href="/ITP-Blog/Research-Residency/residency.html">Research Residency</a></li>
+                            <li><a href="/ITP-Blog/Thesis/thesis-adm.html">Thesis - ADM</a></li>
+                            <li><a href="/ITP-Blog/Class-Blogs/Fall-2021/fall_2021.html">Fall 2021</a></li>
+                            <li><a href="/ITP-Blog/Class-Blogs/Spring-2022/spring-2022.html">Spring 2022</a></li>
+                            <li><a href="/ITP-Blog/Class-Blogs/Fall-2022/fall_2022.html">Fall 2022</a></li>
+                            <li><a href="/ITP-Blog/Class-Blogs/Spring-2023/spring_2023.html">Spring 2023</a></li>
+                        </ul>
+                    </li>
+                </div>
+                <li><a href="/Contact/contact.html">Contact</a></li>
+            </div>
+
+        </ul>
+    </nav>
+    <!-- ----------------------- ----------- ----------------------- -->
+
+    <main>
+        <div class="page-body">
+            <h3 class="page-header">Week 01 - Hosting + Firewall Log</h3>
+
+            <hr class="page-divider">
+
+            <!-- <h3 class="page-title">[ Title Here ]</h3> -->
+
+            <!-- <h3 class="page-subtitle">[ Subtitle Here ]</h3> -->
+
+            <h3 class="page-text">
+                Setting up the virtual host using Digital Ocean was pretty easy and straight
+                forward. I didn’t start running into issues until I got to running things on the
+                command line of Terminal. The first problem being, I didn’t receive the email
+                that would have said the IP address, username, and password of my droplet,
+                so when I had to enter the password in Terminal, at first I wasn’t sure what to
+                do. I attempted to use the password I created when I made the droplet, but
+                that didn’t work. I asked one of my classmates if she had run into the same
+                issue as well, and she said she did and used the password she made with her
+                droplet. So I went back to try it again, and then it didn’t prompt me for a
+                password (I think maybe it took the password when I typed it the first time)
+                and it let me through and connected successfully and showed the text “The
+                authenticity of host …”.
+            </h3>
+
+            <img class="page-center-image" id="horizontal"
+                src="https://media.biancagan.com/ITP-Blog/Fall-2022/F22_01_understanding-networks/01_week-01/01.PNG" alt=""
+            >
+
+            <h3 class="page-text">
+                I continued through the steps of logging into it and adding a user. I ran into a
+                couple more bumps in the road when setting up the firewall and installing
+                ufw. Most of which was just navigating through the terminal – when needing
+                to copy and paste the rules for iptables – but eventually I got through it and
+                was able to finish and log out.
+            </h3>
+
+            <div class="page-grid">
+                <div class="page-grid-item">
+                    <video class="grid-image" controls>
+                        <source src="https://media.biancagan.com/ITP-Blog/Fall-2022/F22_01_understanding-networks/01_week-01/02.MOV">
+                    </video>
+                </div>
+                <div class="page-grid-item">
+                    <img class="grid-image" src="https://media.biancagan.com/ITP-Blog/Fall-2022/F22_01_understanding-networks/01_week-01/03.PNG" alt="">
+                </div>
+            </div>
+
+            <h3 class="page-text">
+                Following the video about firewall log searching, I have been trying to login to
+                my host for the past few days and keep getting the error ‘ssh: connect to
+                host 167.99.225.109 port 22: Connection refused’ and other various things
+                about sudo commands not working. I have office hours today, but before
+                then, I have been googling and googling how to trouble shoot this. Something
+                is wrong with my Port 22 not listening.
+                <br><br>
+                I went through a lot of troubleshooting and googling — trying to find out why
+                the sudo command wasn’t working, why I couldn’t get the ufw status, how I
+                could open Port 22, etc.
+                <br><br>
+                I got to the point of using the recovery console through Digital Ocean and
+                changed the root password before I had office hours with Tom.
+                <br><br>
+                I had an option to just trashing the droplet and creating a new one, but
+                thankfully we went through some more troubleshooting because I have
+                become emotionally attached to my droplet named ‘bread’ since we have
+                been through so much together. Jokes.
+                <br><br>
+                We did some troubleshooting using the recovery console and also trying it in
+                Terminal. We found that I had an instance of iptables and also ufw that
+                seemed to be blocking or butting heads with each other which made the
+                port unable to be accessed. We trashed iptables, and doing so also trashed
+                ufw, so reinstalled ufw and was finally able to access the firewall log — thanks
+                Tom!
+                <br><br>
+                At this point, I was finally able to continue with looking at and sorting through
+                who has tried to access my host.
+            </h3>
+
+            <div class="page-grid">
+                <div class="page-grid-item">
+                    <img class="grid-image" src="https://media.biancagan.com/ITP-Blog/Fall-2022/F22_01_understanding-networks/01_week-01/04.PNG" alt="">
+                </div>
+                <div class="page-grid-item">
+                    <img class="grid-image" src="https://media.biancagan.com/ITP-Blog/Fall-2022/F22_01_understanding-networks/01_week-01/05.PNG" alt="">
+                </div>
+            </div>
+
+            <h3 class="page-text">
+                At this point in time after resetting ufw, so about two and a half hours, there
+                have been 439 attempts.
+                <br><br>
+                Here is the <a class="sub-link" target="_blank" href="https://docs.google.com/spreadsheets/d/1lAfS82gWPV5OOdFJ_z8vHRAjXsC3Lp9KP29n9Yzg0Jk/edit?usp=sharing">link</a>
+                to the google sheet. I was able to count how many different IP addresses tried 
+                to access it, as well as what all the unique IP addresses were. I’m trying to 
+                find a way to count how many times each unique IP address tried to connect.
+            </h3>
+
+
+        </div>
+    </main>
+
+
+    <!-- ----------------------- FOOTER ----------------------- -->
+    <footer>
+        <div class="footer-nav">
+            <ul>
+                <li class="footer-nav-link"><a href="/">Home</a></li>
+                <li class="footer-nav-link"><a href="/About/about.html">About</a></li>
+                <li class="footer-nav-link"><a href="/Work Credits/work-credits.html">Work Credits</a></li>
+                <li class="footer-nav-link"><a href="/Projects/projects.html">Projects</a></li>
+                <li class="footer-nav-link"><a href="/ITP Blog/itp-blog.html">ITP Blog</a></li>
+                <li class="footer-nav-link"><a href="#contact">Contact</a></li>
+            </ul>
+        </div>
+
+        <div class="social-links">
+            <a class="social-icon" href="http://www.instagram.com/biancaaagan" target="_blank">
+                <img src="/Media/icon-instagram.png" width="25px">
+            </a>
+            <a class="social-icon" href="http://www.linkedin.com/in/biancagan" target="_blank">
+                <img src="/Media/icon-linkedin.png" width="25px">
+            </a>
+        </div>
+
+        <div class="footer-credits-div">
+            <h2 class="footer-credits"><a id="copyright" href="https://www.needafreq.com/">&copy;</a> 2024 | Bianca Gan
+            </h2>
+        </div>
+    </footer>
+    <!-- ----------------------- ----------------------- ----------------------- -->
+</body>
+
+</html>
