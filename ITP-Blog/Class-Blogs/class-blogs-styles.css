@@ -378,6 +378,7 @@ li {
 }
 
 .main-link {
+  /* border-style: dotted; */
   font-family: Jost-SemiBold;
   width: fit-content;
   margin: 30px 0 0 20px;
@@ -394,6 +395,7 @@ li {
 
 .sub-link {
   color: var(--highlight-orange);
+  text-decoration: underline;
 }
 
 .sub-link:hover {
