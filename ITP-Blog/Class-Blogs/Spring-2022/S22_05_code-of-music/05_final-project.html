@@ -53,7 +53,7 @@
 
     <main>
         <div class="page-body">
-            <h3 class="page-header">Code of Music - Melody</h3>
+            <h3 class="page-header">Code of Music - Final Project</h3>
 
             <hr class="page-divider">
 
@@ -62,36 +62,71 @@
             <!-- <h3 class="page-subtitle">[ Subtitle Here ]</h3> -->
 
             <h3 class="page-text">
-                My idea is to create a musical version of the game Pong or Breakout.
-                Where each block you clear out can be a different note whether it’s random,
-                within a specified scale, or range. And maybe different colored blocks can
-                change the speed.
+                I’m thinking of two ideas, one would be to expand the text analysis sketch I
+                made for timbre, and build off of that and incorporate melody/harmony and
+                use Markov chain(s). Or continue working on the harmony assignment and
+                build out from there for a final project. As of now, I’m thinking of
+                implementing a Markov chain for all the ball collisions instead of random
+                intervals, and working on making the code of the bouncing balls work more
+                smoothly.
             </h3>
 
-            <div class="page-grid">
-                <div class="page-grid-item">
-                    <img class="grid-image" src="https://media.biancagan.com/ITP-Blog/Spring-2022/SS_05_code-of-music/05_melody/01.PNG" alt="">
-                </div>
-                <div class="page-grid-item">
-                    <img class="grid-image" src="https://media.biancagan.com/ITP-Blog/Spring-2022/SS_05_code-of-music/05_melody/02.PNG" alt="">
-                </div>
-            </div>
-
             <img class="page-center-image" id="horizontal"
-                src="https://media.biancagan.com/ITP-Blog/Spring-2022/SS_05_code-of-music/05_melody/03.JPG" alt=""
+                src="https://media.biancagan.com/ITP-Blog/Spring-2022/SS_05_code-of-music/05_final-project/01.PNG" alt=""
             >
 
-            <h3 class="page-title">Interactive Melody Sketch</h3>
-
             <h3 class="page-text">
-                Sketch: <a class="sub-link" target="_blank" href="https://editor.p5js.org/biancaagan/sketches/q9NnNEZhR">https://editor.p5js.org/biancaagan/sketches/q9NnNEZhR</a>
+                At the moment, I have been working on incorporating a Markov chain into
+                both the bouncing ball and text analysis code. I’ve been able to add a Markov
+                chain into the bouncing ball sketch, and have just been finding a work around
+                the error I keep getting when more than one collision occurs at the same
+                time. I have yet to get a Markov chain working in the text analysis code.
+                <br><br>
+                From here, I need to continue fixing the bouncing ball sketch and I’d also like
+                to add in a user controlled aspect to it, thought at the moment I’m not
+                exactly sure what.
+                <br><br>
+                <a class="sub-link" target="_blank" href="https://editor.p5js.org/biancaagan/sketches/5BBRTpRL1">https://editor.p5js.org/biancaagan/sketches/5BBRTpRL1</a>
+                <br>
+                <a class="sub-link" target="_blank" href="https://editor.p5js.org/biancaagan/sketches/5BBRTpRL1">https://editor.p5js.org/biancaagan/sketches/5BBRTpRL1</a>
             </h3>
 
             <video class="page-center-video" id="horizontal" controls>
-                <source src="https://media.biancagan.com/ITP-Blog/Spring-2022/SS_05_code-of-music/05_melody/04.MOV">
+                <source src="https://media.biancagan.com/ITP-Blog/Spring-2022/SS_05_code-of-music/05_final-project/02.MOV">
             </video>
 
+            <h3 class="page-text">
+                Here I still have the issue of start times occurring simultaneously.
+                <br><br>
+                In the next video, I tried using the setTimeout() function to call the playNext
+                function after a random amount of time in milliseconds.
+                <br><br>
+                It seems to have mostly solved the problem.
+                <br><br>
+                One issue I still continue to have is with some of the ball collisions getting
+                stuck which is what’s causing multiple calls of a sound and making the distorted noise.
+                <br><br>
+                In the new code, there is also a single circle that acts as a drone and can be
+                changed by moving the Arduino. I’ve access the gyroscope and mapped
+                those values to move the circle and controle the drone frequencies.
+                <br><br>
+                <a class="sub-link" target="_blank" href="https://editor.p5js.org/bg5392/sketches/wndiV8G1n">https://editor.p5js.org/bg5392/sketches/wndiV8G1n</a>
+                <br>
+                <a class="sub-link" target="_blank" href="https://editor.p5js.org/bg5392/sketches/wndiV8G1n">https://editor.p5js.org/bg5392/sketches/wndiV8G1n</a>
+            </h3>
 
+            <video class="page-center-video" id="horizontal" controls>
+                <source src="https://media.biancagan.com/ITP-Blog/Spring-2022/SS_05_code-of-music/05_final-project/03.MOV">
+            </video>
+
+            <div class="page-grid">
+                <div class="page-grid-item">
+                    <img class="grid-image" src="https://media.biancagan.com/ITP-Blog/Spring-2022/SS_05_code-of-music/05_final-project/04.PNG" alt="">
+                </div>
+                <div class="page-grid-item">
+                    <img class="grid-image" src="https://media.biancagan.com/ITP-Blog/Spring-2022/SS_05_code-of-music/05_final-project/05.PNG" alt="">
+                </div>
+            </div>
 
         </div>
     </main>
