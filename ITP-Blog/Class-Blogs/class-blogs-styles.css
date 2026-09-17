@@ -253,6 +253,11 @@ li {
   text-align: center;
 }
 
+.page-title-link {
+  font-size: 1.8vw;
+  margin: 10px auto;
+}
+
 .page-subtitle {
   border-style: dashed;
   border-width: 2px;
@@ -271,7 +276,7 @@ li {
   width: 98%;
   margin: 20px auto auto auto;
   padding: 1vw;
-  font-size: 1.6vw;
+  font-size: 1.8vw;
   word-wrap: break-word;
 }
 
