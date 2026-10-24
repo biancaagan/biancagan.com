@@ -259,8 +259,8 @@ li {
 }
 
 .page-subtitle {
-  border-style: dashed;
-  border-width: 2px;
+  /* border-style: dashed;
+  border-width: 2px; */
   font-family: Jost-SemiBold;
   width: 98%;
   margin: 20px auto auto auto;
@@ -269,8 +269,8 @@ li {
 }
 
 .page-text {
-  border-style: dashed;
-  border-width: 2px;
+  /* border-style: dashed;
+  border-width: 2px; */
   justify-content: center;
   font-family: Jost-Regular;
   width: 98%;
@@ -281,8 +281,8 @@ li {
 }
 
 .page-center-image {
-  border-style: dashed;
-  border-width: 2px;
+  /* border-style: dashed;
+  border-width: 2px; */
   width: 50%;
   display: flex;
   justify-content: center;
@@ -300,8 +300,8 @@ li {
 }
 
 .page-center-video {
-  border-style: dashed;
-  border-width: 2px;
+  /* border-style: dashed;
+  border-width: 2px; */
   width: 50%;
   display: flex;
   justify-content: center;
@@ -336,11 +336,11 @@ li {
 
 .page-grid-item {
   /* Optional: Add some styling so you can see the columns */
-  background-color: #f0f0f0;
+  /* background-color: #f0f0f0; */
   margin: auto;
   padding: 1vw 0 1vw 0;
-  border-style: dashed;
-  border-width: 2px;
+  /* border-style: dashed;
+  border-width: 2px; */
   font-family: Jost-Regular;
 }
 

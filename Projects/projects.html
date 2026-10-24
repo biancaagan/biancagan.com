@@ -7,117 +7,139 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="icon" type="image/png" href="/Media/FCG Logo 2.png">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    <link rel="stylesheet" href="/style.css" />
+    <link rel="stylesheet" href="/Projects/projects-style.css" />
     <title>BG</title>
 </head>
 
 <body>
 
     <!-- ----------------------- NEW NAV BAR ----------------------- -->
- <nav class="navbar">
+    <nav class="navbar">
         <div class="nav-header">
-                <h3><a href="/" style="color: black;">BG</a></h3>
+            <h3><a href="/" style="color: black;">BG</a></h3>
         </div>
-        
-        <ul class="nav-links top-nav">
-                <!-- USING CHECKBOX HACK -->
-                <input type="checkbox" class="hack" id="checkbox_toggle" />
-                <label for="checkbox_toggle" class="hamburger">&#9776;</label>
 
-                <div class="menu">
-                        <li class="top-nav-link"><a href="/">Home</a></li>
-                        <li class="top-nav-link"><a href="/About/about.html">About</a></li>
-                        <li class="top-nav-link"><a href="/Work-Credits/work-credits.html">Work Credits</a></li>
-                        <li class="top-nav-link"><a href="/Projects/projects.html">Projects</a></li>
-                        <div class="dropdown-menu">
-                                <li class="itp-blog top-nav-link">
-                                        <a href="/ITP-Blog/itp-blog.html">ITP Blog&nbsp;<i class="fa fa-caret-down"></i></a>
-                                        
-                                        <!-- DROPDOWN MENU ITEMS -->
-                                        <ul class="dropdown">
-                                                <li><a href="/ITP-Blog/Research-Residency/residency.html">Research Residency</a></li>
-                                                <li><a href="/ITP-Blog/Thesis/thesis-adm.html">Thesis - ADM</a></li>
-                                                <li><a href="/ITP-Blog/Class-Blogs/Fall-2021/fall_2021.html">Fall 2021</a></li>
-                                                <li><a href="/ITP-Blog/Class-Blogs/Spring-2022/spring-2022.html">Spring 2022</a></li>
-                                                <li><a href="/ITP-Blog/Class-Blogs/Fall-2022/fall_2022.html">Fall 2022</a></li>
-                                                <li><a href="/ITP-Blog/Class-Blogs/Spring-2023/spring_2023.html">Spring 2023</a></li>
-                                        </ul>
-                                </li>
-                        </div>
-                        <li><a href="/Contact/contact.html">Contact</a></li>
+        <ul class="nav-links top-nav">
+            <!-- USING CHECKBOX HACK -->
+            <input type="checkbox" class="hack" id="checkbox_toggle" />
+            <label for="checkbox_toggle" class="hamburger">&#9776;</label>
+
+            <div class="menu">
+                <li class="top-nav-link"><a href="/">Home</a></li>
+                <li class="top-nav-link"><a href="/About/about.html">About</a></li>
+                <li class="top-nav-link"><a href="/Work-Credits/work-credits.html">Work Credits</a></li>
+                <li class="top-nav-link"><a href="/Projects/projects.html">Projects</a></li>
+                <div class="dropdown-menu">
+                    <li class="itp-blog top-nav-link">
+                        <a href="/ITP-Blog/itp-blog.html">ITP Blog&nbsp;<i class="fa fa-caret-down"></i></a>
+
+                        <!-- DROPDOWN MENU ITEMS -->
+                        <ul class="dropdown">
+                            <li><a href="/ITP-Blog/Research-Residency/residency.html">Research Residency</a></li>
+                            <li><a href="/ITP-Blog/Thesis/thesis-adm.html">Thesis - ADM</a></li>
+                            <li><a href="/ITP-Blog/Class-Blogs/Fall-2021/fall_2021.html">Fall 2021</a></li>
+                            <li><a href="/ITP-Blog/Class-Blogs/Spring-2022/spring-2022.html">Spring 2022</a></li>
+                            <li><a href="/ITP-Blog/Class-Blogs/Fall-2022/fall_2022.html">Fall 2022</a></li>
+                            <li><a href="/ITP-Blog/Class-Blogs/Spring-2023/spring_2023.html">Spring 2023</a></li>
+                        </ul>
+                    </li>
                 </div>
-                
+                <li><a href="/Contact/contact.html">Contact</a></li>
+            </div>
+
         </ul>
-</nav>
+    </nav>
     <!-- ----------------------- ----------- ----------------------- -->
 
     <main>
         <div class="page-body">
-                <h3 class="page-header">Projects &#40;Big & Small&#41;</h3>
-                <h3 class="page-subtitle" style="text-align: left;">&#40;Apologies if some media doesn't show, I'm currently migrating everything to a new cloud storage&#41;</h3>
-                <hr style="width: 72vw; margin: 20px auto 20px auto;">
-                
-                <!-- PROJECT -->
-                <h3 style="text-align: left;"><a class="main-link" href="/BLT Garden/blt-garden-project.html"><u>BLT's Automated Garden</u></a></h3>
-                <p class="page-text">
-                    For T's birthday I decided to build a raised garden bed for our backyard so we can have a few veggies and herbs.
-                    And somehow I ended up going down a bit of a rabbit hole and over-engineered or over-complicated the system.
-                    Oops. It was fun.
-                    <!-- <br><br>
-                    <a class="project-info-link" href="/"><u>Click here</u></a> for project info. -->
-                </p>
-                <hr style="width: 72vw; margin: 20px auto 20px auto;">
+            <h3 class="page-header">Projects &#40;Big & Small&#41;</h3>
+            <h3 class="page-header-subtext" style="text-align: left;">&#40;Apologies if some media doesn't show, I'm currently
+                migrating everything to a new cloud storage&#41;</h3>
+            <hr class="page-divider">
 
-                <!-- PROJECT -->
-                <h3 style="text-align: left;"><a class="main-link" href="/ITP-Blog/Research-Residency/project_analog-synth.html"><u>Analog Synth &#40;Residency Project&#41;</u>, actual name still TBD...</a></h3>
-                <p class="page-text">
-                    I have occassionally built simple noise makers since taking Billy Bennett's <i>Hacking Audio Hardware</i> class during 
-                    my first semester at ITP.
-                    <br>
-                    <!-- &#40;See <a class="sub-link" href="/"><u>this <i>Intro to Fabrication</i> project</u></a>.&#41; -->
-                    During my research residency I experimented with many different analog audio circuits such as various
-                    oscillators, filters, mixers, etc. For the resident show I decided to continue this exploration of
-                    analog audio and built my own version of a modular synthesizer.
-                    <!-- <br><br>
+            <!-- PROJECT -->
+            <h3 style="text-align: left;"><a class="main-link"
+                    href="/Projects/biancaisbored.html"><u>biancaisbored.com</u></a></h3>
+            <p class="page-text">
+                A website I've created to house all the silly coding projects I end up doing to keep myself from dying
+                of boredom at work &#40;sometimes&#41;.
+                <!-- <br><br>
                     <a class="project-info-link" href="/"><u>Click here</u></a> for project info. -->
-                </p>
-                <hr style="width: 72vw; margin: 20px auto 20px auto;">
+            </p>
+            <hr class="page-divider">
 
-                <!-- PROJECT -->
-                <h3 style="text-align: left;"><a class="main-link" href="/ITP-Blog/Research-Residency/project_mini-adm.html"><u>Mini ADM</u></a></h3>
-                <p class="page-text">
-                    Expanding on my thesis, I built a mini version of ADM 
-                    &#40;Abstract Drawing Machine&#41; to hang on the wall in front of my desk.
-                    <br>
-                    I've been playing around with different equations and using the Desmos
-                    online graphing calculator.
-                    <!-- <br><br>
+            <!-- PROJECT -->
+            <h3 style="text-align: left;"><a class="main-link" href="/BLT Garden/blt-garden-project.html"><u>BLT's
+                        Automated Garden</u></a></h3>
+            <p class="page-text">
+                For T's birthday I decided to build a raised garden bed for our backyard so we can have a few veggies
+                and herbs.
+                And somehow I ended up going down a bit of a rabbit hole and over-engineered or over-complicated the
+                system.
+                Oops. It was fun.
+                <!-- <br><br>
                     <a class="project-info-link" href="/"><u>Click here</u></a> for project info. -->
-                </p>
-                <hr style="width: 72vw; margin: 20px auto 20px auto;">
+            </p>
+            <hr class="page-divider">
 
-                <!-- PROJECT -->
-                <h3 style="text-align: left;"><a class="main-link" href="/ITP-Blog/Thesis/thesis-adm.html"><u>ADM &#40;Abstract Drawing Machine&#41;</u></a></h3>
-                <p class="page-text">
-                    My thesis - ADM &#40;Abstract Drawing Machine&#41; - is a drawing machine with multiple functions
-                    that allos it to be both an art installation as well as an interactive machine that encourages people
-                    to be curious and playful. This project is both the machine itself as well as the process of research
-                    and experimentation, a custom Arduino library, and many many drawings.
-                    <!-- <br> -->
-                </p>
-                <hr style="width: 72vw; margin: 20px auto 20px auto;">
-       
-                <!-- PROJECT -->
-                <h3 style="text-align: left;"><a class="main-link" href="https://www.needafreq.com" target="_blank"><u>needafreq.com</u></a></h3>
-                <p class="page-text">
-                    Is a frequency giving you issues? Maybe you think you're getting interference? Have no fear, check out 
-                    this site and hit the spin/stop buttons to get you a bran spankin' new freq! Can't get one in the range you need?
-                    Don't worry, just keep going until it lands on one...
-                    <!-- <br><br>
+            <!-- PROJECT -->
+            <h3 style="text-align: left;"><a class="main-link"
+                    href="/ITP-Blog/Research-Residency/project_analog-synth.html"><u>Analog Synth &#40;Residency
+                        Project&#41;</u>, actual name still TBD...</a></h3>
+            <p class="page-text">
+                I have occassionally built simple noise makers since taking Billy Bennett's <i>Hacking Audio
+                    Hardware</i> class during
+                my first semester at ITP.
+                <br>
+                <!-- &#40;See <a class="sub-link" href="/"><u>this <i>Intro to Fabrication</i> project</u></a>.&#41; -->
+                During my research residency I experimented with many different analog audio circuits such as various
+                oscillators, filters, mixers, etc. For the resident show I decided to continue this exploration of
+                analog audio and built my own version of a modular synthesizer.
+                <!-- <br><br>
                     <a class="project-info-link" href="/"><u>Click here</u></a> for project info. -->
-                </p>
-                <hr style="width: 72vw; margin: 20px auto 20px auto;">
-                
+            </p>
+            <hr class="page-divider">
+
+            <!-- PROJECT -->
+            <h3 style="text-align: left;"><a class="main-link"
+                    href="/ITP-Blog/Research-Residency/project_mini-adm.html"><u>Mini ADM</u></a></h3>
+            <p class="page-text">
+                Expanding on my thesis, I built a mini version of ADM
+                &#40;Abstract Drawing Machine&#41; to hang on the wall in front of my desk.
+                <br>
+                I've been playing around with different equations and using the Desmos
+                online graphing calculator.
+                <!-- <br><br>
+                    <a class="project-info-link" href="/"><u>Click here</u></a> for project info. -->
+            </p>
+            <hr class="page-divider">
+
+            <!-- PROJECT -->
+            <h3 style="text-align: left;"><a class="main-link" href="/ITP-Blog/Thesis/thesis-adm.html"><u>ADM
+                        &#40;Abstract Drawing Machine&#41;</u></a></h3>
+            <p class="page-text">
+                My thesis - ADM &#40;Abstract Drawing Machine&#41; - is a drawing machine with multiple functions
+                that allos it to be both an art installation as well as an interactive machine that encourages people
+                to be curious and playful. This project is both the machine itself as well as the process of research
+                and experimentation, a custom Arduino library, and many many drawings.
+                <!-- <br> -->
+            </p>
+            <hr class="page-divider">
+
+            <!-- PROJECT -->
+            <h3 style="text-align: left;"><a class="main-link" href="https://www.needafreq.com"
+                    target="_blank"><u>needafreq.com</u></a></h3>
+            <p class="page-text">
+                Is a frequency giving you issues? Maybe you think you're getting interference? Have no fear, check out
+                this site and hit the spin/stop buttons to get you a bran spankin' new freq! Can't get one in the range
+                you need?
+                Don't worry, just keep going until it lands on one...
+                <!-- <br><br>
+                    <a class="project-info-link" href="/"><u>Click here</u></a> for project info. -->
+            </p>
+            <!-- <hr class="page-divider"> -->
+
         </div>
     </main>
 
@@ -125,27 +147,28 @@
     <!-- ----------------------- FOOTER ----------------------- -->
     <footer>
         <div class="footer-nav">
-                <ul>
-                        <li class="footer-nav-link"><a href="/">Home</a></li>
-                        <li class="footer-nav-link"><a href="/About/about.html">About</a></li>
-                        <li class="footer-nav-link"><a href="/Work Credits/work-credits.html">Work Credits</a></li>
-                        <li class="footer-nav-link"><a href="/Projects/projects.html">Projects</a></li>
-                        <li class="footer-nav-link"><a href="#itp-blog">ITP Blog</a></li>
-                        <li class="footer-nav-link"><a href="#contact">Contact</a></li>
-                </ul>
+            <ul>
+                <li class="footer-nav-link"><a href="/">Home</a></li>
+                <li class="footer-nav-link"><a href="/About/about.html">About</a></li>
+                <li class="footer-nav-link"><a href="/Work Credits/work-credits.html">Work Credits</a></li>
+                <li class="footer-nav-link"><a href="/Projects/projects.html">Projects</a></li>
+                <li class="footer-nav-link"><a href="#itp-blog">ITP Blog</a></li>
+                <li class="footer-nav-link"><a href="#contact">Contact</a></li>
+            </ul>
         </div>
 
         <div class="social-links">
-                <a class="social-icon" href="http://www.instagram.com/biancaaagan" target="_blank">
-                    <img src="/Media/icon-instagram.png" width="25px">
-                </a>
-                <a class="social-icon" href="http://www.linkedin.com/in/biancagan" target="_blank">
-                    <img src="/Media/icon-linkedin.png" width="25px">
-                </a>
+            <a class="social-icon" href="http://www.instagram.com/biancaaagan" target="_blank">
+                <img src="/Media/icon-instagram.png" width="25px">
+            </a>
+            <a class="social-icon" href="http://www.linkedin.com/in/biancagan" target="_blank">
+                <img src="/Media/icon-linkedin.png" width="25px">
+            </a>
         </div>
 
         <div class="footer-credits-div">
-            <h2 class="footer-credits"><a id="copyright" href="https://www.needafreq.com/">&copy;</a> 2024 | Bianca Gan</h2>
+            <h2 class="footer-credits"><a id="copyright" href="https://www.needafreq.com/">&copy;</a> 2024 | Bianca Gan
+            </h2>
         </div>
     </footer>
     <!-- ----------------------- ----------------------- ----------------------- -->

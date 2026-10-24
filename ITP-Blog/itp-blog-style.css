@@ -252,8 +252,8 @@ li {
 }
 
 .page-subtitle {
-  border-style: dashed;
-  border-width: 2px;
+  /* border-style: dashed;
+  border-width: 2px; */
   font-family: Jost-SemiBold;
   width: 98%;
   margin: 20px auto auto auto;
@@ -262,8 +262,8 @@ li {
 }
 
 .page-text {
-  border-style: dashed;
-  border-width: 2px;
+  /* border-style: dashed;
+  border-width: 2px; */
   justify-content: center;
   font-family: Jost-Regular;
   width: 98%;
@@ -274,13 +274,16 @@ li {
 }
 
 .page-center-image {
-  border-style: dashed;
-  border-width: 2px;
+  /* border-style: dashed;
+  border-width: 2px; */
   width: 50%;
   display: flex;
   justify-content: center;
   margin: 40px auto 40px auto;
   padding: 1vw;
+
+  cursor: zoom-in;
+  transform: transform 0.2s ease;
 }
 
 .page-grid {

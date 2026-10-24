@@ -2,206 +2,239 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="icon" type="image/png" href="/Media/FCG Logo 2.png">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    <link rel="stylesheet" href="/ITP-Blog/Class-Blogs/class-blogs-styles.css" />
-    <title>BG</title>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link rel="icon" type="image/png" href="/Media/FCG Logo 2.png">
+        <link rel="stylesheet"
+                href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        <link rel="stylesheet" href="/style.css" />
+        <title>BG</title>
 </head>
 
 <body>
 
-    <!-- ----------------------- NEW NAV BAR ----------------------- -->
- <nav class="navbar">
-        <div class="nav-header">
-                <h3><a href="/" style="color: black;">BG</a></h3>
-        </div>
-        
-        <ul class="nav-links top-nav">
-                <!-- USING CHECKBOX HACK -->
-                <input type="checkbox" class="hack" id="checkbox_toggle" />
-                <label for="checkbox_toggle" class="hamburger">&#9776;</label>
-
-                <div class="menu">
-                        <li class="top-nav-link"><a href="/">Home</a></li>
-                        <li class="top-nav-link"><a href="/About/about.html">About</a></li>
-                        <li class="top-nav-link"><a href="/Work-Credits/work-credits.html">Work Credits</a></li>
-                        <li class="top-nav-link"><a href="/Projects/projects.html">Projects</a></li>
-                        <div class="dropdown-menu">
-                                <li class="itp-blog top-nav-link">
-                                        <a href="/ITP-Blog/itp-blog.html">ITP Blog&nbsp;<i class="fa fa-caret-down"></i></a>
-                                        
-                                        <!-- DROPDOWN MENU ITEMS -->
-                                        <ul class="dropdown">
-                                                <li><a href="/ITP-Blog/Research-Residency/residency.html">Research Residency</a></li>
-                                                <li><a href="/ITP-Blog/Thesis/thesis-adm.html">Thesis - ADM</a></li>
-                                                <li><a href="/ITP-Blog/Class-Blogs/Fall-2021/fall_2021.html">Fall 2021</a></li>
-                                                <li><a href="/ITP-Blog/Class-Blogs/Spring-2022/spring-2022.html">Spring 2022</a></li>
-                                                <li><a href="/ITP-Blog/Class-Blogs/Fall-2022/fall_2022.html">Fall 2022</a></li>
-                                                <li><a href="/ITP-Blog/Class-Blogs/Spring-2023/spring_2023.html">Spring 2023</a></li>
-                                        </ul>
-                                </li>
-                        </div>
-                        <li><a href="/Contact/contact.html">Contact</a></li>
-                </div>
-                
-        </ul>
-</nav>
-    <!-- ----------------------- ----------- ----------------------- -->
-
-    <main>
-        <div class="page-body">
-                <h3 class="page-header">P-Comp Project 01</h3>
-
-                <hr class="page-divider">
-
-                <h3 class="page-title">Getting some ideas...</h3>
-
-                <h3 class="page-subtitle">Idea 01</h3>
-                
-                <h3 class="page-text">
-                        The first idea I had was to make a pressure sensitive microphone tin/holder.
-                        When I work on shows, we have aluminum bread tins that hold wireless
-                        microphones. My thought was to add force sensitive resistors to the base of
-                        it below some type of layer that when something is placed upon it, say a
-                        microphone, after a certain amount of time a light will turn green, signaling
-                        that a microphone is present. The sensors will have a threshold to where it
-                        will turn green, and when that threshold isn’t reached, it will turn red meaning
-                        no microphone is present.<br><br>
-                        Below is a basic sketch.
-                </h3>
-
-                <img class="page-center-image"
-                        src="https://media.biancagan.com/ITP-Blog/Fall-2021/F21_04_pcomp/F21_04_project-01/01.jpg" alt="">
-
-                <h3 class="page-subtitle">Idea 02</h3>
-                
-                <h3 class="page-text">
-                        Another idea — which I’ve literally just thought of as I typed the above entry
-                        — is for an automatic LED strip. I have a travel Pelican case that I use to
-                        house tools and other work necessities, and currently I have a strip of LED
-                        lights around the rim of the lid that sometimes turns on when I use the
-                        remote. Something I could possible do is have it turn on automatically when
-                        (1) the case is open and (2) when it’s dark and there is little light present.<br><br>
-                        Below is what it looks like at the moment.
-                </h3>
-
-                <img class="page-center-image"
-                        src="https://media.biancagan.com/ITP-Blog/Fall-2021/F21_04_pcomp/F21_04_project-01/02.JPG" alt="">
-
-                <h3 class="page-subtitle">Idea 03 - The Chosen One</h3>
-                
-                <h3 class="page-text">
-                        I was thinking about what I could make that involved a combination of sound
-                        or tune of sorts along with buttons and the servo motor. One of the first
-                        things I thought of was the Jeopardy theme, which traumatized me in high
-                        school when my sophomore geometry teacher would play the theme song
-                        as we all raced to fill in a blank circle of pie chart before the song ended.<br><br>
-                        I got this idea from those coin / toy boxes that can sense coins on a platform
-                        and a little hand of a cute animal like a panda reaches out to drag the coin
-                        into the box, or another example is similar but there is a toggle switch that
-                        when you switch it, a hand pops out to switch it back, and this goes back
-                        and forth.<br><br>
-                        My idea is to create a similar style box that when a sequence of buttons are
-                        pushed, it would trigger the playing of the Jeopardy theme while
-                        simultaneously teasing the opening of the lid. Such that the lid will slowly
-                        open, close a little, and back and forth throughout the whole song until the
-                        very end when the lid fully opens. However, my thought was to have a 5
-                        second threshold that if the sequence is pressed again before 5 seconds are
-                        up then the lid would stay open, if not then the lid would close, and if you
-                        wanted to open it, you’d have to listen to the whole tune again.<br><br>
-                        The images below are basic pseudocode and also the notes for the melody.
-                </h3>
-
-                <div class="page-grid">
-                        <div class="page-grid-item">
-                                <img class="grid-image"
-                                        src="https://media.biancagan.com/ITP-Blog/Fall-2021/F21_04_pcomp/F21_04_project-01/03.jpg" alt="">
-                        </div>
-                        <div class="page-grid-item">
-                                <img class="grid-image"
-                                        src="https://media.biancagan.com/ITP-Blog/Fall-2021/F21_04_pcomp/F21_04_project-01/04.jpg" alt="">
-                        </div>
+        <!-- ----------------------- NEW NAV BAR ----------------------- -->
+        <nav class="navbar">
+                <div class="nav-header">
+                        <h3><a href="/" style="color: black;">BG</a></h3>
                 </div>
 
-                <h3 class="page-text">
-                        My next step is going to program the tune so that it comes out properly,
-                        then to code the sequence of buttons pressed that would trigger the tune.<br><br>
-                        Here I managed to program the jeopardy tune, it’s not perfect, but one can
-                        tell that that’s what it is. The rhythm is a little off, but it is a computer and I
-                        am new to Arduino.<br><br>
-                        At first it was a little tricky, I tried to do bits at a time, and adjust the
-                        noteDuration. For a while, after the last note I programmed it would end on a
-                        different note and just play out continuously. I was using the lab from week 3
-                        as reference using the pitches library and code, and saw that what was
-                        ‘thisNote < 8’ in the lab cod, I needed to adjust to the number of notes I had.
-                        I’m not sure if this was the correct approach, but I was able to end on my last
-                        note that I had entered.
-                </h3>
+                <ul class="nav-links top-nav">
+                        <!-- USING CHECKBOX HACK -->
+                        <input type="checkbox" class="hack" id="checkbox_toggle" />
+                        <label for="checkbox_toggle" class="hamburger">&#9776;</label>
 
-                <div class="page-grid">
-                        <div class="page-grid-item">
-                                <img class="grid-image"
-                                        src="https://media.biancagan.com/ITP-Blog/Fall-2021/F21_04_pcomp/F21_04_project-01/05.jpg" alt="">
+                        <div class="menu">
+                                <li class="top-nav-link"><a href="/">Home</a></li>
+                                <li class="top-nav-link"><a href="/About/about.html">About</a></li>
+                                <li class="top-nav-link"><a href="/Work-Credits/work-credits.html">Work Credits</a></li>
+                                <li class="top-nav-link"><a href="/Projects/projects.html">Projects</a></li>
+                                <div class="dropdown-menu">
+                                        <li class="itp-blog top-nav-link">
+                                                <a href="/ITP-Blog/itp-blog.html">ITP Blog&nbsp;<i
+                                                                class="fa fa-caret-down"></i></a>
+
+                                                <!-- DROPDOWN MENU ITEMS -->
+                                                <ul class="dropdown">
+                                                        <li><a href="/ITP-Blog/Research-Residency/residency.html">Research
+                                                                        Residency</a></li>
+                                                        <li><a href="/ITP-Blog/Thesis/thesis-adm.html">Thesis - ADM</a>
+                                                        </li>
+                                                        <li><a href="/ITP-Blog/Class-Blogs/Fall-2021/fall_2021.html">Fall
+                                                                        2021</a></li>
+                                                        <li><a href="/ITP-Blog/Class-Blogs/Spring-2022/spring-2022.html">Spring
+                                                                        2022</a></li>
+                                                        <li><a href="/ITP-Blog/Class-Blogs/Fall-2022/fall_2022.html">Fall
+                                                                        2022</a></li>
+                                                        <li><a href="/ITP-Blog/Class-Blogs/Spring-2023/spring_2023.html">Spring
+                                                                        2023</a></li>
+                                                </ul>
+                                        </li>
+                                </div>
+                                <li><a href="/Contact/contact.html">Contact</a></li>
                         </div>
-                        <div class="page-grid-item">
-                                <video class="grid-image" controls>
-                                        <source src="https://media.biancagan.com/ITP-Blog/Fall-2021/F21_04_pcomp/F21_04_project-01/06.MOV">
-                                </video>
+
+                </ul>
+        </nav>
+        <!-- ----------------------- ----------- ----------------------- -->
+
+        <main>
+                <div class="page-body">
+                        <h3 class="page-header">P-Comp Project 01</h3>
+
+                        <hr class="page-divider">
+
+                        <h3 class="page-title">Getting some ideas...</h3>
+
+                        <hr class="page-subdivider">
+
+                        <h3 class="page-subtitle">Idea 01</h3>
+
+                        <h3 class="page-text">
+                                The first idea I had was to make a pressure sensitive microphone tin/holder.
+                                When I work on shows, we have aluminum bread tins that hold wireless
+                                microphones. My thought was to add force sensitive resistors to the base of
+                                it below some type of layer that when something is placed upon it, say a
+                                microphone, after a certain amount of time a light will turn green, signaling
+                                that a microphone is present. The sensors will have a threshold to where it
+                                will turn green, and when that threshold isn’t reached, it will turn red meaning
+                                no microphone is present.<br><br>
+                                Below is a basic sketch.
+                        </h3>
+
+                        <img class="page-center-image" id="horizontal"
+                                src="https://media.biancagan.com/ITP-Blog/Fall-2021/F21_04_pcomp/F21_04_project-01/01.jpg"
+                                alt="">
+
+                        <h3 class="page-subtitle">Idea 02</h3>
+
+                        <h3 class="page-text">
+                                Another idea — which I’ve literally just thought of as I typed the above entry
+                                — is for an automatic LED strip. I have a travel Pelican case that I use to
+                                house tools and other work necessities, and currently I have a strip of LED
+                                lights around the rim of the lid that sometimes turns on when I use the
+                                remote. Something I could possible do is have it turn on automatically when
+                                (1) the case is open and (2) when it’s dark and there is little light present.<br><br>
+                                Below is what it looks like at the moment.
+                        </h3>
+
+                        <img class="page-center-image" id="horizontal"
+                                src="https://media.biancagan.com/ITP-Blog/Fall-2021/F21_04_pcomp/F21_04_project-01/02.JPG"
+                                alt="">
+
+                        <h3 class="page-subtitle">Idea 03 - The Chosen One</h3>
+
+                        <h3 class="page-text">
+                                I was thinking about what I could make that involved a combination of sound
+                                or tune of sorts along with buttons and the servo motor. One of the first
+                                things I thought of was the Jeopardy theme, which traumatized me in high
+                                school when my sophomore geometry teacher would play the theme song
+                                as we all raced to fill in a blank circle of pie chart before the song ended.<br><br>
+                                I got this idea from those coin / toy boxes that can sense coins on a platform
+                                and a little hand of a cute animal like a panda reaches out to drag the coin
+                                into the box, or another example is similar but there is a toggle switch that
+                                when you switch it, a hand pops out to switch it back, and this goes back
+                                and forth.<br><br>
+                                My idea is to create a similar style box that when a sequence of buttons are
+                                pushed, it would trigger the playing of the Jeopardy theme while
+                                simultaneously teasing the opening of the lid. Such that the lid will slowly
+                                open, close a little, and back and forth throughout the whole song until the
+                                very end when the lid fully opens. However, my thought was to have a 5
+                                second threshold that if the sequence is pressed again before 5 seconds are
+                                up then the lid would stay open, if not then the lid would close, and if you
+                                wanted to open it, you’d have to listen to the whole tune again.<br><br>
+                                The images below are basic pseudocode and also the notes for the melody.
+                        </h3>
+
+                        <div class="page-grid">
+                                <div class="page-grid-item">
+                                        <img class="grid-image"
+                                                src="https://media.biancagan.com/ITP-Blog/Fall-2021/F21_04_pcomp/F21_04_project-01/03.jpg"
+                                                alt="">
+                                </div>
+                                <div class="page-grid-item">
+                                        <img class="grid-image"
+                                                src="https://media.biancagan.com/ITP-Blog/Fall-2021/F21_04_pcomp/F21_04_project-01/04.jpg"
+                                                alt="">
+                                </div>
                         </div>
-                </div>
 
-                <h3 class="page-text">
-                        I DID IT !!!!!<br><br>
-                        By it, I mean I was able to write the code so that when one button is pressed,
-                        it triggers the tune.
-                </h3>
+                        <h3 class="page-text">
+                                My next step is going to program the tune so that it comes out properly,
+                                then to code the sequence of buttons pressed that would trigger the tune.<br><br>
+                                Here I managed to program the jeopardy tune, it’s not perfect, but one can
+                                tell that that’s what it is. The rhythm is a little off, but it is a computer and I
+                                am new to Arduino.<br><br>
+                                At first it was a little tricky, I tried to do bits at a time, and adjust the
+                                noteDuration. For a while, after the last note I programmed it would end on a
+                                different note and just play out continuously. I was using the lab from week 3
+                                as reference using the pitches library and code, and saw that what was
+                                ‘thisNote < 8’ in the lab cod, I needed to adjust to the number of notes I had. I’m not
+                                        sure if this was the correct approach, but I was able to end on my last note
+                                        that I had entered. </h3>
 
-                <img class="page-center-image"
-                        src="https://media.biancagan.com/ITP-Blog/Fall-2021/F21_04_pcomp/F21_04_project-01/07.jpg" alt="">
-                <video class="page-center-image" controls>
-                        <source src="https://media.biancagan.com/ITP-Blog/Fall-2021/F21_04_pcomp/F21_04_project-01/08.MOV">
-                </video>
+                                        <div class="page-grid">
+                                                <div class="page-grid-item">
+                                                        <img class="grid-image"
+                                                                src="https://media.biancagan.com/ITP-Blog/Fall-2021/F21_04_pcomp/F21_04_project-01/05.jpg"
+                                                                alt="">
+                                                </div>
+                                                <div class="page-grid-item">
+                                                        <video class="grid-image" controls>
+                                                                <source
+                                                                        src="https://media.biancagan.com/ITP-Blog/Fall-2021/F21_04_pcomp/F21_04_project-01/06.MOV">
+                                                        </video>
+                                                </div>
+                                        </div>
 
-                <h3 class="page-text">
-                        Currently, I am struggling a bit to program a button sequence that only when
-                        pressed will it trigger the tune. So far, I’ve been able to program it so that
-                        when all 3 buttons are pressed at once, the tune plays, and most recently,
-                        when a sequence of the 3 buttons are pressed the tune plays. However, it’s
-                        the 3 buttons in any order, not a particular combination.
-                </h3>
+                                        <h3 class="page-text">
+                                                I DID IT !!!!!<br><br>
+                                                By it, I mean I was able to write the code so that when one button is
+                                                pressed,
+                                                it triggers the tune.
+                                        </h3>
 
-                <video class="page-center-image" controls>
-                        <source src="https://media.biancagan.com/ITP-Blog/Fall-2021/F21_04_pcomp/F21_04_project-01/09.MOV">
-                </video>
+                                        <img class="page-center-image" id="horizontal"
+                                                src="https://media.biancagan.com/ITP-Blog/Fall-2021/F21_04_pcomp/F21_04_project-01/07.jpg"
+                                                alt="">
 
-                <h3 class="page-subtitle">Update:</h3>
+                                        <video class="page-center-video" id="horizontal" controls>
+                                                <source
+                                                        src="https://media.biancagan.com/ITP-Blog/Fall-2021/F21_04_pcomp/F21_04_project-01/08.MOV">
+                                        </video>
 
-                <h3 class="page-text">
-                        I was able to write code so that a pushbutton when pressed will trigger the
-                        tune, and once the tune is done a servo motor will move (door opens) and
-                        after a five second delay the motor resets (door closes).<br><br>
-                        I’m not sure why, but when I try to combine the code for the three button
-                        input that triggers the tune, and the servo actions, it does not work.
-                </h3>
+                                        <h3 class="page-text">
+                                                Currently, I am struggling a bit to program a button sequence that only
+                                                when
+                                                pressed will it trigger the tune. So far, I’ve been able to program it
+                                                so that
+                                                when all 3 buttons are pressed at once, the tune plays, and most
+                                                recently,
+                                                when a sequence of the 3 buttons are pressed the tune plays. However,
+                                                it’s
+                                                the 3 buttons in any order, not a particular combination.
+                                        </h3>
 
-                <video class="page-center-image" controls>
-                        <source src="https://media.biancagan.com/ITP-Blog/Fall-2021/F21_04_pcomp/F21_04_project-01/10.mov">
-                </video>
-                <img class="page-center-image"
-                        src="https://media.biancagan.com/ITP-Blog/Fall-2021/F21_04_pcomp/F21_04_project-01/11.jpg" alt="">
-                <img class="page-center-image"
-                        src="https://media.biancagan.com/ITP-Blog/Fall-2021/F21_04_pcomp/F21_04_project-01/12.JPG" alt="">
+                                        <video class="page-center-video" id="horizontal" controls>
+                                                <source
+                                                        src="https://media.biancagan.com/ITP-Blog/Fall-2021/F21_04_pcomp/F21_04_project-01/09.MOV">
+                                        </video>
 
-                <h3 class="page-text">
-                        Next, I started building the enclosure. I needed to have a door on a hinge,
-                        which was the most difficult part to do because I build a door hinge out of
-                        cardboard, superglue, and some wire.
-                </h3>
+                                        <h3 class="page-subtitle">Update:</h3>
 
-                <!-- <div class="page-grid">
+                                        <h3 class="page-text">
+                                                I was able to write code so that a pushbutton when pressed will trigger
+                                                the
+                                                tune, and once the tune is done a servo motor will move (door opens) and
+                                                after a five second delay the motor resets (door closes).<br><br>
+                                                I’m not sure why, but when I try to combine the code for the three
+                                                button
+                                                input that triggers the tune, and the servo actions, it does not work.
+                                        </h3>
+
+                                        <video class="page-center-video" id="horizontal" controls>
+                                                <source
+                                                        src="https://media.biancagan.com/ITP-Blog/Fall-2021/F21_04_pcomp/F21_04_project-01/10.mov">
+                                        </video>
+
+                                        <img class="page-center-image" id="horizontal"
+                                                src="https://media.biancagan.com/ITP-Blog/Fall-2021/F21_04_pcomp/F21_04_project-01/11.jpg"
+                                                alt="">
+
+                                        <img class="page-center-image" id="horizontal"
+                                                src="https://media.biancagan.com/ITP-Blog/Fall-2021/F21_04_pcomp/F21_04_project-01/12.JPG"
+                                                alt="">
+
+                                        <h3 class="page-text">
+                                                Next, I started building the enclosure. I needed to have a door on a
+                                                hinge,
+                                                which was the most difficult part to do because I build a door hinge out
+                                                of
+                                                cardboard, superglue, and some wire.
+                                        </h3>
+
+                                        <!-- <div class="page-grid">
                         <div class="page-grid-item">
                                 <img class="grid-image"
                                         src="/" alt="">
@@ -213,43 +246,46 @@
                         </div>
                 </div> -->
 
-                <h3 class="page-title">FINAL - Video</h3>
+                                        <h3 class="page-title">FINAL - Video</h3>
 
-                <video class="page-center-image" controls>
-                        <source src="https://media.biancagan.com/ITP-Blog/Fall-2021/F21_04_pcomp/F21_04_project-01/final.MOV">
-                </video>
+                                        <video class="page-center-video" id="horizontal" controls>
+                                                <source
+                                                        src="https://media.biancagan.com/ITP-Blog/Fall-2021/F21_04_pcomp/F21_04_project-01/final.MOV">
+                                        </video>
 
-        </div>
-    </main>
+                </div>
+        </main>
 
 
-    <!-- ----------------------- FOOTER ----------------------- -->
-    <footer>
-        <div class="footer-nav">
-                <ul>
-                        <li class="footer-nav-link"><a href="/">Home</a></li>
-                        <li class="footer-nav-link"><a href="/About/about.html">About</a></li>
-                        <li class="footer-nav-link"><a href="/Work Credits/work-credits.html">Work Credits</a></li>
-                        <li class="footer-nav-link"><a href="/Projects/projects.html">Projects</a></li>
-                        <li class="footer-nav-link"><a href="/ITP Blog/itp-blog.html">ITP Blog</a></li>
-                        <li class="footer-nav-link"><a href="#contact">Contact</a></li>
-                </ul>
-        </div>
+        <!-- ----------------------- FOOTER ----------------------- -->
+        <footer>
+                <div class="footer-nav">
+                        <ul>
+                                <li class="footer-nav-link"><a href="/">Home</a></li>
+                                <li class="footer-nav-link"><a href="/About/about.html">About</a></li>
+                                <li class="footer-nav-link"><a href="/Work Credits/work-credits.html">Work Credits</a>
+                                </li>
+                                <li class="footer-nav-link"><a href="/Projects/projects.html">Projects</a></li>
+                                <li class="footer-nav-link"><a href="/ITP Blog/itp-blog.html">ITP Blog</a></li>
+                                <li class="footer-nav-link"><a href="#contact">Contact</a></li>
+                        </ul>
+                </div>
 
-        <div class="social-links">
-                <a class="social-icon" href="http://www.instagram.com/biancaaagan" target="_blank">
-                        <img src="/Media/icon-instagram.png" width="25px">
-                </a>
-                <a class="social-icon" href="http://www.linkedin.com/in/biancagan" target="_blank">
-                    <img src="/Media/icon-linkedin.png" width="25px">
-                </a>
-        </div>
+                <div class="social-links">
+                        <a class="social-icon" href="http://www.instagram.com/biancaaagan" target="_blank">
+                                <img src="/Media/icon-instagram.png" width="25px">
+                        </a>
+                        <a class="social-icon" href="http://www.linkedin.com/in/biancagan" target="_blank">
+                                <img src="/Media/icon-linkedin.png" width="25px">
+                        </a>
+                </div>
 
-        <div class="footer-credits-div">
-            <h2 class="footer-credits"><a id="copyright" href="https://www.needafreq.com/">&copy;</a> 2024 | Bianca Gan</h2>
-        </div>
-    </footer>
-    <!-- ----------------------- ----------------------- ----------------------- -->
+                <div class="footer-credits-div">
+                        <h2 class="footer-credits"><a id="copyright" href="https://www.needafreq.com/">&copy;</a> 2024 |
+                                Bianca Gan</h2>
+                </div>
+        </footer>
+        <!-- ----------------------- ----------------------- ----------------------- -->
 </body>
 
 </html>
