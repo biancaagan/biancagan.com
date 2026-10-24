@@ -262,8 +262,8 @@ li {
 }
 
 .page-text {
-  border-style: dashed;
-  border-width: 2px;
+  /* border-style: dashed;
+  border-width: 2px; */
   justify-content: center;
   font-family: Jost-Regular;
   width: 98%;
