@@ -252,8 +252,8 @@ li {
 }
 
 .page-subtitle {
-  border-style: dashed;
-  border-width: 2px;
+  /* border-style: dashed;
+  border-width: 2px; */
   font-family: Jost-SemiBold;
   width: 98%;
   margin: 20px auto auto auto;
