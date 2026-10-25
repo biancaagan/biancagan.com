@@ -141,14 +141,13 @@ li {
 
 .dropdown {
   /* border-style: dotted; */
-  background-color: #dbdbdb;
-  padding: 0 0;
   position: absolute;
-  /* with respect to parent */
+  top: 100%;
+  right: 0;
   display: none;
-  border-radius: 8px;
-  top: 2.6em;
-  right: 4.8em;
+  background-color: #dbdbdb;
+  border-radius: 8px 0 8px 8px;
+  z-index: 200;
 }
 
 .dropdown li a+li {
@@ -166,6 +165,10 @@ li {
 .dropdown li:hover {
   /* border-style: dotted; */
   background-color: var(--highlight-orange);
+}
+
+.dropdown-menu {
+  position: relative;
 }
 
 .dropdown-menu:hover .dropdown {
@@ -212,7 +215,7 @@ li {
   .menu li:hover {
     cursor: pointer;
     display: inline-block;
-    background-color: var(--fcg-green);
+    background-color: var(--highlight-orange);
     transition: 0.3s ease;
   }
 
@@ -225,13 +228,17 @@ li {
   }
 
   .dropdown {
-    /* left: 50%; */
-    top: 34px;
-    /* transform: translateX(10%); */
+    position: static;
+    width: 100%;
+    border-radius: 0;
+  }
+
+  .dropdown li {
+    width: 100%;
   }
 
   .dropdown li:hover {
-    background-color: var(--fcg-green);
+    background-color: var(--highlight-orange);
   }
 }
 
@@ -621,7 +628,6 @@ li.footer-nav-link a:hover {
 
   .menu li:hover {
     cursor: pointer;
-    display: inline-block;
     background-color: var(--go-to-grey);
     /* transition: 0.3s ease; */
   }
@@ -632,12 +638,6 @@ li.footer-nav-link a:hover {
 
   .hamburger {
     display: block;
-  }
-
-  .dropdown {
-    /* left: 50%; */
-    top: 20px;
-    /* transform: translateX(10%); */
   }
 
   .dropdown li:hover {
