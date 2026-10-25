@@ -386,9 +386,20 @@ li {
   border-radius: 5px;
 }
 
+.page-list {
+  /* border-style: dotted; */
+  font-family: var(--jost-regular);
+  font-size: var(--text-font-size);
+  margin: 0 60px;
+}
+
+.page-list li {
+  list-style: inherit;
+}
+
 .page-center-image {
-  /* border-style: dashed;
-  border-width: 2px; */
+  border-style: dashed;
+  border-width: 2px;
   width: 50%;
   display: flex;
   justify-content: center;
@@ -397,6 +408,11 @@ li {
 
   cursor: zoom-in;
   transform: transform 0.2s ease;
+}
+
+.page-center-caption {
+  font-family: var(--ibm-regular);
+  text-align: center;
 }
 
 .page-center-image:hover {

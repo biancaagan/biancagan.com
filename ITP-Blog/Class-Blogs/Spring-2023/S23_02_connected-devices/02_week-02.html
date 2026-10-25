@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" type="image/png" href="/Media/FCG Logo 2.png">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="/style.css" />
+    <title>BG</title>
+</head>
+
+<body>
+
+    <!-- ----------------------- NEW NAV BAR ----------------------- -->
+    <nav class="navbar">
+        <div class="nav-header">
+            <h3><a href="/" style="color: black;">BG</a></h3>
+        </div>
+
+        <ul class="nav-links top-nav">
+            <!-- USING CHECKBOX HACK -->
+            <input type="checkbox" class="hack" id="checkbox_toggle" />
+            <label for="checkbox_toggle" class="hamburger">&#9776;</label>
+
+            <div class="menu">
+                <li class="top-nav-link"><a href="/">Home</a></li>
+                <li class="top-nav-link"><a href="/About/about.html">About</a></li>
+                <li class="top-nav-link"><a href="/Work-Credits/work-credits.html">Work Credits</a></li>
+                <li class="top-nav-link"><a href="/Projects/projects.html">Projects</a></li>
+                <div class="dropdown-menu">
+                    <li class="itp-blog top-nav-link">
+                        <a href="/ITP-Blog/itp-blog.html">ITP Blog&nbsp;<i class="fa fa-caret-down"></i></a>
+
+                        <!-- DROPDOWN MENU ITEMS -->
+                        <ul class="dropdown">
+                            <li><a href="/ITP-Blog/Research-Residency/residency.html">Research Residency</a></li>
+                            <li><a href="/ITP-Blog/Thesis/thesis-adm.html">Thesis - ADM</a></li>
+                            <li><a href="/ITP-Blog/Class-Blogs/Fall-2021/fall_2021.html">Fall 2021</a></li>
+                            <li><a href="/ITP-Blog/Class-Blogs/Spring-2022/spring-2022.html">Spring 2022</a></li>
+                            <li><a href="/ITP-Blog/Class-Blogs/Fall-2022/fall_2022.html">Fall 2022</a></li>
+                            <li><a href="/ITP-Blog/Class-Blogs/Spring-2023/spring_2023.html">Spring 2023</a></li>
+                        </ul>
+                    </li>
+                </div>
+                <li><a href="/Contact/contact.html">Contact</a></li>
+            </div>
+
+        </ul>
+    </nav>
+    <!-- ----------------------- ----------- ----------------------- -->
+
+    <main>
+        <div class="page-body">
+            <h3 class="page-header">Week 02 - Device Data Dashboard</h3>
+
+            <hr class="page-divider">
+
+            <p class="page-text">
+                I’ve done a couple things so far — one being sending data to an MQTT broker
+                (trying to refresh my memory from UndNet), and I was also to create another
+                webpage from biancasbread to eventually display sensor data, but now
+                instead of getting an error, it show a line of text –
+                >
+                <br><br>
+                <a class="page-text-link" href="https://biancasbread.com/conndev-sensor"
+                    target="_blank">https://biancasbread.com/conndev-sensor</a>
+            </p>
+
+            <img class="page-center-image" id="horizontal" src="" alt="">
+
+            <p class="page-center-caption">
+                MQTT Explorer + Arduino MKR1000 + Sound Sensor
+            </p>
+
+            <img class="page-center-image" id="horizontal" src="" alt="">
+
+            <img class="page-center-image" id="horizontal" src="" alt="">
+
+            <p class="page-center-caption">
+                I also ran the script using pm2 so it's constantly running in the background.
+            </p>
+
+            <img class="page-center-image" id="horizontal" src="" alt="">
+
+            <p class="page-text">
+                Now I am trying to integrate fetch into the script to push sensor values from
+                log.json--
+                <br><br>
+                Currently, I have a <a class="page-text-link" href="https://github.com/biancaagan/ConnDev_DDD_Server"
+                    target="_blank">github repo</a>
+                that I've cloned into the directory /var/www/biancasbread.com/ ,
+                here I ran the script.js-- which leaves me with a couple of questions:
+                <br>
+            </p>
+
+            <ul class="page-list">
+                <li>Like the fetch example with node.js server, I have an index.html file in a
+                    public folder, which should be executed, although I can’t see it’s
+                    context, not sure why…?
+                </li>
+                <li>How come when I visit the biancaisbread.com/conndev-sensor it only shows the
+                    text written in my script.js file?
+                </li>
+                <li>
+                    How do I get the contents of the .html to show instead?
+                </li>
+            </ul>
+
+            <p class="page-text">
+                Another note — I know Tom wants us to write our own code but for now I am
+                using his examples as a crutch / foundation to get a better understanding of
+                it all.
+                <br><br>
+                Ok, so I’ve worked off of the fetch with node.js example, but am still unable to
+                see the context of my index.html file …?
+                <br><br>
+                Stepped away from trying to get the server fetch app to work, and went
+                back to working local.
+                <br><br>
+                Here is the <a class="page-text-link" href="https://github.com/biancaagan/ConnDev_DDD_Local"
+                    target="_blank">github repo</a> for my local files.
+            </p>
+
+            <img class="page-center-image" id="horizontal" src="" alt="">
+
+            <img class="page-center-image" id="horizontal" src="" alt="">
+
+            <img class="page-center-image" id="horizontal" src="" alt="">
+
+            <img class="page-center-image" id="horizontal" src="" alt="">
+
+            <p class="page-text">
+                UPDATE: Had office hours with Tom today, and he helped resolve the problem!
+                <br><br>
+                He found that I had not enabled the port in my firewall, so that was the first thing to fix.
+            </p>
+
+            <img class="page-center-image" id="horizontal" src="" alt="">
+
+            <p class="page-text">
+                Next, Tom figured out that the line in my server.js code that is supposed to
+                default to any files in the ‘public’ folder, was missing the /conndev-sensor
+                route.
+                <br><br>
+                I came across this in my attempt to troubleshoot it over the past couple of
+                days, and had referred to the <a class="page-text-link"
+                    href="https://expressjs.com/en/starter/static-files.html" target="_blank">expressjs site</a>
+                for help, I was close
+                but instead of the correct code below, I had used the directory folder of all
+                the project files –> ‘/ConnDev_DDD_Server/’
+            </p>
+
+            <img class="page-center-image" id="horizontal" src="" alt="">
+
+
+
+
+            <h3 class="page-title">[ Title Here ]</h3>
+
+            <h3 class="page-subtitle">[ Subtitle Here ]</h3>
+
+            <div class="page-grid">
+                <div class="page-grid-item">
+                    <img class="grid-image" src="" alt="">
+                </div>
+                <div class="page-grid-item">
+                    <video class="grid-image" controls>
+                        <source src="">
+                    </video>
+                </div>
+            </div>
+
+
+            <audio controls class="page-audio-file">
+                <source src="" type="">
+            </audio>
+
+
+            <h3 class="page-text">
+                Text here text here text here text here text here text here
+                text here text here text here text here text here text here
+                text here text here text here text here text here text here.
+            </h3>
+
+            <img class="page-center-image" id="horizontal" src="" alt="">
+
+
+            <video class="page-center-video" controls>
+                <source src="">
+            </video>
+
+
+        </div>
+    </main>
+
+
+    <!-- ----------------------- FOOTER ----------------------- -->
+    <footer>
+        <div class="footer-nav">
+            <ul>
+                <li class="footer-nav-link"><a href="/">Home</a></li>
+                <li class="footer-nav-link"><a href="/About/about.html">About</a></li>
+                <li class="footer-nav-link"><a href="/Work Credits/work-credits.html">Work Credits</a></li>
+                <li class="footer-nav-link"><a href="/Projects/projects.html">Projects</a></li>
+                <li class="footer-nav-link"><a href="/ITP Blog/itp-blog.html">ITP Blog</a></li>
+                <li class="footer-nav-link"><a href="#contact">Contact</a></li>
+            </ul>
+        </div>
+
+        <div class="social-links">
+            <a class="social-icon" href="http://www.instagram.com/biancaaagan" target="_blank">
+                <img src="/Media/icon-instagram.png" width="25px">
+            </a>
+            <a class="social-icon" href="http://www.linkedin.com/in/biancagan" target="_blank">
+                <img src="/Media/icon-linkedin.png" width="25px">
+            </a>
+        </div>
+
+        <div class="footer-credits-div">
+            <h2 class="footer-credits"><a id="copyright" href="https://www.needafreq.com/">&copy;</a> 2024 | Bianca Gan
+            </h2>
+        </div>
+    </footer>
+    <!-- ----------------------- ----------------------- ----------------------- -->
+</body>
+
+</html>
