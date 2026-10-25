@@ -247,6 +247,7 @@ li {
   border-style: dashed;
   border-width: 2px;
   width: 75vw;
+  max-width: 800px;
   margin: 150px auto 200px auto;
   padding: 20px;
   word-wrap: break-word;
