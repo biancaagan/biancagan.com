@@ -415,6 +415,11 @@ li {
   text-align: center;
 }
 
+.page-grid-caption {
+  font-family: var(--ibm-regular);
+  text-align: center;
+}
+
 .page-center-image:hover {
   transform: scale(1.5);
   position: relative;
