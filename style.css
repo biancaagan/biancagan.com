@@ -308,22 +308,47 @@ li {
 .page-title-link a,
 .page-title-link a:link,
 .page-title-link a:visited {
+  -webkit-box-decoration-break: clone;
+  box-decoration-break: clone;
+
   color: var(--highlight-orange);
   text-decoration: underline;
+
+  background-image: linear-gradient(var(--highlight-orange), var(--highlight-orange));
+  background-repeat: no-repeat;
+  background-position: left center;
+  background-size: 0% 100%;
+  border-radius: 5px;
+  padding: 0 4px;
+  margin: 0 -4px;
+
+  transition: background-size 0.3s ease, color 0.3s ease;
 }
 
-.page-title-link a:hover {
+.page-title-link a,
+.page-title-link a * {
+  cursor: pointer;
+}
+
+.page-title-link a:hover,
+.page-title-link a:focus-visible {
+  background-size: 100% 100%;  /* this is what makes the tape grow */
+  color: black;
+}
+
+/* .page-title-link a:hover {
   background-color: var(--highlight-orange);
   color: black;
   border-radius: 5px;
-}
+  cursor:pointer;
+} */
 
 .page-subtitle {
   /* border-style: dashed;
   border-width: 2px; */
   font-family: var(--ibm-regular);
   width: 98%;
-  margin: 0 auto auto auto;
+  margin: 20px auto auto auto;
   padding: 10px;
   font-size: 1.8vw;
   text-align: center;
@@ -412,9 +437,43 @@ li {
   transform: transform 0.2s ease;
 }
 
+.page-center-image:hover {
+  transform: scale(1.5);
+  position: relative;
+  z-index: 100;
+}
+
 .page-center-caption {
   font-family: var(--ibm-regular);
   text-align: center;
+}
+
+.polaroid {
+  display: block;
+  width: fit-content;
+  margin: 2rem auto;
+  transform: rotate(-4deg);          /* the crooked part */
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+
+  /* lift it off the page */
+  box-shadow:
+    0 2px 4px rgba(0, 0, 0, 0.2),
+    0 12px 24px rgba(0, 0, 0, 0.25);
+}
+
+.polaroid img {
+  display: block;
+  max-width: 300px;
+  width: 100%;
+  height: auto;
+}
+
+/* optional: straighten and lift on hover */
+.polaroid:hover {
+  transform: rotate(0deg) scale(1.04);
+  box-shadow:
+    0 4px 8px rgba(0, 0, 0, 0.2),
+    0 20px 40px rgba(0, 0, 0, 0.3);
 }
 
 .page-grid-caption {
@@ -422,11 +481,6 @@ li {
   text-align: center;
 }
 
-.page-center-image:hover {
-  transform: scale(1.5);
-  position: relative;
-  z-index: 100;
-}
 
 .page-center-video {
   /* border-style: dashed;

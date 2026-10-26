@@ -286,6 +286,8 @@ li {
   transform: transform 0.2s ease;
 }
 
+
+
 .page-grid {
   display: grid;
   /* Creates two columns, each taking up one equal fraction (1fr) of the available space */
