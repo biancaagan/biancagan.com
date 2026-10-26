@@ -53,50 +53,73 @@
 
     <main>
         <div class="page-body">
-            <h3 class="page-header">[ Header Here ]</h3>
+            <h3 class="page-header">Week 04 - More Modeling + Sweep</h3>
 
             <hr class="page-divider">
 
-            <h3 class="page-title">[ Title Here ]</h3>
-
-            <h3 class="page-subtitle">[ Subtitle Here ]</h3>
+            <p class="page-text">
+                For this exercise I worked off of the reference photos for the Ikea watering can--
+            </p>
 
             <div class="page-grid">
                 <div class="page-grid-item">
-                    <img class="grid-image" src="" alt="">
+                    <img class="grid-image" src="https://media.biancagan.com/ITP-Blog/Spring-2023/S23_03_cad/03_week-04/01.JPG" alt="">
                 </div>
                 <div class="page-grid-item">
-                    <video class="grid-image" controls>
-                        <source src="">
-                    </video>
+                    <img class="grid-image" src="https://media.biancagan.com/ITP-Blog/Spring-2023/S23_03_cad/03_week-04/02.JPG" alt="">
                 </div>
             </div>
 
-
-            <audio controls class="page-audio-file">
-                <source src="" type="">
-            </audio>
-
-
-            <h3 class="page-text">
-                Text here text here text here text here text here text here
-                text here text here text here text here text here text here
-                text here text here text here text here text here text here.
-            </h3>
-
-            <img class="page-center-image" id="horizontal"
-                src="" alt=""
-            >
-
-            <p class="page-center-caption">
-                MQTT Explorer + Arduino MKR1000 + Sound Sensor
+            <p class="page-text">
+                I initially started by drawing circles to extrude upwards, but then changed my mind and drew a cross
+                section of half of the watering can then revolved it to make it hollow inside.
             </p>
 
+            <img class="page-center-image" id="horizontal" src="https://media.biancagan.com/ITP-Blog/Spring-2023/S23_03_cad/03_week-04/03.PNG" alt="">
 
-            <video class="page-center-video" id="horizontal" controls>
-                <source src="">
-            </video>
+            <img class="page-center-image" id="horizontal" src="https://media.biancagan.com/ITP-Blog/Spring-2023/S23_03_cad/03_week-04/04.PNG" alt="">
 
+            <p class="page-text">
+                Then I added another sketch to the top surface of the can to create that half circle looking hole at the
+                top.
+            </p>
+
+            <img class="page-center-image" id="horizontal" src="https://media.biancagan.com/ITP-Blog/Spring-2023/S23_03_cad/03_week-04/05.PNG" alt="">
+
+            <p class="page-text">
+                Next I drew a path for the watering spout and created a plane on the very right of the path, up against
+                the can. From there I drew three circles on that newly created plane, two for the hollow spout and a
+                outer third for the little bumped ring at the base of the spout.
+                <br><br>
+                I selected the face and used sweep along the created path.
+            </p>
+
+            <img class="page-center-image" id="horizontal" src="https://media.biancagan.com/ITP-Blog/Spring-2023/S23_03_cad/03_week-04/06.PNG" alt="">
+
+            <p class="page-text">
+                In order to get the flat cross section at the top of the path, I created a line and used the split body
+                function -- later I realized I could've used the sweep action with a guide rail.
+            </p>
+
+            <img class="page-center-image" id="horizontal" src="https://media.biancagan.com/ITP-Blog/Spring-2023/S23_03_cad/03_week-04/07.PNG" alt="">
+
+            <p class="page-text">
+                Next I drew another path for the handle, and similarly create a plane along that path, and circles to
+                sweep across that path to create the handle.
+            </p>
+
+            <img class="page-center-image" id="horizontal" src="https://media.biancagan.com/ITP-Blog/Spring-2023/S23_03_cad/03_week-04/08.PNG" alt="">
+
+            <img class="page-center-image" id="horizontal" src="https://media.biancagan.com/ITP-Blog/Spring-2023/S23_03_cad/03_week-04/09.PNG" alt="">
+
+            <p class="page-text">
+                After all of the major bodies were finished, I used fillet on most of the edges to give it a smoother
+                look, and added some material to make it look similar to the actual can.
+            </p>
+
+            <img class="page-center-image" id="horizontal" src="https://media.biancagan.com/ITP-Blog/Spring-2023/S23_03_cad/03_week-04/10.PNG" alt="">
+
+            <img class="page-center-image" id="horizontal" src="https://media.biancagan.com/ITP-Blog/Spring-2023/S23_03_cad/03_week-04/11.PNG" alt="">
 
         </div>
     </main>
