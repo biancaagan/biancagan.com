@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" type="image/png" href="/Media/FCG Logo 2.png">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="/style.css" />
+    <title>BG</title>
+</head>
+
+<body>
+
+    <!-- ----------------------- NEW NAV BAR ----------------------- -->
+    <nav class="navbar">
+        <div class="nav-header">
+            <h3><a href="/" style="color: black;">BG</a></h3>
+        </div>
+
+        <ul class="nav-links top-nav">
+            <!-- USING CHECKBOX HACK -->
+            <input type="checkbox" class="hack" id="checkbox_toggle" />
+            <label for="checkbox_toggle" class="hamburger">&#9776;</label>
+
+            <div class="menu">
+                <li class="top-nav-link"><a href="/">Home</a></li>
+                <li class="top-nav-link"><a href="/About/about.html">About</a></li>
+                <li class="top-nav-link"><a href="/Work-Credits/work-credits.html">Work Credits</a></li>
+                <li class="top-nav-link"><a href="/Projects/projects.html">Projects</a></li>
+                <div class="dropdown-menu">
+                    <li class="itp-blog top-nav-link">
+                        <a href="/ITP-Blog/itp-blog.html">ITP Blog&nbsp;<i class="fa fa-caret-down"></i></a>
+
+                        <!-- DROPDOWN MENU ITEMS -->
+                        <ul class="dropdown">
+                            <li><a href="/ITP-Blog/Research-Residency/residency.html">Research Residency</a></li>
+                            <li><a href="/ITP-Blog/Thesis/thesis-adm.html">Thesis - ADM</a></li>
+                            <li><a href="/ITP-Blog/Class-Blogs/Fall-2021/fall_2021.html">Fall 2021</a></li>
+                            <li><a href="/ITP-Blog/Class-Blogs/Spring-2022/spring-2022.html">Spring 2022</a></li>
+                            <li><a href="/ITP-Blog/Class-Blogs/Fall-2022/fall_2022.html">Fall 2022</a></li>
+                            <li><a href="/ITP-Blog/Class-Blogs/Spring-2023/spring_2023.html">Spring 2023</a></li>
+                        </ul>
+                    </li>
+                </div>
+                <li><a href="/Contact/contact.html">Contact</a></li>
+            </div>
+
+        </ul>
+    </nav>
+    <!-- ----------------------- ----------- ----------------------- -->
+
+    <main>
+        <div class="page-body">
+            <h3 class="page-header">Week 13 - Weather Display</h3>
+
+            <hr class="page-divider">
+
+            <p class="page-text">
+                Update, I have moved to a different weather API, I am nost using <a class="page-text-link"
+                    href="https://www.weatherapi.com/" target="_blank">Weather API</a> instead of OpenWeatherMap,
+                because I liked the format of the JSON response as well as the info it provides.
+                <br><br>
+                Here is the link to my Arduino <a class="page-text-link"
+                    href="https://github.com/biancaagan/CD_WeatherDisplay/blob/main/CD_WeatherDisplay.ino"
+                    target="_blank">code</a>.
+                <br><br>
+                I also got the LCD screen to work following this <a class="page-text-link"
+                    href="https://learn.adafruit.com/character-lcds/arduino-code" target="_blank">guide</a> from
+                Adafruit.
+            </p>
+
+            <img class="page-center-image" id="horizontal"
+                src="https://media.biancagan.com/ITP-Blog/Spring-2023/S23_02_connected-devices/02_week-13/01.JPG"
+                alt="">
+
+            <p class="page-text">
+                To make my life a little easier, instead of using the sunset/sunrise API as well,
+                I am using the same weather API to also pull the hour, every GET request,
+                which will update the neopixel ring to reflect the hour of the day — in military
+                time at the moment.
+                <br><br>
+                I am now seeing spots, this thing is bright.
+                <br><br>
+                Hear it was 9pm so 18.
+                <br><br>
+                I’ve also changed the brightness so I am not blinded.
+            </p>
+
+            <img class="page-center-image" id="horizontal"
+                src="https://media.biancagan.com/ITP-Blog/Spring-2023/S23_02_connected-devices/02_week-13/02.JPG"
+                alt="">
+
+            <p class="page-text">
+                Did some quick sketches for the panel which consists of the top which has a
+                cutout for the LCD screen and the screws to mount it, as well as an inner
+                panel that has a cutout for the neopixel ring and the board. The top panel will
+                be a translucent white to diffuse the light a bit and the inner bottom panel is
+                black to frame where the light ring will be.
+            </p>
+
+            <img class="page-center-image" id="horizontal"
+                src="https://media.biancagan.com/ITP-Blog/Spring-2023/S23_02_connected-devices/02_week-13/03.JPG"
+                alt="">
+
+            <img class="page-center-image" id="horizontal"
+                src="https://media.biancagan.com/ITP-Blog/Spring-2023/S23_02_connected-devices/02_week-13/04.PNG"
+                alt="">
+
+            <p class="page-text">
+                The wooden box I picked up from the container store isn’t a perfect square
+                so I had to go in with some sand paper and a dremel to get the acrylic
+                panels to fit.
+                <br><br>
+                Next I worked on moving everything to a protoboard.
+                <br><br>
+                I used header pins to mount both the LCD screen as well as the Arduino, I
+                used screw terminals for the RGB leads of the LCD screen (right now it’s set
+                to blue), and another screw terminal for the neopixel ring.
+                <br><br>
+                Drew up a very wonky looking schematic before I dove into soldering
+                everything, the neopixel ring is missing from the drawing.
+            </p>
+
+            <img class="page-center-image" id="horizontal"
+                src="https://media.biancagan.com/ITP-Blog/Spring-2023/S23_02_connected-devices/02_week-13/05.JPG"
+                alt="">
+
+            <p class="page-text">
+                This protoboard isn’t my best work, there’s a little too much going on, and I
+                had to work around the shallow depth of the box as well as the short
+                distance from the board to the panel. It’s a bit of organized chaos.
+            </p>
+
+            <div class="page-grid">
+                <div class="page-grid-item">
+                    <img class="grid-image"
+                        src="https://media.biancagan.com/ITP-Blog/Spring-2023/S23_02_connected-devices/02_week-13/06.JPG"
+                        alt="">
+                </div>
+                <div class="page-grid-item">
+                    <img class="grid-image"
+                        src="https://media.biancagan.com/ITP-Blog/Spring-2023/S23_02_connected-devices/02_week-13/07.JPG"
+                        alt="">
+                </div>
+            </div>
+
+            <img class="page-center-image" id="horizontal"
+                src="https://media.biancagan.com/ITP-Blog/Spring-2023/S23_02_connected-devices/02_week-13/08.JPG"
+                alt="">
+
+            <div class="page-grid">
+                <div class="page-grid-item">
+                    <img class="grid-image"
+                        src="https://media.biancagan.com/ITP-Blog/Spring-2023/S23_02_connected-devices/02_week-13/09.JPG"
+                        alt="">
+                </div>
+                <div class="page-grid-item">
+                    <img class="grid-image"
+                        src="https://media.biancagan.com/ITP-Blog/Spring-2023/S23_02_connected-devices/02_week-13/10.JPG"
+                        alt="">
+                </div>
+            </div>
+
+            <img class="page-center-image" id="horizontal"
+                src="https://media.biancagan.com/ITP-Blog/Spring-2023/S23_02_connected-devices/02_week-13/11.JPG"
+                alt="">
+
+            <p class="page-center-caption">Testing the LCD screen...</p>
+
+            <video class="page-center-video" id="horizontal" controls>
+                <source
+                    src="https://media.biancagan.com/ITP-Blog/Spring-2023/S23_02_connected-devices/02_week-13/12.MOV">
+            </video>
+
+            <p class="page-center-caption">Not working...???</p>
+
+            <video class="page-center-video" id="horizontal" controls>
+                <source
+                    src="https://media.biancagan.com/ITP-Blog/Spring-2023/S23_02_connected-devices/02_week-13/13.MOV">
+            </video>
+
+            <img class="page-center-image" id="horizontal"
+                src="https://media.biancagan.com/ITP-Blog/Spring-2023/S23_02_connected-devices/02_week-13/14.JPG"
+                alt="">
+
+            <p class="page-text">
+                I had a panel mount micro usb adapter, however, I didn’t measure correctly
+                the placement of the cutout on the box versus where the usb of the Arduino
+                would be located — so eventually I’ll have to redo the box and maybe get a
+                right angle adapter, so for now I just made the hole I already cut out large
+                enough to fit the cable and connector through.
+            </p>
+
+            <img class="page-center-image" id="horizontal"
+                src="https://media.biancagan.com/ITP-Blog/Spring-2023/S23_02_connected-devices/02_week-13/15.JPG"
+                alt="">
+
+            <img class="page-center-image" id="horizontal"
+                src="https://media.biancagan.com/ITP-Blog/Spring-2023/S23_02_connected-devices/02_week-13/16.JPG"
+                alt="">
+
+            <img class="page-center-image" id="horizontal"
+                src="https://media.biancagan.com/ITP-Blog/Spring-2023/S23_02_connected-devices/02_week-13/17.JPG"
+                alt="">
+
+            <img class="page-center-image" id="horizontal"
+                src="https://media.biancagan.com/ITP-Blog/Spring-2023/S23_02_connected-devices/02_week-13/18.JPG"
+                alt="">
+
+        </div>
+    </main>
+
+
+    <!-- ----------------------- FOOTER ----------------------- -->
+    <footer>
+        <div class="footer-nav">
+            <ul>
+                <li class="footer-nav-link"><a href="/">Home</a></li>
+                <li class="footer-nav-link"><a href="/About/about.html">About</a></li>
+                <li class="footer-nav-link"><a href="/Work Credits/work-credits.html">Work Credits</a></li>
+                <li class="footer-nav-link"><a href="/Projects/projects.html">Projects</a></li>
+                <li class="footer-nav-link"><a href="/ITP Blog/itp-blog.html">ITP Blog</a></li>
+                <li class="footer-nav-link"><a href="#contact">Contact</a></li>
+            </ul>
+        </div>
+
+        <div class="social-links">
+            <a class="social-icon" href="http://www.instagram.com/biancaaagan" target="_blank">
+                <img src="/Media/icon-instagram.png" width="25px">
+            </a>
+            <a class="social-icon" href="http://www.linkedin.com/in/biancagan" target="_blank">
+                <img src="/Media/icon-linkedin.png" width="25px">
+            </a>
+        </div>
+
+        <div class="footer-credits-div">
+            <h2 class="footer-credits"><a id="copyright" href="https://www.needafreq.com/">&copy;</a> 2024 | Bianca Gan
+            </h2>
+        </div>
+    </footer>
+    <!-- ----------------------- ----------------------- ----------------------- -->
+</body>
+
+</html>
