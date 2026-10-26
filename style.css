@@ -100,6 +100,8 @@ li {
   background-color: white;
   color: black;
   border-bottom: 1px solid black;
+
+  z-index: 1000;
 }
 
 .nav-header {
@@ -328,7 +330,7 @@ li {
 }
 
 .page-subdivider {
-  width: 50%;
+  width: 40%;
   margin: 0 auto 20px auto;
 }
 
