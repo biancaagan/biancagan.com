@@ -68,21 +68,29 @@
                     target="_blank">https://biancasbread.com/conndev-sensor</a>
             </p>
 
-            <img class="page-center-image" id="horizontal" src="" alt="">
+            <img class="page-center-image" id="horizontal"
+                src="https://media.biancagan.com/ITP-Blog/Spring-2023/S23_02_connected-devices/02_week-02/01.PNG"
+                alt="">
 
             <p class="page-center-caption">
                 MQTT Explorer + Arduino MKR1000 + Sound Sensor
             </p>
 
-            <img class="page-center-image" id="horizontal" src="" alt="">
+            <img class="page-center-image" id="horizontal"
+                src="https://media.biancagan.com/ITP-Blog/Spring-2023/S23_02_connected-devices/02_week-02/02.PNG"
+                alt="">
 
-            <img class="page-center-image" id="horizontal" src="" alt="">
+            <img class="page-center-image" id="horizontal"
+                src="https://media.biancagan.com/ITP-Blog/Spring-2023/S23_02_connected-devices/02_week-02/03.PNG"
+                alt="">
 
             <p class="page-center-caption">
                 I also ran the script using pm2 so it's constantly running in the background.
             </p>
 
-            <img class="page-center-image" id="horizontal" src="" alt="">
+            <img class="page-center-image" id="horizontal"
+                src="https://media.biancagan.com/ITP-Blog/Spring-2023/S23_02_connected-devices/02_week-02/04.PNG"
+                alt="">
 
             <p class="page-text">
                 Now I am trying to integrate fetch into the script to push sensor values from
@@ -123,13 +131,22 @@
                     target="_blank">github repo</a> for my local files.
             </p>
 
-            <img class="page-center-image" id="horizontal" src="" alt="">
+            <img class="page-center-image" id="horizontal"
+                src="https://media.biancagan.com/ITP-Blog/Spring-2023/S23_02_connected-devices/02_week-02/05.PNG"
+                alt="">
 
-            <img class="page-center-image" id="horizontal" src="" alt="">
+            <img class="page-center-image" id="horizontal"
+                src="https://media.biancagan.com/ITP-Blog/Spring-2023/S23_02_connected-devices/02_week-02/06.PNG"
+                alt="">
 
-            <img class="page-center-image" id="horizontal" src="" alt="">
+            <img class="page-center-image" id="horizontal"
+                src="https://media.biancagan.com/ITP-Blog/Spring-2023/S23_02_connected-devices/02_week-02/07.PNG"
+                alt="">
 
-            <img class="page-center-image" id="horizontal" src="" alt="">
+            <video class="page-center-video" id="horizontal" controls>
+                <source
+                    src="https://media.biancagan.com/ITP-Blog/Spring-2023/S23_02_connected-devices/02_week-02/08.MOV">
+            </video>
 
             <p class="page-text">
                 UPDATE: Had office hours with Tom today, and he helped resolve the problem!
@@ -137,7 +154,9 @@
                 He found that I had not enabled the port in my firewall, so that was the first thing to fix.
             </p>
 
-            <img class="page-center-image" id="horizontal" src="" alt="">
+            <img class="page-center-image" id="horizontal"
+                src="https://media.biancagan.com/ITP-Blog/Spring-2023/S23_02_connected-devices/02_week-02/09.PNG"
+                alt="">
 
             <p class="page-text">
                 Next, Tom figured out that the line in my server.js code that is supposed to
@@ -152,45 +171,41 @@
                 the project files –> ‘/ConnDev_DDD_Server/’
             </p>
 
-            <img class="page-center-image" id="horizontal" src="" alt="">
+            <img class="page-center-image" id="horizontal"
+                src="https://media.biancagan.com/ITP-Blog/Spring-2023/S23_02_connected-devices/02_week-02/10.PNG"
+                alt="">
 
+            <p class="page-text">
+                So with this, the site <a class="page-text-link" href="https://biancasbread.com/conndev-sensor/"
+                    target="_blank">www.biancasbread.com/conndev-sensor</a> worked! (mostly)
+                <br><br>
+                <i>(Update: the page opens but the sensor is no longer active)</i>
+            </p>
 
+            <img class="page-center-image" id="horizontal"
+                src="https://media.biancagan.com/ITP-Blog/Spring-2023/S23_02_connected-devices/02_week-02/11.PNG"
+                alt="">
 
+            <p class="page-text">
+                Once all the correct routing was finally fixed (thanks Tom), I just had to figure
+                out why I was getting errors when clicking the fetch buttons/slider.
+                <br><br>
+                It was a pretty simple fix, in my code I had interchanged res / response and
+                req / request, I just had to make sure I was consistent throughout.
+                <br><br>
+                Also ran the server.js script with PM2 so it can always run in the background
+                without node.
+            </p>
 
-            <h3 class="page-title">[ Title Here ]</h3>
-
-            <h3 class="page-subtitle">[ Subtitle Here ]</h3>
-
-            <div class="page-grid">
-                <div class="page-grid-item">
-                    <img class="grid-image" src="" alt="">
-                </div>
-                <div class="page-grid-item">
-                    <video class="grid-image" controls>
-                        <source src="">
-                    </video>
-                </div>
-            </div>
-
-
-            <audio controls class="page-audio-file">
-                <source src="" type="">
-            </audio>
-
-
-            <h3 class="page-text">
-                Text here text here text here text here text here text here
-                text here text here text here text here text here text here
-                text here text here text here text here text here text here.
-            </h3>
-
-            <img class="page-center-image" id="horizontal" src="" alt="">
-
-
-            <video class="page-center-video" controls>
-                <source src="">
+            <video class="page-center-video" id="horizontal" controls>
+                <source src="https://media.biancagan.com/ITP-Blog/Spring-2023/S23_02_connected-devices/02_week-02/12.MOV">
             </video>
 
+            <p class="page-text">
+                Fun quote from week 2 readings: “A smartphone allows you to do work or
+                doomscroll while you watch television and ignore your children.” -- Ian Bogost,
+                The Atlantic
+            </p>
 
         </div>
     </main>

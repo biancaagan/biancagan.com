@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" type="image/png" href="/Media/FCG Logo 2.png">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="/style.css" />
+    <title>BG</title>
+</head>
+
+<body>
+
+    <!-- ----------------------- NEW NAV BAR ----------------------- -->
+    <nav class="navbar">
+        <div class="nav-header">
+            <h3><a href="/" style="color: black;">BG</a></h3>
+        </div>
+
+        <ul class="nav-links top-nav">
+            <!-- USING CHECKBOX HACK -->
+            <input type="checkbox" class="hack" id="checkbox_toggle" />
+            <label for="checkbox_toggle" class="hamburger">&#9776;</label>
+
+            <div class="menu">
+                <li class="top-nav-link"><a href="/">Home</a></li>
+                <li class="top-nav-link"><a href="/About/about.html">About</a></li>
+                <li class="top-nav-link"><a href="/Work-Credits/work-credits.html">Work Credits</a></li>
+                <li class="top-nav-link"><a href="/Projects/projects.html">Projects</a></li>
+                <div class="dropdown-menu">
+                    <li class="itp-blog top-nav-link">
+                        <a href="/ITP-Blog/itp-blog.html">ITP Blog&nbsp;<i class="fa fa-caret-down"></i></a>
+
+                        <!-- DROPDOWN MENU ITEMS -->
+                        <ul class="dropdown">
+                            <li><a href="/ITP-Blog/Research-Residency/residency.html">Research Residency</a></li>
+                            <li><a href="/ITP-Blog/Thesis/thesis-adm.html">Thesis - ADM</a></li>
+                            <li><a href="/ITP-Blog/Class-Blogs/Fall-2021/fall_2021.html">Fall 2021</a></li>
+                            <li><a href="/ITP-Blog/Class-Blogs/Spring-2022/spring-2022.html">Spring 2022</a></li>
+                            <li><a href="/ITP-Blog/Class-Blogs/Fall-2022/fall_2022.html">Fall 2022</a></li>
+                            <li><a href="/ITP-Blog/Class-Blogs/Spring-2023/spring_2023.html">Spring 2023</a></li>
+                        </ul>
+                    </li>
+                </div>
+                <li><a href="/Contact/contact.html">Contact</a></li>
+            </div>
+
+        </ul>
+    </nav>
+    <!-- ----------------------- ----------- ----------------------- -->
+
+    <main>
+        <div class="page-body">
+            <h3 class="page-header">Week 03 - Device Data Dashboard &#40;cont'd&#41;</h3>
+
+            <hr class="page-divider">
+
+            <p class="page-text">
+                I’ve started collecting the data from the onboard gyroscope/accelerometer
+                on the Arduino Nano, so I’ve been trying to parse the three individual values.
+                <br><br>
+                First I was trying to do it using fetch, but eventually after running in circles
+                around that for the past couple of days, I decided to abandon it and went
+                the MQTT route.
+                <br><br>
+                I was able to get Tom’s basic MQTT.js example working. Took long enough.
+            </p>
+
+            <img class="page-center-image" id="horizontal"
+                src="https://media.biancagan.com/ITP-Blog/Spring-2023/S23_02_connected-devices/02_week-03/01.PNG"
+                alt="">
+
+            <p class="page-text">
+                I moved onto adding it to the webpage <a class="page-text-link" href="https://biancasbread.com/gyro/"
+                    target="_blank">www.biancasbread.com/gyro</a>
+                <br><br>
+                And boy did I struggle
+                <br><br>
+                I thought I did everything right from the previous time I did it for /conndev-
+                sensor.
+                <br><br>
+                I could not figure out what was going on for the life of me, turns out I think I
+                just needed to do a good ol
+                &lt; sudo nginx -t > as well as &lt; sudo systemctl restart nginx >
+            </p>
+
+            <img class="page-center-image" id="horizontal"
+                src="https://media.biancagan.com/ITP-Blog/Spring-2023/S23_02_connected-devices/02_week-03/02.PNG"
+                alt="">
+
+            <p class="page-text">
+                I next added a few LED's to my Arduino to help visually indicate connection statuses.
+                <br><br>
+                Green = WiFi connection
+                <br>
+                Yellow = MQTT connection
+                <br>
+                Blinking Blue = messages sent to MQTT
+            </p>
+
+            <video class="page-center-video" id="horizontal" controls>
+                <source
+                    src="https://media.biancagan.com/ITP-Blog/Spring-2023/S23_02_connected-devices/02_week-03/03.MOV">
+            </video>
+
+            <p class="page-text">
+                Then I went wireless!
+            </p>
+
+            <div class="page-grid">
+                <div class="page-grid-item">
+                    <img class="grid-image"
+                        src="https://media.biancagan.com/ITP-Blog/Spring-2023/S23_02_connected-devices/02_week-03/04.JPG"
+                        alt="">
+                </div>
+                <div class="page-grid-item">
+                    <video class="grid-image" controls>
+                        <source
+                            src="https://media.biancagan.com/ITP-Blog/Spring-2023/S23_02_connected-devices/02_week-03/05.MOV">
+                    </video>
+                </div>
+            </div>
+
+            <p class="page-text">
+                The next thing I need to do is translate all of this gyroscope data into some
+                kind of clock-esque thing — which comes my brilliant idea of the <i>Questionable
+                    Thesis Clock</i>.
+                <br><br>
+                I’d like the physical mechanisms to be two positions, kind of like an hourglass
+                — on or off — or in this case — Thesis? and Thesis!
+                <br><br>
+                Although instead of a countdown timer, I want it to visually-abstractly keep
+                track of the amount of time I am working on my thesis versus not working on
+                it.
+                <br><br>
+                I tried to make a separate site called <a class="page-text-link" href="http://www.thesis-ohgod.com/"
+                    target="_blank">www.thesis-ohgod.com</a> to house my <i>Questionable Clock</i>, but I was
+                having some issues with getting the routing correct with my files in my cloned
+                github repo in to the server.
+                <br><br>
+                As of right now, it just populates an index.html file with nothing else.
+            </p>
+
+            <img class="page-center-image" id="horizontal"
+                src="https://media.biancagan.com/ITP-Blog/Spring-2023/S23_02_connected-devices/02_week-03/06.PNG"
+                alt="">
+
+            <p class="page-text">
+                So instead, I made a route from my already functioning thesis website to the
+                Questionable Clock -> <a class="page-text-link" href="https://who-is-adm.com/clock/"
+                    target="_blank">www.who-is-adm.com/clock</a>.
+                <br><br>
+                Here is a <a class="page-text-link" href="https://github.com/biancaagan/QuestionableThesisClock"
+                    target="_blank">link</a> to my github repo.
+            </p>
+
+            <img class="page-center-image" id="horizontal"
+                src="https://media.biancagan.com/ITP-Blog/Spring-2023/S23_02_connected-devices/02_week-03/07.PNG"
+                alt="">
+
+            <p class="page-text">
+                I would like to eventually update it so that some of the lines fade away over time.
+                <br><br>
+                Also, I changed it to draw circles.
+            </p>
+
+            <img class="page-center-image" id="horizontal"
+                src="https://media.biancagan.com/ITP-Blog/Spring-2023/S23_02_connected-devices/02_week-03/08.PNG"
+                alt="">
+            <p class="page-center-caption">Not much thesis work getting done here...</p>
+
+        </div>
+    </main>
+
+
+    <!-- ----------------------- FOOTER ----------------------- -->
+    <footer>
+        <div class="footer-nav">
+            <ul>
+                <li class="footer-nav-link"><a href="/">Home</a></li>
+                <li class="footer-nav-link"><a href="/About/about.html">About</a></li>
+                <li class="footer-nav-link"><a href="/Work Credits/work-credits.html">Work Credits</a></li>
+                <li class="footer-nav-link"><a href="/Projects/projects.html">Projects</a></li>
+                <li class="footer-nav-link"><a href="/ITP Blog/itp-blog.html">ITP Blog</a></li>
+                <li class="footer-nav-link"><a href="#contact">Contact</a></li>
+            </ul>
+        </div>
+
+        <div class="social-links">
+            <a class="social-icon" href="http://www.instagram.com/biancaaagan" target="_blank">
+                <img src="/Media/icon-instagram.png" width="25px">
+            </a>
+            <a class="social-icon" href="http://www.linkedin.com/in/biancagan" target="_blank">
+                <img src="/Media/icon-linkedin.png" width="25px">
+            </a>
+        </div>
+
+        <div class="footer-credits-div">
+            <h2 class="footer-credits"><a id="copyright" href="https://www.needafreq.com/">&copy;</a> 2024 | Bianca Gan
+            </h2>
+        </div>
+    </footer>
+    <!-- ----------------------- ----------------------- ----------------------- -->
+</body>
+
+</html>
