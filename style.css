@@ -463,6 +463,10 @@ li {
   margin: 20px;
 }
 
+.page-grid--3col {
+  grid-template-columns: repeat(3, 1fr);
+}
+
 .page-grid-item {
   /* Optional: Add some styling so you can see the columns */
   /* background-color: #f0f0f0; */
