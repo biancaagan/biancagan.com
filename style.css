@@ -99,7 +99,8 @@ li {
   padding: 8px 0px 8px 0px;
   background-color: white;
   color: black;
-  border-bottom: 1px solid black;
+
+  border-bottom: 1px dashed black;
 
   z-index: 1000;
 }
@@ -133,7 +134,7 @@ li {
 }
 
 .menu li a:hover {
-  color: white;
+  /* color: white; */
 }
 
 .menu li {
@@ -253,8 +254,13 @@ li {
 
 /* ---------- PAGE DEFAULT ---------- */
 .page-body {
+  /* border-style: dashed;
+  border-width: 2px; */
+
   border-style: dashed;
-  border-width: 2px;
+  border-width: 1px;
+  stroke-dasharray: 1;
+
   width: 75vw;
   max-width: 800px;
   margin: 150px auto 200px auto;
@@ -332,7 +338,8 @@ li {
 
 .page-title-link a:hover,
 .page-title-link a:focus-visible {
-  background-size: 100% 100%;  /* this is what makes the tape grow */
+  background-size: 100% 100%;
+  /* this is what makes the tape grow */
   color: black;
 }
 
@@ -453,7 +460,8 @@ li {
   display: block;
   width: fit-content;
   margin: 2rem auto;
-  transform: rotate(-4deg);          /* the crooked part */
+  transform: rotate(-4deg);
+  /* the crooked part */
   transition: transform 0.25s ease, box-shadow 0.25s ease;
 
   /* lift it off the page */
@@ -537,7 +545,7 @@ li {
 .grid-image {
   /* border-style: dashed;
   border-width: 2px; */
-  
+
   width: 80%;
   display: flex;
   justify-content: center;
@@ -568,10 +576,11 @@ li {
   width: 80%;
   /* height: 60%; */
   margin: auto;
-  object-fit: cover; 
-  object-position: center; 
+  object-fit: cover;
+  object-position: center;
   display: block;
 }
+
 /* ---------- ---------- ---------- */
 
 
