@@ -425,8 +425,9 @@ li {
 }
 
 .page-center-image {
-  border-style: dashed;
-  border-width: 2px;
+  /* border-style: dashed;
+  border-width: 2px; */
+
   width: 50%;
   display: flex;
   justify-content: center;
@@ -485,6 +486,7 @@ li {
 .page-center-video {
   /* border-style: dashed;
   border-width: 2px; */
+
   width: 50%;
   display: flex;
   justify-content: center;
@@ -497,8 +499,9 @@ li {
 }
 
 .page-audio-file {
-  border-style: dashed;
-  border-width: 2px;
+  /* border-style: dashed;
+  border-width: 2px; */
+
   width: 50%;
   display: flex;
   justify-content: center;
@@ -534,6 +537,7 @@ li {
 .grid-image {
   /* border-style: dashed;
   border-width: 2px; */
+  
   width: 80%;
   display: flex;
   justify-content: center;
