@@ -310,7 +310,7 @@ li {
 /* ---------- ---------- ---------- ---------- */
 .page-title-link {
   width: fit-content;
-  margin: 10px 0 8px 20px; 
+  margin: 10px 0 8px 0; 
   padding: 0;
 
   font-family: var(--ibm-bold);
