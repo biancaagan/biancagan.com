@@ -1,7 +1,8 @@
 :root {
   --fcg-green: #81bb4e;
   --go-to-grey: #dddddd;
-  --highlight-orange: #ff8c28;
+  --highlight-orange: #FFBE85;
+  /* --highlight-orange: #ff8c28; */
   --light-orange: #FFBE85;
 
   --ibm-regular: IBM-Plex-Mono-Regular;
@@ -130,7 +131,7 @@ li {
 
 .menu li:hover {
   background-color: var(--highlight-orange);
-  border-radius: 3px;
+  border-radius: 999px;
   /* transition: 0.3s ease; */
 }
 
@@ -150,7 +151,8 @@ li {
   right: 0;
   display: none;
   background-color: #dbdbdb;
-  border-radius: 8px 0 8px 8px;
+  border-radius: 8px;
+  padding: 4px;
   z-index: 200;
 }
 
@@ -164,6 +166,7 @@ li {
   /* padding: 0.5em; */
   width: 18em;
   text-align: center;
+  border-radius: 999px;
 }
 
 .dropdown li:hover {
