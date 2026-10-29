@@ -2,6 +2,7 @@
   --fcg-green: #81bb4e;
   --go-to-grey: #dddddd;
   --highlight-orange: #ff8c28;
+  --light-orange: #FFBE85;
 
   --ibm-regular: IBM-Plex-Mono-Regular;
   --ibm-semibold: IBM-Plex-Mono-Regular;
@@ -14,7 +15,7 @@
   --incon-medium: Inconsolata-Medium;
 
   --text-font-size: clamp(1rem, 1.8vw, 1.125rem);
-  --title-font-size: clamp(1.4rem, 1.8vw, 1.5rem);
+  --title-font-size: clamp(1.2rem, 1.8vw, 1.4rem);
 
 }
 
@@ -275,6 +276,7 @@ li {
   font-size: clamp(1.5rem, 1.8vw, 1.6rem);
   text-align: left;
   margin: 10px auto 10px auto;
+
 }
 
 .page-header-subtext {
@@ -299,13 +301,126 @@ li {
   margin: 0 auto auto auto;
   padding: 20px;
   text-align: center;
+
+  
+}
+/* ---------- ---------- ---------- ---------- */
+.page-title-link {
+  width: fit-content;
+  margin: 10px 0 8px 20px; 
+  padding: 0;
+
+  font-family: var(--ibm-bold);
+  font-size: var(--title-font-size);
+  text-decoration: none;
 }
 
-.page-title-link {
-  font-family: var(--jost-semibold);
+.page-title-link a,
+.page-title-link a:link,
+.page-title-link a:visited {
+  display: inline-block;
+  margin: 0;
+  padding: 0.25em 1em;   /* vertical / horizontal */
+  line-height: 1.2;      /* keeps top and bottom space even */
+
+  color: #111;
+  background: var(--light-orange);
+  border: 2px solid #111;
+  border-radius: 999px;
+  box-shadow: 0 0 0 #111;
+  transition: transform 0.12s ease, box-shadow 0.12s ease, background 0.15s ease;
+}
+.page-title-link a:hover,
+.page-title-link a:focus-visible {
+  background: var(--highlight-orange);
+  transform: translate(-2px, -2px);
+  box-shadow: 2px 2px 0 #111;
+}
+.page-title-link a:active {
+  transform: translate(0, 0);
+  box-shadow: 0 0 0 #111;
+}
+
+.page-title-link a::after {
+  content: "↗";
+  display: inline-block;
+  margin-left: 0.5em;
+  transition: transform 0.15s ease;
+}
+
+.page-title-link a:hover::after,
+.page-title-link a:focus-visible::after {
+  transform: translate(2px, -2px);
+}
+
+/* Test link css: */
+/* .page-title-link {
+  width: fit-content;
+  margin: 10px 0 8px 20px; 
+  padding: 0;
+
+  font-family: var(--ibm-semibold);
+  font-size: var(--title-font-size);
+  text-decoration: none;
+}
+
+.page-title-link a,
+.page-title-link a:link,
+.page-title-link a:visited {
+  display: inline-block;
+  margin: 0;
+  padding: 0.1em 0.6em;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.page-title-link a:focus-visible {
+  outline: 3px solid #111;
+  outline-offset: 2px;
+}
+
+.page-title-link a,
+.page-title-link a:link,
+.page-title-link a:visited {
+  color: #111;
+  background: var(--light-orange);
+  border: 2px solid #111;
+  border-radius: 999px;
+  padding: 0.1em 0.9em;
+  box-shadow: 3px 3px 0 #111;
+  transition: transform 0.1s ease, box-shadow 0.1s ease;
+}
+.page-title-link a::after {
+  content: "↗";
+  display: inline-block;
+  width: 0;
+  overflow: hidden;
+  vertical-align: bottom;
+  transition: width 0.2s ease, margin 0.2s ease;
+}
+.page-title-link a:hover,
+.page-title-link a:focus-visible {
+  transform: translate(-1px, -1px);
+  box-shadow: 4px 4px 0 #111;
+  background-color: var(--light-orange);
+}
+.page-title-link a:hover::after,
+.page-title-link a:focus-visible::after {
+  width: 1em;
+  margin-left: 0.3em;
+}
+.page-title-link a:active {
+  transform: translate(3px, 3px);
+  box-shadow: 0 0 0 #111;
+} */
+
+/* ---------- ---------- Original styling ---------- ---------- */
+/* .page-title-link {
   width: fit-content;
   margin: 10px 0 0 20px;
   padding: 0;
+  
+  font-family: var(--jost-semibold);
   font-size: var(--title-font-size);
   color: var(--highlight-orange);
   text-decoration: underline;
@@ -339,9 +454,9 @@ li {
 .page-title-link a:hover,
 .page-title-link a:focus-visible {
   background-size: 100% 100%;
-  /* this is what makes the tape grow */
   color: black;
-}
+} */
+/* ---------- ---------- ---------- ---------- */
 
 /* .page-title-link a:hover {
   background-color: var(--highlight-orange);
