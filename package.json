@@ -1,0 +1,21 @@
+{
+  "name": "biancagan.com",
+  "version": "1.0.0",
+  "description": "",
+  "main": "blt-garden-rx.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/biancaagan/biancagan.com.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "bugs": {
+    "url": "https://github.com/biancaagan/biancagan.com/issues"
+  },
+  "homepage": "https://github.com/biancaagan/biancagan.com#readme"
+}
