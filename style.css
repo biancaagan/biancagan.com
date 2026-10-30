@@ -139,8 +139,18 @@ li {
   /* color: white; */
 }
 
-.menu li {
+/* .menu li {
   padding: 6.5px 14px;
+} */
+
+.menu li {
+  padding: 0;
+}
+
+.menu li > a {
+  display: block;
+  padding: 6.5px 14px;
+  border-radius: 999px;
 }
 
 
