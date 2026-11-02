@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" type="image/png" href="/Media/FCG Logo 2.png">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="/ITP-Blog/Class-Blogs/class-blogs-styles.css" />
+    <title>BG</title>
+</head>
+
+<body>
+
+    <!-- ----------------------- NEW NAV BAR ----------------------- -->
+    <nav class="navbar">
+        <div class="nav-header">
+            <h3><a href="https://www.biancagan.com/" style="color: black;">BG</a></h3>
+        </div>
+
+        <ul class="nav-links top-nav">
+            <!-- USING CHECKBOX HACK -->
+            <input type="checkbox" class="hack" id="checkbox_toggle" />
+            <label for="checkbox_toggle" class="hamburger">&#9776;</label>
+
+            <div class="menu">
+                <li class="top-nav-link"><a href="https://www.biancagan.com/">Home</a></li>
+                <li class="top-nav-link"><a href="https://www.biancagan.com/about">About</a></li>
+                <li class="top-nav-link"><a href="https://www.biancagan.com/work-credits">Work Credits</a></li>
+                <li class="top-nav-link"><a href="https://www.biancagan.com/projects">Projects</a></li>
+                <div class="dropdown-menu">
+                    <li class="itp-blog top-nav-link">
+                        <a href="https://www.biancagan.com/itp-blog">ITP Blog&nbsp;<i class="fa fa-caret-down"></i></a>
+
+                        <!-- DROPDOWN MENU ITEMS -->
+                        <ul class="dropdown">
+                            <li><a href="https://www.biancagan.com/itp-blog/research-residency">Research Residency</a>
+                            </li>
+                            <li><a href="https://www.biancagan.com/itp-blog/thesis">Thesis - ADM</a></li>
+                            <li><a href="https://www.biancagan.com/itp-blog/fall-2021">Fall 2021</a></li>
+                            <li><a href="https://www.biancagan.com/itp-blog/spring-2022">Spring 2022</a></li>
+                            <li><a href="https://www.biancagan.com/itp-blog/fall-2022">Fall 2022</a></li>
+                            <li><a href="https://www.biancagan.com/itp-blog/spring-2023">Spring 2023</a></li>
+                        </ul>
+                    </li>
+                </div>
+                <li><a href="https://www.biancagan.com/contact">Contact</a></li>
+            </div>
+
+        </ul>
+    </nav>
+    <!-- ----------------------- ----------- ----------------------- -->
+
+    <main>
+        <div class="page-body">
+            <h3 class="page-header">P-Comp Week 10 Labs</h3>
+
+            <hr class="page-divider">
+
+            <h3 class="page-subtitle">Lab 01: Using a transistor to control high current loads with an Arduino</h3>
+
+            <div class="page-grid">
+                <div class="page-grid-item">
+                    <img class="grid-image"
+                        src="https://media.biancagan.com/ITP-Blog/Fall-2021/F21_04_pcomp/F21_04_week-10_labs/01.jpg"
+                        alt="">
+                </div>
+                <div class="page-grid-item">
+                    <video class="grid-image" controls>
+                        <source
+                            src="https://media.biancagan.com/ITP-Blog/Fall-2021/F21_04_pcomp/F21_04_week-10_labs/02.MOV">
+                    </video>
+                </div>
+            </div>
+
+            <h3 class="page-text">
+                To start, we had an issue getting the DC motor to work, we believed it may
+                have been a bad wire. We troubleshooted and made sure all the connections
+                were correct, then ultimately decided to change the motor for another, and
+                that ended up working.
+            </h3>
+
+            <h3 class="page-subtitle">Lab 02: DC motor control using an H-bridge</h3>
+
+            <div class="page-grid">
+                <div class="page-grid-item">
+                    <img class="grid-image"
+                        src="https://media.biancagan.com/ITP-Blog/Fall-2021/F21_04_pcomp/F21_04_week-10_labs/03.jpg"
+                        alt="">
+                </div>
+                <div class="page-grid-item">
+                    <video class="grid-image" controls>
+                        <source
+                            src="https://media.biancagan.com/ITP-Blog/Fall-2021/F21_04_pcomp/F21_04_week-10_labs/04.MOV">
+                    </video>
+                </div>
+            </div>
+
+            <h3 class="page-subtitle">Lab 03: Controlling a stepper motor with an H-bridge</h3>
+
+            <h3 class="page-text">
+                I had some issues with this lab. It was a little hard to translate the schematic
+                from the lab– there were no more of the H-bridge IC (L293D) chip, so I was
+                still using the H-bridge TB6612 breakout board from the second lab. Most of the
+                schematics were using the IC chip, and none of them involved the
+                Arduino Nano. The very bottom schematic used an Arduino MKR Zero, so I
+                attempted to translate the pins using that onto my breadboard.<br><br>
+                I was unable to get the stepper motor to work. The Arduino serial monitor
+                was outputting the steps so the code was correct, and the motor did start
+                to heat up so I know it was receiving voltage, but it didn’t move.
+            </h3>
+
+            <div class="page-grid">
+                <div class="page-grid-item">
+                    <img class="grid-image"
+                        src="https://media.biancagan.com/ITP-Blog/Fall-2021/F21_04_pcomp/F21_04_week-10_labs/05.jpg"
+                        alt="">
+                </div>
+                <div class="page-grid-item">
+                    <img class="grid-image"
+                        src="https://media.biancagan.com/ITP-Blog/Fall-2021/F21_04_pcomp/F21_04_week-10_labs/06.JPG"
+                        alt="">
+                </div>
+            </div>
+
+            <h3 class="page-subtitle">Lab 03 (cont'd): In-class trial</h3>
+
+            <h3 class="page-text">
+                Mo and I attempted the stepper motor lab in class. With Yeseul’s help, it
+                turns out the color orientation of the wires on the stepper motor from the
+                shop is different according to the wiring in the schematics on the lab.
+                It works!<br><br>
+                The steps were very slow, so we reduced the delay to 50 milliseconds.
+            </h3>
+
+            <div class="page-grid">
+                <div class="page-grid-item">
+                    <img class="grid-image"
+                        src="https://media.biancagan.com/ITP-Blog/Fall-2021/F21_04_pcomp/F21_04_week-10_labs/07.JPG"
+                        alt="">
+                </div>
+                <div class="page-grid-item">
+                    <video class="grid-image" controls>
+                        <source
+                            src="https://media.biancagan.com/ITP-Blog/Fall-2021/F21_04_pcomp/F21_04_week-10_labs/08.MOV">
+                    </video>
+                </div>
+            </div>
+
+            <h3 class="page-text">
+                For the second part of this lab, we ran into another issue where the motor
+                would go counterclockwise, pause for 5 seconds, but then it would continue
+                in the same direction rather than going clockwise. Yeseul helped us
+                troubleshoot again and we used her motor, because there is a mismatch
+                with the leads on the stepper motor we have.
+            </h3>
+
+            <div class="page-grid">
+                <div class="page-grid-item">
+                    <img class="grid-image"
+                        src="https://media.biancagan.com/ITP-Blog/Fall-2021/F21_04_pcomp/F21_04_week-10_labs/09.jpg"
+                        alt="">
+                </div>
+                <div class="page-grid-item">
+                    <video class="grid-image" controls>
+                        <source
+                            src="https://media.biancagan.com/ITP-Blog/Fall-2021/F21_04_pcomp/F21_04_week-10_labs/10.MOV">
+                    </video>
+                </div>
+            </div>
+
+        </div>
+    </main>
+
+
+    <!-- ----------------------- FOOTER ----------------------- -->
+    <footer>
+        <div class="footer-nav">
+            <ul>
+                <li class="footer-nav-link"><a href="https://www.biancagan.com/">Home</a></li>
+                <li class="footer-nav-link"><a href="https://www.biancagan.com/about">About</a></li>
+                <li class="footer-nav-link"><a href="https://www.biancagan.com/work-credits">Work Credits</a>
+                </li>
+                <li class="footer-nav-link"><a href="https://www.biancagan.com/projects">Projects</a></li>
+                <li class="footer-nav-link"><a href="https://www.biancagan.com/itp-blog">ITP Blog</a></li>
+                <li class="footer-nav-link"><a href="https://www.biancagan.com/contact">Contact</a></li>
+            </ul>
+        </div>
+
+        <div class="social-links">
+            <a class="social-icon" href="http://www.instagram.com/biancaaagan" target="_blank">
+                <img src="/Media/icon-instagram.png" width="25px">
+            </a>
+            <a class="social-icon" href="http://www.linkedin.com/in/biancagan" target="_blank">
+                <img src="/Media/icon-linkedin.png" width="25px">
+            </a>
+        </div>
+
+        <div class="footer-credits-div">
+            <h2 class="footer-credits"><a id="copyright" href="https://www.needafreq.com/">&copy;</a> 2024 |
+                Bianca Gan</h2>
+        </div>
+    </footer>
+    <!-- ----------------------- ----------------------- ----------------------- -->
+</body>
+
+</html>

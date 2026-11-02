@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" type="image/png" href="/Media/FCG Logo 2.png">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="/style.css" />
+    <title>BG</title>
+</head>
+
+<body>
+
+    <!-- ----------------------- NEW NAV BAR ----------------------- -->
+    <nav class="navbar">
+        <div class="nav-header">
+            <h3><a href="https://www.biancagan.com/" style="color: black;">BG</a></h3>
+        </div>
+
+        <ul class="nav-links top-nav">
+            <!-- USING CHECKBOX HACK -->
+            <input type="checkbox" class="hack" id="checkbox_toggle" />
+            <label for="checkbox_toggle" class="hamburger">&#9776;</label>
+
+            <div class="menu">
+                <li class="top-nav-link"><a href="https://www.biancagan.com/">Home</a></li>
+                <li class="top-nav-link"><a href="https://www.biancagan.com/about">About</a></li>
+                <li class="top-nav-link"><a href="https://www.biancagan.com/work-credits">Work Credits</a></li>
+                <li class="top-nav-link"><a href="https://www.biancagan.com/projects">Projects</a></li>
+                <div class="dropdown-menu">
+                    <li class="itp-blog top-nav-link">
+                        <a href="https://www.biancagan.com/itp-blog">ITP Blog&nbsp;<i class="fa fa-caret-down"></i></a>
+
+                        <!-- DROPDOWN MENU ITEMS -->
+                        <ul class="dropdown">
+                            <li><a href="https://www.biancagan.com/itp-blog/research-residency">Research Residency</a></li>
+                            <li><a href="https://www.biancagan.com/itp-blog/thesis">Thesis - ADM</a></li>
+                            <li><a href="https://www.biancagan.com/itp-blog/fall-2021">Fall 2021</a></li>
+                            <li><a href="https://www.biancagan.com/itp-blog/spring-2022">Spring 2022</a></li>
+                            <li><a href="https://www.biancagan.com/itp-blog/fall-2022">Fall 2022</a></li>
+                            <li><a href="https://www.biancagan.com/itp-blog/spring-2023">Spring 2023</a></li>
+                        </ul>
+                    </li>
+                </div>
+                <li><a href="https://www.biancagan.com/contact">Contact</a></li>
+            </div>
+
+        </ul>
+    </nav>
+    <!-- ----------------------- ----------- ----------------------- -->
+
+    <main>
+        <div class="page-body">
+            <h3 class="page-header">P-Comp Week 07 Labs</h3>
+
+            <hr class="page-divider">
+
+            <h3 class="page-title">Two-Way (Duplex) Serial Communication Using Arduino and p5</h3>
+
+            <h3 class="page-subtitle">Sending multiple serial data using punctuation</h3>
+
+            <div class="page-grid">
+                <div class="page-grid-item">
+                    <video class="grid-image" controls>
+                        <source
+                            src="https://media.biancagan.com/ITP-Blog/Fall-2021/F21_04_pcomp/F21_04_week-07_labs/01.mov">
+                    </video>
+                </div>
+                <div class="page-grid-item">
+                    <img class="grid-imageter-image"
+                        src="https://media.biancagan.com/ITP-Blog/Fall-2021/F21_04_pcomp/F21_04_week-07_labs/02.jpg"
+                        alt="">
+                </div>
+            </div>
+
+            <h3 class="page-subtitle">Receing multiple serial data in p5</h3>
+
+            <div class="page-grid">
+                <div class="page-grid-item">
+                    <video class="grid-image" controls>
+                        <source
+                            src="https://media.biancagan.com/ITP-Blog/Fall-2021/F21_04_pcomp/F21_04_week-07_labs/03.mov">
+                    </video>
+                </div>
+                <div class="page-grid-item">
+                    <img class="grid-imageter-image"
+                        src="https://media.biancagan.com/ITP-Blog/Fall-2021/F21_04_pcomp/F21_04_week-07_labs/04.JPG"
+                        alt="">
+                </div>
+            </div>
+
+            <h3 class="page-subtitle">Flow control: call and response (handshaking)</h3>
+
+            <div class="page-grid">
+                <div class="page-grid-item">
+                    <img class="grid-imageter-image"
+                        src="https://media.biancagan.com/ITP-Blog/Fall-2021/F21_04_pcomp/F21_04_week-07_labs/05.jpg"
+                        alt="">
+                </div>
+                <div class="page-grid-item">
+                    <video class="grid-image" controls>
+                        <source
+                            src="https://media.biancagan.com/ITP-Blog/Fall-2021/F21_04_pcomp/F21_04_week-07_labs/06.mov">
+                    </video>
+                </div>
+            </div>
+
+            <video class="page-center-video" id="horizontal" controls>
+                <source src="https://media.biancagan.com/ITP-Blog/Fall-2021/F21_04_pcomp/F21_04_week-07_labs/07.mov">
+            </video>
+
+            <h3 class="page-title">Build Your Own Application</h3>
+
+            <h3 class="page-text">
+                My goal is to build direction controls like on a video game controller. At first, I
+                started off with the base code from the two-way (duplex) lab where we had
+                a pushbutton and two potentiometers connected to the Arduino. I adjusted
+                the Arduino code accordingly to reflect two pushbuttons to start off with.<br><br>
+                could keep track of when the code would or would not work. With these first
+                two pushbuttons, I wanted to make a circle on the screen of P5 move to the
+                right and also down.<br><br>
+                At the beginning I was able to kind of do this, however once I ran the P5 code
+                the ellipse would start at the correct coordinates but when I selected the
+                correct port from the dropdown menu, the ellipse would move to the
+                coordinates (0, 0). When I pressed the first pushbutton (right) there was a
+                bit of a delay before the circle would move to the right, but return to (0, 0),
+                and same thing with the second pushbutton (down) except it would lag then
+                move down and return to (0, 0). As I continued to press the buttons, the
+                delay would grow longer and eventually it would just stop working.<br><br>
+                Below is a video of what my original P5 code would do as well as the Arduino
+                code.
+            </h3>
+
+            <div class="page-grid">
+                <div class="page-grid-item">
+                    <video class="grid-image" controls>
+                        <source
+                            src="https://media.biancagan.com/ITP-Blog/Fall-2021/F21_04_pcomp/F21_04_week-07_labs/08.mov">
+                    </video>
+                </div>
+                <div class="page-grid-item">
+                    <img class="grid-imageter-image"
+                        src="https://media.biancagan.com/ITP-Blog/Fall-2021/F21_04_pcomp/F21_04_week-07_labs/09.jpg"
+                        alt="">
+                </div>
+            </div>
+
+            <h3 class="page-text">
+                During office hours with Yeseul, she was able to help me trouble shoot my
+                main issues:<br><br>
+                &emsp;1. The delay between button presses<br>
+                &emsp;2. Having the ellipse start at the correct coordinates<br>
+                &emsp;3. Incrementing the x movements so that it would keep moving to the
+                right/down<br><br>
+                By adding a delay of 10 milliseconds at the end of my Arduino code, this
+                allowed the program to run and not lag.<br><br>
+                In my P5 code, I had to change the sensor reading inputs to read as an
+                integer. This along with declaring more variables, we were able to get the
+                ellipse to move to the right and down as the buttons were pressed.<br><br>
+                Below is the code along with a video demonstrating four buttons causing the
+                ellipse to move to the right, left, up and down.
+            </h3>
+
+            <div class="page-grid">
+                <div class="page-grid-item">
+                    <video class="grid-image" controls>
+                        <source
+                            src="https://media.biancagan.com/ITP-Blog/Fall-2021/F21_04_pcomp/F21_04_week-07_labs/10.MOV">
+                    </video>
+                </div>
+                <div class="page-grid-item">
+                    <img class="grid-imageter-image"
+                        src="https://media.biancagan.com/ITP-Blog/Fall-2021/F21_04_pcomp/F21_04_week-07_labs/11.jpg"
+                        alt="">
+                </div>
+            </div>
+
+            <h3 class="page-text">
+                Next, I worked on hooking up arcade buttons instead of the pushbuttons,
+                and also moving my circuit onto a proto-board...
+            </h3>
+
+            <img class="page-center-image"
+                src="https://media.biancagan.com/ITP-Blog/Fall-2021/F21_04_pcomp/F21_04_week-07_labs/12.JPG" alt="">
+
+            <div class="page-grid">
+                <div class="page-grid-item">
+                    <img class="grid-image"
+                        src="https://media.biancagan.com/ITP-Blog/Fall-2021/F21_04_pcomp/F21_04_week-07_labs/13.JPG"
+                        alt="">
+                </div>
+                <div class="page-grid-item">
+                    <img class="grid-image"
+                        src="https://media.biancagan.com/ITP-Blog/Fall-2021/F21_04_pcomp/F21_04_week-07_labs/14.JPG"
+                        alt="">
+                </div>
+                <div class="page-grid-item">
+                    <img class="grid-image"
+                        src="https://media.biancagan.com/ITP-Blog/Fall-2021/F21_04_pcomp/F21_04_week-07_labs/15.JPG"
+                        alt="">
+                </div>
+                <div class="page-grid-item">
+                    <img class="grid-image"
+                        src="https://media.biancagan.com/ITP-Blog/Fall-2021/F21_04_pcomp/F21_04_week-07_labs/16.JPG"
+                        alt="">
+                </div>
+            </div>
+
+            <video class="grid-image" controls>
+                <source src="https://media.biancagan.com/ITP-Blog/Fall-2021/F21_04_pcomp/F21_04_week-07_labs/17.MOV">
+            </video>
+
+        </div>
+    </main>
+
+
+    <!-- ----------------------- FOOTER ----------------------- -->
+    <footer>
+        <div class="footer-nav">
+            <ul>
+                <li class="footer-nav-link"><a href="https://www.biancagan.com/">Home</a></li>
+                <li class="footer-nav-link"><a href="https://www.biancagan.com/about">About</a></li>
+                <li class="footer-nav-link"><a href="https://www.biancagan.com/work-credits">Work Credits</a>
+                </li>
+                <li class="footer-nav-link"><a href="https://www.biancagan.com/projects">Projects</a></li>
+                <li class="footer-nav-link"><a href="https://www.biancagan.com/itp-blog">ITP Blog</a></li>
+                <li class="footer-nav-link"><a href="https://www.biancagan.com/contact">Contact</a></li>
+            </ul>
+        </div>
+
+        <div class="social-links">
+            <a class="social-icon" href="http://www.instagram.com/biancaaagan" target="_blank">
+                <img src="/Media/icon-instagram.png" width="25px">
+            </a>
+            <a class="social-icon" href="http://www.linkedin.com/in/biancagan" target="_blank">
+                <img src="/Media/icon-linkedin.png" width="25px">
+            </a>
+        </div>
+
+        <div class="footer-credits-div">
+            <h2 class="footer-credits"><a id="copyright" href="https://www.needafreq.com/">&copy;</a> 2024 |
+                Bianca Gan</h2>
+        </div>
+    </footer>
+    <!-- ----------------------- ----------------------- ----------------------- -->
+</body>
+
+</html>

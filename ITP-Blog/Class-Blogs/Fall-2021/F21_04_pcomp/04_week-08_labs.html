@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" type="image/png" href="/Media/FCG Logo 2.png">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="/style.css" />
+    <title>BG</title>
+</head>
+
+<body>
+
+    <!-- ----------------------- NEW NAV BAR ----------------------- -->
+    <nav class="navbar">
+        <div class="nav-header">
+            <h3><a href="https://www.biancagan.com/" style="color: black;">BG</a></h3>
+        </div>
+
+        <ul class="nav-links top-nav">
+            <!-- USING CHECKBOX HACK -->
+            <input type="checkbox" class="hack" id="checkbox_toggle" />
+            <label for="checkbox_toggle" class="hamburger">&#9776;</label>
+
+            <div class="menu">
+                <li class="top-nav-link"><a href="https://www.biancagan.com/">Home</a></li>
+                <li class="top-nav-link"><a href="https://www.biancagan.com/about">About</a></li>
+                <li class="top-nav-link"><a href="https://www.biancagan.com/work-credits">Work Credits</a></li>
+                <li class="top-nav-link"><a href="https://www.biancagan.com/projects">Projects</a></li>
+                <div class="dropdown-menu">
+                    <li class="itp-blog top-nav-link">
+                        <a href="https://www.biancagan.com/itp-blog">ITP Blog&nbsp;<i class="fa fa-caret-down"></i></a>
+
+                        <!-- DROPDOWN MENU ITEMS -->
+                        <ul class="dropdown">
+                            <li><a href="https://www.biancagan.com/itp-blog/research-residency">Research Residency</a>
+                            </li>
+                            <li><a href="https://www.biancagan.com/itp-blog/thesis">Thesis - ADM</a></li>
+                            <li><a href="https://www.biancagan.com/itp-blog/fall-2021">Fall 2021</a></li>
+                            <li><a href="https://www.biancagan.com/itp-blog/spring-2022">Spring 2022</a></li>
+                            <li><a href="https://www.biancagan.com/itp-blog/fall-2022">Fall 2022</a></li>
+                            <li><a href="https://www.biancagan.com/itp-blog/spring-2023">Spring 2023</a></li>
+                        </ul>
+                    </li>
+                </div>
+                <li><a href="https://www.biancagan.com/contact">Contact</a></li>
+            </div>
+
+        </ul>
+    </nav>
+    <!-- ----------------------- ----------- ----------------------- -->
+
+    <main>
+        <div class="page-body">
+            <h3 class="page-header">P-Comp Week 08 Labs</h3>
+
+            <hr class="page-divider">
+
+            <h3 class="page-title">Synchronous Serial Lab - OLED Screen Display Using I2C</h3>
+
+            <h3 class="page-subtitle">Displaying time and sensor value</h3>
+
+            <h3 class="page-text">
+                I had a small issue getting the code to read the libraries. I had added a new
+                tab making files titled “Adafruit_SSD1306.h” and “Adafruit_GFX” then pasting
+                the code from Github, but I couldn’t get it to work. Then I found that I
+                needed to go to the Manage Libraries tag and add the necessary ones
+                there– then it worked.
+            </h3>
+
+            <div class="page-grid">
+                <div class="page-grid-item">
+                    <img class="grid-image"
+                        src="https://media.biancagan.com/ITP-Blog/Fall-2021/F21_04_pcomp/F21_04_week-08_labs/01.jpg"
+                        alt="">
+                </div>
+                <div class="page-grid-item">
+                    <img class="grid-image"
+                        src="https://media.biancagan.com/ITP-Blog/Fall-2021/F21_04_pcomp/F21_04_week-08_labs/02.jpg"
+                        alt="">
+                </div>
+            </div>
+
+            <h3 class="page-text">
+                Below is the video with the OLED display reading the sensor value.
+            </h3>
+
+            <video class="page-center-video" id="horizontal" controls>
+                <source src="https://media.biancagan.com/ITP-Blog/Fall-2021/F21_04_pcomp/F21_04_week-08_labs/03.mov">
+            </video>
+
+            <h3 class="page-subtitle">Displaying a QR code</h3>
+
+            <h3 class="page-text">
+                Below is the code used to generate a QR code when a string is inputed into
+                the serial monitor.
+            </h3>
+
+            <div class="page-grid">
+                <div class="page-grid-item">
+                    <img class="grid-image"
+                        src="https://media.biancagan.com/ITP-Blog/Fall-2021/F21_04_pcomp/F21_04_week-08_labs/04.jpg"
+                        alt="">
+                </div>
+                <div class="page-grid-item">
+                    <img class="grid-image"
+                        src="https://media.biancagan.com/ITP-Blog/Fall-2021/F21_04_pcomp/F21_04_week-08_labs/05.jpg"
+                        alt="">
+                </div>
+                <div class="page-grid-item">
+                    <video class="grid-image" controls>
+                        <source
+                            src="https://media.biancagan.com/ITP-Blog/Fall-2021/F21_04_pcomp/F21_04_week-08_labs/06.MOV">
+                    </video>
+                </div>
+                <video class="grid-image" controls>
+                    <source
+                        src="https://media.biancagan.com/ITP-Blog/Fall-2021/F21_04_pcomp/F21_04_week-08_labs/07.MP4">
+                </video>
+            </div>
+
+            <h3 class="page-subtitle">Synchronous serial lab - SPI communication with a digital potentiometer</h3>
+
+            <div class="page-grid">
+                <div class="page-grid-item">
+                    <video class="grid-image" controls>
+                        <source
+                            src="https://media.biancagan.com/ITP-Blog/Fall-2021/F21_04_pcomp/F21_04_week-08_labs/08.MOV">
+                    </video>
+                </div>
+                <div class="page-grid-item">
+                    <img class="grid-image"
+                        src="https://media.biancagan.com/ITP-Blog/Fall-2021/F21_04_pcomp/F21_04_week-08_labs/09.jpg"
+                        alt="">
+                </div>
+            </div>
+
+        </div>
+    </main>
+
+
+    <!-- ----------------------- FOOTER ----------------------- -->
+    <footer>
+        <div class="footer-nav">
+            <ul>
+                <li class="footer-nav-link"><a href="https://www.biancagan.com/">Home</a></li>
+                <li class="footer-nav-link"><a href="https://www.biancagan.com/about">About</a></li>
+                <li class="footer-nav-link"><a href="https://www.biancagan.com/work-credits">Work Credits</a>
+                </li>
+                <li class="footer-nav-link"><a href="https://www.biancagan.com/projects">Projects</a></li>
+                <li class="footer-nav-link"><a href="https://www.biancagan.com/itp-blog">ITP Blog</a></li>
+                <li class="footer-nav-link"><a href="https://www.biancagan.com/contact">Contact</a></li>
+            </ul>
+        </div>
+
+        <div class="social-links">
+            <a class="social-icon" href="http://www.instagram.com/biancaaagan" target="_blank">
+                <img src="/Media/icon-instagram.png" width="25px">
+            </a>
+            <a class="social-icon" href="http://www.linkedin.com/in/biancagan" target="_blank">
+                <img src="/Media/icon-linkedin.png" width="25px">
+            </a>
+        </div>
+
+        <div class="footer-credits-div">
+            <h2 class="footer-credits"><a id="copyright" href="https://www.needafreq.com/">&copy;</a> 2024 |
+                Bianca Gan</h2>
+        </div>
+    </footer>
+    <!-- ----------------------- ----------------------- ----------------------- -->
+</body>
+
+</html>
